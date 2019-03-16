@@ -34,7 +34,7 @@
 										<h1>Оплата за курс</h1>
 									</header>
 
-									
+
 
 									<p>Наши курсы нацелены только на ваш результат,стоимость прохождения курса составляет <strong>2000 рублей.</strong></p>
 									Вы можете осуществить оплату банковской картой или Яндекс Кошельком.<br>
@@ -44,13 +44,13 @@
 									<br></p>
 
 								<p> Что нужно знать перед оплатой:</p>
-								<strong>1)При оплате, тенге конвертируется в рубли по курсу.<br></strong> 
+								<strong>1)При оплате, тенге конвертируется в рубли по курсу.<br></strong>
 								<strong>2)Наш счёт,официально подтверждён платёжной системой.<br></strong>
-								<strong>3)Вы будете перенаправлены на платёжную систему Яндекса.<br></strong> 
+								<strong>3)Вы будете перенаправлены на платёжную систему Яндекса.<br></strong>
 								<strong>4) Мы получаем только те данные,которые вы указываете у нас на сайте.<br></strong>
 								</section>
 <iframe src="https://money.yandex.ru/quickpay/shop-widget?writer=seller&targets=%D0%9E%D0%BF%D0%BB%D0%B0%D1%82%D0%B0%20%D0%B7%D0%B0%20%D0%BA%D1%83%D1%80%D1%81%20%D0%BE%D1%82%20Saico%20Education&targets-hint=&default-sum=2000&button-text=11&payment-type-choice=on&mail=on&hint=&successURL=https%3A%2F%2Feducation.saico.pro%2F&quickpay=shop&account=410018884562159" width="100%" height="223" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
-							
+
 						</div>
 					</div>
 
