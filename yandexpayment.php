@@ -31,7 +31,7 @@
 							<!-- Content -->
 								<section>
 									<header class="main" >
-										<h1>Оплата за кур</h1>
+										<h1>Оплата за курс</h1>
 									</header>
 
 
