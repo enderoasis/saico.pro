@@ -21,23 +21,8 @@ R::store($payment);
 
 $usermail = $_POST['email'];
 $userpaid = $_POST['amount'];
-$data = http_build_query(
-    array(
-        'user_id' => $usermail,
-        'user_p' => $userpaid,
 
-    )
-);
 
-$options = array('http' =>
-    array(
-        'method' => 'POST',
-        'header' => 'Content-type: application/x-www-form-urlencoded',
-        'content' => $data
-    )
-);
-$context = stream_context_create($options);
-$result = file_get_contents('https://partners.saico.pro/pay', false, $context);
-$result = htmlspecialchars($result);
-//file_put_contents('history.php', $_POST['datetime'] . 'через Яндекс.Деньги на сумму: '. $_POST['amount']. 'Почта'. $_POST['label'] .PHP_EOL, FILE_APPEND);
+$Url = "https://195.210.46.63/pay?email=".$usermail."&sum=".$userpaid;
+$callback = file_get_contents($Url);
 ?>
