@@ -19,22 +19,19 @@ $payment->sum = $_POST['amount'];
 $payment->email = $_POST['email'];
 R::store($payment);
 
-$data = http_build_query(
-    array(
-        'user_mail' => $_POST['email'],
-        'sum' => $_POST['amount']
-    )
-);
+$myvar1 = $_POST['amount'];
+$myvar2 = $_POST['email'];
+$url = 'https://education.saico.pro';
+$myvars = 'myvar1=' . $myvar1 . '&myvar2=' . $myvar2;
 
-$options = array('http' =>
-    array(
-        'method' => 'POST',
-        'header' => 'Content-type: application/x-www-form-urlencoded',
-        'content' => $data
-    )
-);
-$context = stream_context_create($options);
-$result = file_get_contents('https://partners.saico.pro/', false, $context);
+$ch = curl_init( $url );
+curl_setopt( $ch, CURLOPT_POST, 1);
+curl_setopt( $ch, CURLOPT_POSTFIELDS, $myvars);
+curl_setopt( $ch, CURLOPT_FOLLOWLOCATION, 1);
+curl_setopt( $ch, CURLOPT_HEADER, 0);
+curl_setopt( $ch, CURLOPT_RETURNTRANSFER, 1);
+
+$response = curl_exec( $ch );
 
 //file_put_contents('history.php', $_POST['datetime'] . 'через Яндекс.Деньги на сумму: '. $_POST['amount']. 'Почта'. $_POST['label'] .PHP_EOL, FILE_APPEND);
 ?>
