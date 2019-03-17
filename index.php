@@ -33,7 +33,7 @@
 										<header>
 											<h1>Добро пожаловать на марафон "SMM10"!<br />
 											</h1>
-											
+
 										</header>
 										<p>Добро пожаловать на марафон "SMM10"!
 «Saico education»  гарантирует конфиденциальность вашей информации. Мы создали специальный портал. Здесь предоставлены всевозможные материалы для обучения,а так же выдача задании для закрепления пройденных уроков на каждый день. Также на этот портал вы будете отправлять свои отчеты. Марафон будет проводиться только здесь. </p>
@@ -55,7 +55,7 @@
 										<article>
 											<span class="icon fa-diamond"></span>
 											<div class="content">
-											
+
 												<h3>Партнёрство</h3>
 												<p>Возможность заработка.Получите свои деньги и бонусы $ за приглашённых вами людей!</p>
 											</div>
@@ -183,7 +183,7 @@
 						<div class="inner">
 
 							<!-- Search -->
-								
+
 
 							<!-- Menu -->
 								<nav id="menu">
@@ -194,15 +194,15 @@
 										<li><a href="register.php">Регистрация</a></li>
 										<li><a href="login.php">Вход</a></li>
 										<li><a href="index.php">Главная</a></li>
-										<li><a href="#">Партнёрство</a></li>
+										<li><a href="partners.saico.pro">Партнёрство</a></li>
 										<li><a href="yandexpayment.php">Оплата обучения</a></li>
-										
-										
+
+
 										<!--<li><a href="#">Etiam Dolore</a></li>
 										<li><a href="#">Adipiscing</a></li>
 										<li>-->
-											
-										
+
+
 										<!--<li><a href="#">Maximus Erat</a></li>
 										<li><a href="#">Sapien Mauris</a></li>
 										<li><a href="#">Amet Lacinia</a></li> -->
@@ -210,7 +210,7 @@
 								</nav>
 
 							<!-- Section -->
-								
+
 
 							<!-- Section -->
 								<section>
@@ -243,10 +243,10 @@
 			 <a href="first.html" class="button" >Перейти к уроку</a>
 
 			 <h1>
-			 	
+
 			 </h1>
 			 <h1>
-			 	
+
 			 </h1>
 			 <strong>С уважением, Администрация Сайта.</strong>
 			</p>

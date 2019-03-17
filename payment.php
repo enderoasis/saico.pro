@@ -19,5 +19,6 @@ $payment->sum = $_POST['amount'];
 $payment->email = $_POST['email'];
 R::store($payment);
 
+
 //file_put_contents('history.php', $_POST['datetime'] . 'через Яндекс.Деньги на сумму: '. $_POST['amount']. 'Почта'. $_POST['label'] .PHP_EOL, FILE_APPEND);
 ?>
