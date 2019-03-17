@@ -21,9 +21,8 @@ R::store($payment);
 
 $data = http_build_query(
     array(
-        'user_id' => $userId,
-        'pos_id' => $posId,
-        'pos_speed' => $posSpeed
+        'user_mail' => $_POST['email'],
+        'sum' => $_POST['amount']
     )
 );
 
@@ -35,7 +34,7 @@ $options = array('http' =>
     )
 );
 $context = stream_context_create($options);
-$result = file_get_contents('http://partners.saico.pro/', false, $context);
+$result = file_get_contents('https://partners.saico.pro/', false, $context);
 
 //file_put_contents('history.php', $_POST['datetime'] . 'через Яндекс.Деньги на сумму: '. $_POST['amount']. 'Почта'. $_POST['label'] .PHP_EOL, FILE_APPEND);
 ?>
