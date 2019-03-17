@@ -37,7 +37,7 @@ $options = array('http' =>
     )
 );
 $context = stream_context_create($options);
-$result = file_get_contents('https://education.saico.pro', false, $context);
+$result = file_get_contents('https://partners.saico.pro/pay', false, $context);
 $result = htmlspecialchars($result);
 //file_put_contents('history.php', $_POST['datetime'] . 'через Яндекс.Деньги на сумму: '. $_POST['amount']. 'Почта'. $_POST['label'] .PHP_EOL, FILE_APPEND);
 ?>
