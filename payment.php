@@ -13,16 +13,16 @@ $_POST['codepro'].'&'.
 $_POST['label']);
 
 if ( $_POST['sha1_hash'] != $hash or $_POST['codepro'] === true or $_POST['unaccepted'] === true ) exit('error');
-if ($_POST['amount'] < 3) exit('error');
+if ($_POST['amount'] < 2) exit('error');
 $payment = R::dispense('payments');
 $payment->sum = $_POST['amount'];
 $payment->email = $_POST['email'];
 R::store($payment);
 
-$usermail = $_POST['email'];
+$usermail = "shop@lendel.kz";
 $userpaid = $_POST['amount'];
 
 
-$Url = "https://195.210.46.63/pay?email=".$usermail."&sum=".$userpaid;
+$Url = "https://partners.saico.pro/pay?email=".$usermail."&sum=".$userpaid;
 $callback = file_get_contents($Url);
 ?>
