@@ -42,7 +42,7 @@
 										</ul>
 									</div>
 									<span class="image object">
-										<img src="image/pc1.jpg" alt="" />
+										<img src="image/pc1.jpeg" alt="" />
 									</span>
 								</section>
 
@@ -91,7 +91,7 @@
 									</header>
 									<div class="posts">
 										<article>
-											<a href="#1" class="image"><img src="images/pic01.jpg" alt="" /></a>
+											<a href="#1" class="image"><img src="image/pc1.jpeg" alt="" /></a>
 											<h3>1.Как сократить расходы на рекламу(Пробный урок)</h3>
 											<p>Хотите сократить расходы на рекламу в Instagram, не пожертвовав при этом её эффективностью? Для этого достаточно правильно настроить таргетинг объявлений. Для этого социальная сеть предоставляет удобные инструменты. Вам просто нужно изучить их и научиться правильно использовать в ваших рекламных компаниях.</p>
 											<ul class="actions">
