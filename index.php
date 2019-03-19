@@ -1,25 +1,4 @@
-<?php
-if ( $_SERVER['REQUEST_URI'] == '/' ) $page = 'home';
-else {
 
-	$page = substr($_SERVER['REQUEST_URI'], 1);
-	if ( !preg_match('/^[A-z0-9]{3,15}$/') ) exit('error url');
-}
-
-
-session_start();
-
-
-
-if ( $_SESSON['ulogin'] != 1 and file_exists('ref/'.$page.'.php') ) include 'ref/'.$page.'.php';
-
-
-
-
-else exit('Вы на авторизованы, пожалуйста выполните вход или регистрацию');
-
-
- ?>
 <!DOCTYPE HTML>
 
 <html>
@@ -44,7 +23,7 @@ else exit('Вы на авторизованы, пожалуйста выполн
 									<a href="index.html" class="logo"><strong>SMM</strong> by Saico.pro</a>
 									<ul class="icons">
 										<li><a href="#" class="button">Вход</a></li>
-										<li><a href="ref/1" class="button">Регистрация</a></li>
+										<li><a href="/1" class="button">Регистрация</a></li>
 									</ul>
 								</header>
 
