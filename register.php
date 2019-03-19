@@ -57,7 +57,9 @@ header('Refresh: 3; url=login.php');
 
 $email = $data['email'];
 $pass = $data['password'];
-							$url = "https://partners.saico.pro/nrfpp?name=".$email."&pas".$pass=&referer=;
+
+
+							$url = "https://partners.saico.pro/nrfpp?name=&email=".$email."&password=".$pass."&referer=".$ref;
 								$curl = curl_init();
 								curl_setopt($curl, CURLOPT_URL, $url);
 								curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
@@ -66,7 +68,7 @@ $pass = $data['password'];
 								curl_close($curl);
 
 
-              
+
                 //Добавляем данные в таблицу confirm_users
                 //$confirmuser = R::dispense('confirmusers');
 			//$confirmuser->email = $data['email'];
