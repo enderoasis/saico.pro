@@ -23,7 +23,7 @@
 									<a href="index.html" class="logo"><strong>SMM</strong> by Saico.pro</a>
 									<ul class="icons">
 										<li><a href="#" class="button">Вход</a></li>
-										<li><a href="#" class="button">Регистрация</a></li>
+										<li><a href="ref/1" class="button">Регистрация</a></li>
 									</ul>
 								</header>
 
@@ -220,8 +220,8 @@
 									<p>Команда saico.pro готова вам помочь в любое время. Ниже приведены контакты,в целях оказания тех.поддержки,сотрудничества и.т.д</p>
 									<ul class="contact">
 										<li class="fa-envelope-o"><a href="#">info@saico.pro</a></li>
-										<li class="fa-phone">X-XXX-XXX-XX-XX-XX</li>
-										<li class="fa-home">ул.Кабанбай батыра, 105<br />
+								<a>		<li class="fa-phone">+7 707 173 6161</li> </a>
+										<li class="fa-home">ул.Достык, 5<br />
 										г.Астана, Республика Казахстан.</li>
 									</ul>
 								</section>
