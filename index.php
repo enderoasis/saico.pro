@@ -2,12 +2,23 @@
 $url = explode('/',strtolower(substr($_SERVER['REQUEST_URI'], 1)));
 
     switch($url[0]) {
-
-        case '1':{
-            include 'ref/1.php';
+        case '': { //Если пусто в адресе, то направляем на главную
+            include 'pages/main_page.php';
             break;
         }
-          }
+        case 'news':{
+            include 'pages/news_page.php';
+            break;
+        }
+        case 'buy':{
+            include 'pages/my_buy_page.php';
+            break;
+        }
+        case 'somepage':{
+            include 'pages/somepage.php';
+            break;
+        }
+    }
 
 
  ?>
