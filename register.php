@@ -101,7 +101,7 @@ $pass = $data['password'];
 
                     }
 
-				}}
+				}
 
 
 ?>
