@@ -3,7 +3,7 @@ $url = explode('/',strtolower(substr($_SERVER['REQUEST_URI'], 1)));
 
     switch($url[0]) {
         case '': { //Если пусто в адресе, то направляем на главную
-            include 'pages/register.php';
+            include 'pages/main_page.php';
             break;
         }
         case 'ref':{
