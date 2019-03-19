@@ -11,6 +11,13 @@ session_start();
 
 
 
+if ( $_SESSON['ulogin'] != 1 and file_exists('ref/'.$page.'.php') ) include 'ref/'.$page.'.php';
+
+
+
+
+else exit('Вы на авторизованы, пожалуйста выполните вход или регистрацию');
+
 
  ?>
 <!DOCTYPE HTML>
