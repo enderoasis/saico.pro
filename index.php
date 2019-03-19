@@ -44,7 +44,7 @@ else if ( $_SESSON['ulogin'] != 1 and file_exists('guest/'.$page.'.php') ) inclu
 								<header id="header">
 									<a href="index.html" class="logo"><strong>SMM</strong> by Saico.pro</a>
 									<ul class="icons">
-										<li><a href="#" class="button">Вход</a></li>
+										<li><a href="/login" class="button">Вход</a></li>
 										<li><a href="ref/1" class="button">Регистрация</a></li>
 									</ul>
 								</header>
