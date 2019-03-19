@@ -219,7 +219,7 @@
 									</header>
 									<p>Команда saico.pro готова вам помочь в любое время. Ниже приведены контакты,в целях оказания тех.поддержки,сотрудничества и.т.д</p>
 									<ul class="contact">
-										<li class="fa-envelope-o"><a href="#">info@saico.pro</a></li>
+										<li class="fa-envelope-o"><a href="mailto:info@saico.pro">info@saico.pro</a></li>
 								<a>		<li class="fa-phone">+7 707 173 6161</li> </a>
 										<li class="fa-home">ул.Достык, 5<br />
 										г.Астана, Республика Казахстан.</li>
