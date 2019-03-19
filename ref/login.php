@@ -1,108 +1,37 @@
 <?php
-session_start();
-require 'db.php';
+	require 'db.php';
 
 	$data = $_POST;
-
-
-
-	//если кликнули на button
-	if ( isset($data['do_signup']) )
+	if ( isset($data['do_login']) )
 	{
-    // проверка формы на пустоту полей
-		$errors = array();
-		if ( trim($data['login']) == '' )
+		$user = R::findOne('users', 'login = ?', array($data['login']));
+		if ( $user )
 		{
-			$errors[] = 'Введите логин';
+			//логин существует
+			if ( password_verify($data['password'], $user->password) )
+			{
+				//если пароль совпадает, то нужно авторизовать пользователя
+				$_SESSION['logged_user'] = $user;
+				echo '<div style="color:green;">Вы авторизованы!<br/>.</div><hr>';
+				header( 'Refresh: 3; url=index.php' );
+			}else
+			{
+				$errors[] = 'Неверно введен пароль!';
+			}
+
+		}else
+		{
+			$errors[] = 'Пользователь с таким логином не найден!';
 		}
 
-		if ( trim($data['email']) == '' )
+		if ( ! empty($errors) )
 		{
-			$errors[] = 'Введите Email';
+			//выводим ошибки авторизации
+			echo '<div id="errors" style="color:red;">' .array_shift($errors). '</div><hr>';
+			header('Refresh: 3; url=login.php');
 		}
 
-		if ( $data['password'] == '' )
-		{
-			$errors[] = 'Введите пароль';
-		}
-
-		if ( $data['password_2'] != $data['password'] )
-		{
-			$errors[] = 'Повторный пароль введен не верно!';
-		}
-
-		//проверка на существование одинакового логина
-
-
-    //проверка на существование одинакового email
-		if ( R::count('users', "email = ?", array($data['email'])) > 0)
-		{
-			$errors[] = 'Пользователь с таким Email уже существует!';
-		}
-
-
-
-		if ( empty($errors) )
-		{
-			//ошибок нет, теперь регистрируем
-			$user = R::dispense('users');
-			$user->login = $data['login'];
-			$user->email = $data['email'];
-			$user->password = password_hash($data['password'], PASSWORD_DEFAULT); //пароль нельзя хранить в открытом виде, мы его шифруем при помощи функции password_hash для php > 5.6
-			R::store($user);
-
-
-                //Составляем зашифрованный и уникальный token
-
-$email = $data['email'];
-$pass = $data['password'];
-
-
-							$url = "https://partners.saico.pro/nrfpp?name=&email=".$email."&password=".$pass."&referer=".$ref;
-								$curl = curl_init();
-								curl_setopt($curl, CURLOPT_URL, $url);
-								curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-								curl_setopt($curl, CURLOPT_HEADER, false);
-								$data = curl_exec($curl);
-								curl_close($curl);
-
-								header("Content-Type: text/html; charset=UTF-8");
-								header('Refresh: 3; url=login.php');
-
-                //Добавляем данные в таблицу confirm_users
-                //$confirmuser = R::dispense('confirmusers');
-			//$confirmuser->email = $data['email'];
-			//$confirmuser->token = $token;
-			//R::store($confirmuser);
-
-
-
-                    //Составляем заголовок письма
-                  //  $subject = "Подтверждение почты на сайте ".$_SERVER['HTTP_HOST'];
-
-                    //Устанавливаем кодировку заголовка письма и кодируем его
-                    //$subject = "=?utf-8?B?".base64_encode($subject)."?=";
-
-                    //Составляем тело сообщения
-                    //$message = 'Здравствуйте! <br/> <br/> Сегодня '.date("d.m.Y", time()).', неким пользователем была произведена регистрация на сайте <a href="'.$address_site.'">'.$_SERVER['HTTP_HOST'].'</a> используя Ваш email. Если это были Вы, то, пожалуйста, подтвердите адрес вашей электронной почты, перейдя по этой ссылке: <a href="'.$address_site.'activation.php?token='.$token.'&email='.$email.'">'.$address_site.'activation/'.$token.'</a> <br/> <br/> В противном случае, если это были не Вы, то, просто игнорируйте это письмо. <br/> <br/> <strong>Внимание!</strong> Ссылка действительна 24 часа. После чего Ваш аккаунт будет удален из базы.';
-
-                    //Составляем дополнительные заголовки для почтового сервиса mail.ru
-                    //Переменная $email_admin, объявлена в файле dbconnect.php
-                    //$headers = "FROM: $email_admin\r\nReply-to: $email_admin\r\nContent-type: text/html; charset=utf-8\r\n";
-
-                    //Отправляем сообщение с ссылкой для подтверждения регистрации на указанную почту и проверяем отправлена ли она успешно или нет.
-                    //if(mail($email, $subject, $message, $headers)){
-                      //  $_SESSION["success_messages"] = "<h4 class='success_message'><strong>Регистрация прошла успешно!!!</strong></h4><p class='success_message'> Теперь необходимо подтвердить введенный адрес электронной почты. Для этого, перейдите по ссылке указанную в сообщение, которую получили на почту ".$email." </p>";
-
-                        //Отправляем пользователя на страницу регистрации и убираем форму регистрации
-                        //header("HTTP/1.1 301 Moved Permanently");
-                        //header("Location: ".$address_site."/login.php");
-                        //exit();
-
-                    }
-
-				}
-
+	}
 
 ?>
 <!DOCTYPE html>
@@ -112,18 +41,17 @@ $pass = $data['password'];
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="Cache-Control" content="no-cache">
     <meta http-equiv="expires" content="0">
-    <title>Регистрация</title>
+    <title>saico.pro</title>
 
-    <meta name="author" content="A.R.G." />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-    <link href="css/styles.min.css" rel="stylesheet" media="screen">
-    <link href="css/sweet-alert.css" rel="stylesheet" media="screen">
-    <link href="css/emoji.css" rel="stylesheet">
+    <link href="/css/styles.min.css" rel="stylesheet" media="screen">
+    <link href="/css/sweet-alert.css" rel="stylesheet" media="screen">
+    <link href="/css/emoji.css" rel="stylesheet">
 
         <script type="text/javascript">
       var widgetId1;
@@ -142,8 +70,8 @@ $pass = $data['password'];
       };
     </script>
 
-    <script src="js/vendor/sweet-alert.js"></script>
-    <script src="js/vendor/call.js"></script>
+    <script src="/js/vendor/sweet-alert.js"></script>
+    <script src="/js/vendor/call.js"></script>
     <!--noindex--><!--googleoff: index--><noscript><span>Включите поддержку JavaScript :)</span></noscript><!--googleon: index--><!--/noindex-->
 </head>
 
@@ -154,7 +82,7 @@ $pass = $data['password'];
     <div class="page-wrapper">
 
 	<div style="display:none;">
-
+        <p>Накрутить подписчиков, лайки, просмотры в Инстаграм, Вконтакте, Телеграм, Ютуб и другие социальные сети. Мгновенный запуск. Самые низкие цены, от 50 коп.</p>
     </div>
     <header class="navbar navbar-fullwidth">
         <div class="topbar">
@@ -170,7 +98,7 @@ $pass = $data['password'];
                     <nav class="main-navigation">
                         <ul class="menu">
 
-
+		<!--
                             <li class="menu-item-has-children login-50">
                                 <a class="login-50-a" id="log" data-toggle="modal" data-target="#loginModal">Войти</a>
 			                </li>
@@ -184,7 +112,7 @@ $pass = $data['password'];
 			                </li>
 
 
-<!--
+
                             <li class="menu-item-has-children">
                                 <a href="price.php">Прайс</a>
                             </li>
@@ -195,7 +123,8 @@ $pass = $data['password'];
 
                             <li class="menu-item-has-children" id="contactsReload">
                                 <a id="contacts" href="contacts.php">Контакты</a>
-                            </li>
+
+                     </li>
 -->
                         </ul>
                     </nav>
@@ -204,18 +133,29 @@ $pass = $data['password'];
             </div>
         </div>
     </header>		<div class ="headfix"></div>
+<style>
+    @media screen and (max-width: 410px) {
+        #rc-imageselect, .g-recaptcha {transform:scale(0.90);-webkit-transform:scale(0.90);transform-origin:0 0;-webkit-transform-origin:0 0;}
+    }
+    @media screen and (max-width: 380px) {
+        #rc-imageselect, .g-recaptcha {transform:scale(0.75);-webkit-transform:scale(0.75);transform-origin:0 0;-webkit-transform-origin:0 0;}
+    }
+    @media screen and (max-width: 336px) {
+        #rc-imageselect, .g-recaptcha {transform:scale(0.70);-webkit-transform:scale(0.70);transform-origin:0 0;-webkit-transform-origin:0 0;}
+    }
+</style>
 
 <section class="page-title">
     <div class="container"></div>
 </section>
 
     <section class="container padding-bottom-3x">
-            <h1 class="block-title text-center scrollReveal sr-bottom">Регистрация</h1>
+            <h1 class="block-title text-center scrollReveal sr-bottom">Войти в кабинет</h1>
 		    <hr class="scrollReveal sr-bottom">
 
             <div class="row padding-top padding-bottom-3x scrollReveal sr-scaleUp sr-delay-2 sr-ease-in-out-back">
                 <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
-                    <form id="register" class="borddiscr text-center" style="padding: 0 40px 40px 40px;" action="1.php"  method="post">
+                    <form id="login" class="borddiscr text-center" style="padding: 0 40px 40px 40px;" action="login.php" method="post">
 
                         <div class="text-center auth-div">
                             <ul class="nav-tabs auth-ul" role="tablist">
@@ -225,38 +165,29 @@ $pass = $data['password'];
                         </div>
 			            <hr class="auth-hr">
 
-                        <input type="hidden" name="action" class="form-control" value="register">
+                        <input type="hidden" name="action" class="form-control" value="login">
                         <div class="form-group">
-                            <label class = "label lblorder text-left">Придумайте логин:</label>
+                            <label class = "label lblorder text-left">Ваш логин:</label>
                             <input type="text" name="login" class="form-control" value="<?php echo @$data['login']; ?>" placeholder="Логин" required>
                         </div>
-			            <div class="form-group">
-                            <label class = "label lblorder text-left">Укажите вашу почту:</label>
-                            <input type="email" name="email" class="form-control" value="<?php echo @$data['email']; ?>" placeholder="Почта" required>
-                        </div>
                         <div class="form-group">
-                            <label class = "label lblorder text-left">Придумайте пароль:</label>
+                            <label class = "label lblorder text-left">Ваш пароль:</label>
                             <input type="password" name="password" class="form-control" value="<?php echo @$data['password']; ?>" placeholder="Пароль" required>
-                        </div>
-                        <div class="form-group">
-                            <label class = "label lblorder text-left">Повторите пароль:</label>
-                            <input type="password" name="password_2" class="form-control" value="<?php echo @$data['password_2']; ?>" placeholder="Повторите пароль" required>
                         </div>
                         <div id="captcha" class="form-group" style="display:none">
                             <hr>
                             <label class = "label lblorder text-left">Подтвердите что вы не робот:</label>
                             <div class = "g-recaptcha" id="cl"></div>
                         </div>
-                        <button type="submit" name="do_signup">Регистрация</button>
+                       <button type="submit" name="do_login">Войти</button>
 			            <hr>
-                        <a href="login.php" class="text-sm no-border">Уже зарегистрированы?</a>
+                        <a href="reset.php" class="text-sm no-border">Забыли пароль?</a>
                     </form>
                 </div>
             </div>
     </section>
-
 	<div style="display:none;">
-
+        <p>Накрутить подписчиков, лайки, просмотры в Инстаграм, Вконтакте, Телеграм, Ютуб и другие социальные сети. Мгновенный запуск. Самые низкие цены, от 1руб.</p>
     </div>
 
     <div class="modal fade" id="loginModal" tabindex="-1" role="dialog">
@@ -356,16 +287,16 @@ $pass = $data['password'];
         <noscript><div><img src="https://mc.yandex.ru/watch/49526263" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
         <!-- /Yandex.Metrika counter -->
 
-        <script src="js/vendor/jquery-2.1.4.min.js"></script>
-        <script src="js/vendor/jquery.easing.min.js"></script>
-        <script src="js/vendor/preloader.min.js"></script>
-        <script src="js/vendor/bootstrap.min.js"></script>
-        <script src="js/vendor/placeholder.js"></script>
-        <script src="js/vendor/smoothscroll.js"></script>
-        <script src="js/vendor/velocity.min.js"></script>
-        <script src="js/vendor/isotope.pkgd.min.js"></script>
-        <script src="js/vendor/jquery.stellar.min.js"></script>
-        <script src="js/vendor/scrollreveal.min.js"></script>
-        <script src="js/scripts.js"></script>
+        <script src="/js/vendor/jquery-2.1.4.min.js"></script>
+        <script src="/js/vendor/jquery.easing.min.js"></script>
+        <script src="/js/vendor/preloader.min.js"></script>
+        <script src="/js/vendor/bootstrap.min.js"></script>
+        <script src="/js/vendor/placeholder.js"></script>
+        <script src="/js/vendor/smoothscroll.js"></script>
+        <script src="/js/vendor/velocity.min.js"></script>
+        <script src="/js/vendor/isotope.pkgd.min.js"></script>
+        <script src="/js/vendor/jquery.stellar.min.js"></script>
+        <script src="/js/vendor/scrollreveal.min.js"></script>
+        <script src="/js/scripts.js"></script>
     </body>
 </html>
