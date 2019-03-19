@@ -1,23 +1,24 @@
 <?php
-if ( $_SERVER['REQUEST_URI'] == '/' ) $page = 'home';
-else {
+$url = explode('/',strtolower(substr($_SERVER['REQUEST_URI'], 1)));
 
-	$page = substr($_SERVER['REQUEST_URI'], 1);
-	if ( !preg_match('/^[A-z0-9]{3,15}$/') ) exit('error url');
-}
-
-
-session_start();
-
-
-
-if ( file_exists('all/'.$page.'.php') ) include 'all/'.$page.'.php';
-
-else if ( $_SESSON['ulogin'] == 1 and file_exists('auth/'.$page.'.php') ) include 'auth/'.$page.'.php';
-
-else if ( $_SESSON['ulogin'] != 1 and file_exists('guest/'.$page.'.php') ) include 'guest/'.$page.'.php';
-
-
+    switch($url[0]) {
+        case '': { //Если пусто в адресе, то направляем на главную
+            include 'pages/register.php';
+            break;
+        }
+        case 'ref/1':{
+            include 'pages/register.php';
+            break;
+        }
+        case '/ref/1':{
+            include 'pages/register.php';
+            break;
+        }
+        case '1':{
+            include 'pages/register.php';
+            break;
+        }
+    }
 
 
  ?>
