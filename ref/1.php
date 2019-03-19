@@ -121,9 +121,9 @@ $pass = $data['password'];
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-    <link href="css/styles.min.css" rel="stylesheet" media="screen">
-    <link href="css/sweet-alert.css" rel="stylesheet" media="screen">
-    <link href="css/emoji.css" rel="stylesheet">
+    <link href="/css/styles.min.css" rel="stylesheet" media="screen">
+    <link href="/css/sweet-alert.css" rel="stylesheet" media="screen">
+    <link href="/css/emoji.css" rel="stylesheet">
 
         <script type="text/javascript">
       var widgetId1;
@@ -142,8 +142,8 @@ $pass = $data['password'];
       };
     </script>
 
-    <script src="js/vendor/sweet-alert.js"></script>
-    <script src="js/vendor/call.js"></script>
+    <script src="/js/vendor/sweet-alert.js"></script>
+    <script src="/js/vendor/call.js"></script>
     <!--noindex--><!--googleoff: index--><noscript><span>Включите поддержку JavaScript :)</span></noscript><!--googleon: index--><!--/noindex-->
 </head>
 
@@ -215,12 +215,12 @@ $pass = $data['password'];
 
             <div class="row padding-top padding-bottom-3x scrollReveal sr-scaleUp sr-delay-2 sr-ease-in-out-back">
                 <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
-                    <form id="register" class="borddiscr text-center" style="padding: 0 40px 40px 40px;" action="1.php"  method="post">
+                    <form id="register" class="borddiscr text-center" style="padding: 0 40px 40px 40px;" action="register.php"  method="post">
 
                         <div class="text-center auth-div">
                             <ul class="nav-tabs auth-ul" role="tablist">
                                 <li class="auth-li" style="border-right: 1px solid #ececec;"><a class="auth-a" href="login.php">Войти</a></li>
-                                <li class="auth-li"><a class="auth-a" href="1.php">Регистрация</a></li>
+                                <li class="auth-li"><a class="auth-a" href="register.php">Регистрация</a></li>
                             </ul>
                         </div>
 			            <hr class="auth-hr">
@@ -356,16 +356,16 @@ $pass = $data['password'];
         <noscript><div><img src="https://mc.yandex.ru/watch/49526263" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
         <!-- /Yandex.Metrika counter -->
 
-        <script src="js/vendor/jquery-2.1.4.min.js"></script>
-        <script src="js/vendor/jquery.easing.min.js"></script>
-        <script src="js/vendor/preloader.min.js"></script>
-        <script src="js/vendor/bootstrap.min.js"></script>
-        <script src="js/vendor/placeholder.js"></script>
-        <script src="js/vendor/smoothscroll.js"></script>
-        <script src="js/vendor/velocity.min.js"></script>
-        <script src="js/vendor/isotope.pkgd.min.js"></script>
-        <script src="js/vendor/jquery.stellar.min.js"></script>
-        <script src="js/vendor/scrollreveal.min.js"></script>
-        <script src="js/scripts.js"></script>
+        <script src="/js/vendor/jquery-2.1.4.min.js"></script>
+        <script src="/js/vendor/jquery.easing.min.js"></script>
+        <script src="/js/vendor/preloader.min.js"></script>
+        <script src="/js/vendor/bootstrap.min.js"></script>
+        <script src="/js/vendor/placeholder.js"></script>
+        <script src="/js/vendor/smoothscroll.js"></script>
+        <script src="/js/vendor/velocity.min.js"></script>
+        <script src="/js/vendor/isotope.pkgd.min.js"></script>
+        <script src="/js/vendor/jquery.stellar.min.js"></script>
+        <script src="/js/vendor/scrollreveal.min.js"></script>
+        <script src="/js/scripts.js"></script>
     </body>
 </html>
