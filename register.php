@@ -51,8 +51,7 @@ require 'db.php';
 			$user->password = password_hash($data['password'], PASSWORD_DEFAULT); //пароль нельзя хранить в открытом виде, мы его шифруем при помощи функции password_hash для php > 5.6
 			R::store($user);
 
-header("Content-Type: text/html; charset=UTF-8");
-header('Refresh: 3; url=login.php');
+
                 //Составляем зашифрованный и уникальный token
 
 $email = $data['email'];
@@ -67,7 +66,8 @@ $pass = $data['password'];
 								$data = curl_exec($curl);
 								curl_close($curl);
 
-
+								header("Content-Type: text/html; charset=UTF-8");
+								header('Refresh: 3; url=login.php');
 
                 //Добавляем данные в таблицу confirm_users
                 //$confirmuser = R::dispense('confirmusers');
@@ -78,26 +78,26 @@ $pass = $data['password'];
 
 
                     //Составляем заголовок письма
-                    $subject = "Подтверждение почты на сайте ".$_SERVER['HTTP_HOST'];
+                  //  $subject = "Подтверждение почты на сайте ".$_SERVER['HTTP_HOST'];
 
                     //Устанавливаем кодировку заголовка письма и кодируем его
-                    $subject = "=?utf-8?B?".base64_encode($subject)."?=";
+                    //$subject = "=?utf-8?B?".base64_encode($subject)."?=";
 
                     //Составляем тело сообщения
-                    $message = 'Здравствуйте! <br/> <br/> Сегодня '.date("d.m.Y", time()).', неким пользователем была произведена регистрация на сайте <a href="'.$address_site.'">'.$_SERVER['HTTP_HOST'].'</a> используя Ваш email. Если это были Вы, то, пожалуйста, подтвердите адрес вашей электронной почты, перейдя по этой ссылке: <a href="'.$address_site.'activation.php?token='.$token.'&email='.$email.'">'.$address_site.'activation/'.$token.'</a> <br/> <br/> В противном случае, если это были не Вы, то, просто игнорируйте это письмо. <br/> <br/> <strong>Внимание!</strong> Ссылка действительна 24 часа. После чего Ваш аккаунт будет удален из базы.';
+                    //$message = 'Здравствуйте! <br/> <br/> Сегодня '.date("d.m.Y", time()).', неким пользователем была произведена регистрация на сайте <a href="'.$address_site.'">'.$_SERVER['HTTP_HOST'].'</a> используя Ваш email. Если это были Вы, то, пожалуйста, подтвердите адрес вашей электронной почты, перейдя по этой ссылке: <a href="'.$address_site.'activation.php?token='.$token.'&email='.$email.'">'.$address_site.'activation/'.$token.'</a> <br/> <br/> В противном случае, если это были не Вы, то, просто игнорируйте это письмо. <br/> <br/> <strong>Внимание!</strong> Ссылка действительна 24 часа. После чего Ваш аккаунт будет удален из базы.';
 
                     //Составляем дополнительные заголовки для почтового сервиса mail.ru
                     //Переменная $email_admin, объявлена в файле dbconnect.php
-                    $headers = "FROM: $email_admin\r\nReply-to: $email_admin\r\nContent-type: text/html; charset=utf-8\r\n";
+                    //$headers = "FROM: $email_admin\r\nReply-to: $email_admin\r\nContent-type: text/html; charset=utf-8\r\n";
 
                     //Отправляем сообщение с ссылкой для подтверждения регистрации на указанную почту и проверяем отправлена ли она успешно или нет.
-                    if(mail($email, $subject, $message, $headers)){
-                        $_SESSION["success_messages"] = "<h4 class='success_message'><strong>Регистрация прошла успешно!!!</strong></h4><p class='success_message'> Теперь необходимо подтвердить введенный адрес электронной почты. Для этого, перейдите по ссылке указанную в сообщение, которую получили на почту ".$email." </p>";
+                    //if(mail($email, $subject, $message, $headers)){
+                      //  $_SESSION["success_messages"] = "<h4 class='success_message'><strong>Регистрация прошла успешно!!!</strong></h4><p class='success_message'> Теперь необходимо подтвердить введенный адрес электронной почты. Для этого, перейдите по ссылке указанную в сообщение, которую получили на почту ".$email." </p>";
 
                         //Отправляем пользователя на страницу регистрации и убираем форму регистрации
-                        header("HTTP/1.1 301 Moved Permanently");
-                        header("Location: ".$address_site."/login.php");
-                        exit();
+                        //header("HTTP/1.1 301 Moved Permanently");
+                        //header("Location: ".$address_site."/login.php");
+                        //exit();
 
                     }
 
