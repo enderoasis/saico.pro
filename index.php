@@ -1,15 +1,13 @@
 <?php
-if ( $_SERVER['REQUEST_URI'] == '/' ) $page = 'home';
-else {
+$url = explode('/',strtolower(substr($_SERVER['REQUEST_URI'], 1)));
 
-	$page = substr($_SERVER['REQUEST_URI'], 1);
-	if ( !preg_match('/^[A-z0-9]{3,15}$/') ) exit('error url');
-}
+    switch($url[0]) {
 
-
-session_start();
-
-
+        case '1':{
+            include 'ref/1.php';
+            break;
+        }
+          }
 
 
  ?>
