@@ -6,16 +6,16 @@ $url = explode('/',strtolower(substr($_SERVER['REQUEST_URI'], 1)));
             include 'pages/register.php';
             break;
         }
-        case 'news':{
-            include 'pages/news_page.php';
+        case 'ref/1':{
+            include 'pages/register.php';
             break;
         }
-        case 'buy':{
-            include 'pages/my_buy_page.php';
+        case '/ref/1':{
+            include 'pages/register.php';
             break;
         }
-        case 'somepage':{
-            include 'pages/somepage.php';
+        case '1':{
+            include 'pages/register.php';
             break;
         }
     }
