@@ -23,7 +23,7 @@
 									<a href="index.html" class="logo"><strong>SMM</strong> by Saico.pro</a>
 									<ul class="icons">
 										<li><a href="#" class="button">Вход</a></li>
-										<li><a href="ref/1" class="button">Регистрация</a></li>
+										<li><a href="/1" class="button">Регистрация</a></li>
 									</ul>
 								</header>
 
