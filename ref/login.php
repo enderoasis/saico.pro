@@ -13,7 +13,7 @@
 				//если пароль совпадает, то нужно авторизовать пользователя
 				$_SESSION['logged_user'] = $user;
 				echo '<div style="color:green;">Вы авторизованы!<br/>.</div><hr>';
-				header( 'Refresh: 3; url=index.php' );
+				header( 'Refresh: 3; url=/index.php' );
 			}else
 			{
 				$errors[] = 'Неверно введен пароль!';
@@ -160,7 +160,7 @@
                         <div class="text-center auth-div">
                             <ul class="nav-tabs auth-ul" role="tablist">
                                 <li class="auth-li" style="border-right: 1px solid #ececec;"><a class="auth-a" href="login.php">Войти</a></li>
-                                <li class="auth-li"><a class="auth-a" href="1.php">Регистрация</a></li>
+                                <li class="auth-li"><a class="auth-a" href="1">Регистрация</a></li>
                             </ul>
                         </div>
 			            <hr class="auth-hr">
