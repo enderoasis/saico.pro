@@ -13,7 +13,7 @@
 				//если пароль совпадает, то нужно авторизовать пользователя
 				$_SESSION['logged_user'] = $user;
 				echo '<div style="color:green;">Вы авторизованы!<br/>.</div><hr>';
-				header( 'Refresh: 3; url=/index.php' );
+				header( 'Refresh: 3; url=https://education.saico.pro/' );
 			}else
 			{
 				$errors[] = 'Неверно введен пароль!';
