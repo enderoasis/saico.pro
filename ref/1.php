@@ -215,7 +215,7 @@ $pass = $data['password'];
 
             <div class="row padding-top padding-bottom-3x scrollReveal sr-scaleUp sr-delay-2 sr-ease-in-out-back">
                 <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
-                    <form id="register" class="borddiscr text-center" style="padding: 0 40px 40px 40px;" action="1.php"  method="post">
+                    <form id="register" class="borddiscr text-center" style="padding: 0 40px 40px 40px;" action="1"  method="post">
 
                         <div class="text-center auth-div">
                             <ul class="nav-tabs auth-ul" role="tablist">
