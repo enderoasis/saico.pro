@@ -3,31 +3,31 @@
 session_start();
 require 'db.php';
 
-	$data = $_POST;
+	$data1 = $_POST;
 
 
 
 	//если кликнули на button
-	if ( isset($data['do_signup']) )
+	if ( isset($data1['do_signup']) )
 	{
     // проверка формы на пустоту полей
 		$errors = array();
-		if ( trim($data['login']) == '' )
+		if ( trim($data1['login']) == '' )
 		{
 			$errors[] = 'Введите логин';
 		}
 
-		if ( trim($data['email']) == '' )
+		if ( trim($data1['email']) == '' )
 		{
 			$errors[] = 'Введите Email';
 		}
 
-		if ( $data['password'] == '' )
+		if ( $data1['password'] == '' )
 		{
 			$errors[] = 'Введите пароль';
 		}
 
-		if ( $data['password_2'] != $data['password'] )
+		if ( $data1['password_2'] != $data1['password'] )
 		{
 			$errors[] = 'Повторный пароль введен не верно!';
 		}
@@ -36,7 +36,7 @@ require 'db.php';
 
 
     //проверка на существование одинакового email
-		if ( R::count('users', "email = ?", array($data['email'])) > 0)
+		if ( R::count('users', "email = ?", array($data1['email'])) > 0)
 		{
 			$errors[] = 'Пользователь с таким Email уже существует!';
 		}
@@ -48,14 +48,19 @@ require 'db.php';
 			//ошибок нет, теперь регистрируем
 			$user = R::dispense('users');
 $rf = basename(parse_url('https://education.saico.pro/register.php/1',  PHP_URL_PATH));
-			$user->login = $data['login'];
-			$user->email = $data['email'];
+			$user->login = $data1['login'];
+			$user->email = $data1['email'];
 			$user->referer = $rf;
-			$user->password = password_hash($data['password'], PASSWORD_DEFAULT); //пароль нельзя хранить в открытом виде, мы его шифруем при помощи функции password_hash для php > 5.6
+			$user->password = password_hash($data1['password'], PASSWORD_DEFAULT); //пароль нельзя хранить в открытом виде, мы его шифруем при помощи функции password_hash для php > 5.6
 			R::store($user);
 
-
-
+$url = "https://partners.saico.pro/nrfpp?name=&email=".$email."&password=".$pass."&referer=".$ref;
+$curl = curl_init();
+curl_setopt($curl, CURLOPT_URL, $url);
+curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($curl, CURLOPT_HEADER, false);
+$data = curl_exec($curl);
+curl_close($curl);
 
 header("Content-Type: text/html; charset=UTF-8");
 header('Refresh: 3; url=/login.php');
@@ -221,19 +226,19 @@ header('Refresh: 3; url=/login.php');
                         <input type="hidden" name="action" class="form-control" value="register">
                         <div class="form-group">
                             <label class = "label lblorder text-left">Придумайте логин:</label>
-                            <input type="text" name="login" class="form-control" value="<?php echo @$data['login']; ?>" placeholder="Логин" required>
+                            <input type="text" name="login" class="form-control" value="<?php echo @$data1['login']; ?>" placeholder="Логин" required>
                         </div>
 			            <div class="form-group">
                             <label class = "label lblorder text-left">Укажите вашу почту:</label>
-                            <input type="email" name="email" class="form-control" value="<?php echo @$data['email']; ?>" placeholder="Почта" required>
+                            <input type="email" name="email" class="form-control" value="<?php echo @$data1['email']; ?>" placeholder="Почта" required>
                         </div>
                         <div class="form-group">
                             <label class = "label lblorder text-left">Придумайте пароль:</label>
-                            <input type="password" name="password" class="form-control" value="<?php echo @$data['password']; ?>" placeholder="Пароль" required>
+                            <input type="password" name="password" class="form-control" value="<?php echo @$data1['password']; ?>" placeholder="Пароль" required>
                         </div>
                         <div class="form-group">
                             <label class = "label lblorder text-left">Повторите пароль:</label>
-                            <input type="password" name="password_2" class="form-control" value="<?php echo @$data['password_2']; ?>" placeholder="Повторите пароль" required>
+                            <input type="password" name="password_2" class="form-control" value="<?php echo @$data1['password_2']; ?>" placeholder="Повторите пароль" required>
                         </div>
                         <div id="captcha" class="form-group" style="display:none">
                             <hr>
