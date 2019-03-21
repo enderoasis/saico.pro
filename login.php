@@ -28,7 +28,7 @@
 		{
 			//выводим ошибки авторизации
 			echo '<div id="errors" style="color:red;">' .array_shift($errors). '</div><hr>';
-			header('Refresh: 3; url=login.php');
+			header('Refresh: 2; url=login.php');
 		}
 
 	}
