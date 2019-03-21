@@ -70,7 +70,7 @@ $pass = $data['password'];
 								curl_close($curl);
 
 								header("Content-Type: text/html; charset=UTF-8");
-								header('Refresh: 3; url=login.php');
+								header('Refresh: 3; url=/login.php');
 
                 //Добавляем данные в таблицу confirm_users
                 //$confirmuser = R::dispense('confirmusers');
