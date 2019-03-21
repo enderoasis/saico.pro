@@ -44,10 +44,9 @@ require 'db.php';
 
 		if ( empty($errors) )
 		{
-
 			//ошибок нет, теперь регистрируем
-			$rf = basename(parse_url('https://education.saico.pro/register.php/1',  PHP_URL_PATH));
 			$user = R::dispense('users');
+$rf = basename(parse_url('https://education.saico.pro/register.php/1',  PHP_URL_PATH));
 			$user->login = $data['login'];
 			$user->email = $data['email'];
 			$user->referer = $rf;
@@ -55,11 +54,51 @@ require 'db.php';
 			R::store($user);
 
 
-          
 
 
-								header("Content-Type: text/html; charset=UTF-8");
-								header('Refresh: 3; url=/login.php');
+header("Content-Type: text/html; charset=UTF-8");
+header('Refresh: 3; url=/login.php');
+
+
+
+
+								//Составляем зашифрованный и уникальный token
+                //$token=md5($email.time());
+
+                //Добавляем данные в таблицу confirm_users
+                //$confirmuser = R::dispense('confirmusers');
+			//$confirmuser->email = $data['email'];
+			//$confirmuser->token = $token;
+			//R::store($confirmuser);
+
+
+
+                    //Составляем заголовок письма
+                  //  $subject = "Подтверждение почты на сайте ".$_SERVER['HTTP_HOST'];
+
+                    //Устанавливаем кодировку заголовка письма и кодируем его
+                    //$subject = "=?utf-8?B?".base64_encode($subject)."?=";
+
+                    //Составляем тело сообщения
+                    //$message = 'Здравствуйте! <br/> <br/> Сегодня '.date("d.m.Y", time()).', неким пользователем была произведена регистрация на сайте <a href="'.$address_site.'">'.$_SERVER['HTTP_HOST'].'</a> используя Ваш email. Если это были Вы, то, пожалуйста, подтвердите адрес вашей электронной почты, перейдя по этой ссылке: <a href="'.$address_site.'activation.php?token='.$token.'&email='.$email.'">'.$address_site.'activation/'.$token.'</a> <br/> <br/> В противном случае, если это были не Вы, то, просто игнорируйте это письмо. <br/> <br/> <strong>Внимание!</strong> Ссылка действительна 24 часа. После чего Ваш аккаунт будет удален из базы.';
+
+                    //Составляем дополнительные заголовки для почтового сервиса mail.ru
+                    //Переменная $email_admin, объявлена в файле dbconnect.php
+                    //$headers = "FROM: $email_admin\r\nReply-to: $email_admin\r\nContent-type: text/html; charset=utf-8\r\n";
+
+                    //Отправляем сообщение с ссылкой для подтверждения регистрации на указанную почту и проверяем отправлена ли она успешно или нет.
+                    //if(mail($email, $subject, $message, $headers)){
+                      //  $_SESSION["success_messages"] = "<h4 class='success_message'><strong>Регистрация прошла успешно!!!</strong></h4><p class='success_message'> Теперь необходимо подтвердить введенный адрес электронной почты. Для этого, перейдите по ссылке указанную в сообщение, которую получили на почту ".$email." </p>";
+
+                        //Отправляем пользователя на страницу регистрации и убираем форму регистрации
+                        //header("HTTP/1.1 301 Moved Permanently");
+                        //header("Location: ".$address_site."/login.php");
+                        //exit();
+
+                    }
+
+				}
+
 
 ?>
 <!DOCTYPE html>
@@ -78,9 +117,9 @@ require 'db.php';
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-    <link href="/css/styles.min.css" rel="stylesheet" media="screen">
-    <link href="/css/sweet-alert.css" rel="stylesheet" media="screen">
-    <link href="/css/emoji.css" rel="stylesheet">
+    <link href="css/styles.min.css" rel="stylesheet" media="screen">
+    <link href="css/sweet-alert.css" rel="stylesheet" media="screen">
+    <link href="css/emoji.css" rel="stylesheet">
 
         <script type="text/javascript">
       var widgetId1;
@@ -99,8 +138,8 @@ require 'db.php';
       };
     </script>
 
-    <script src="/js/vendor/sweet-alert.js"></script>
-    <script src="/js/vendor/call.js"></script>
+    <script src="js/vendor/sweet-alert.js"></script>
+    <script src="js/vendor/call.js"></script>
     <!--noindex--><!--googleoff: index--><noscript><span>Включите поддержку JavaScript :)</span></noscript><!--googleon: index--><!--/noindex-->
 </head>
 
@@ -313,16 +352,16 @@ require 'db.php';
         <noscript><div><img src="https://mc.yandex.ru/watch/49526263" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
         <!-- /Yandex.Metrika counter -->
 
-        <script src="/js/vendor/jquery-2.1.4.min.js"></script>
-        <script src="/js/vendor/jquery.easing.min.js"></script>
-        <script src="/js/vendor/preloader.min.js"></script>
-        <script src="/js/vendor/bootstrap.min.js"></script>
-        <script src="/js/vendor/placeholder.js"></script>
-        <script src="/js/vendor/smoothscroll.js"></script>
-        <script src="/js/vendor/velocity.min.js"></script>
-        <script src="/js/vendor/isotope.pkgd.min.js"></script>
-        <script src="/js/vendor/jquery.stellar.min.js"></script>
-        <script src="/js/vendor/scrollreveal.min.js"></script>
-        <script src="/js/scripts.js"></script>
+        <script src="js/vendor/jquery-2.1.4.min.js"></script>
+        <script src="js/vendor/jquery.easing.min.js"></script>
+        <script src="js/vendor/preloader.min.js"></script>
+        <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="js/vendor/placeholder.js"></script>
+        <script src="js/vendor/smoothscroll.js"></script>
+        <script src="js/vendor/velocity.min.js"></script>
+        <script src="js/vendor/isotope.pkgd.min.js"></script>
+        <script src="js/vendor/jquery.stellar.min.js"></script>
+        <script src="js/vendor/scrollreveal.min.js"></script>
+        <script src="js/scripts.js"></script>
     </body>
 </html>
