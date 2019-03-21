@@ -54,6 +54,8 @@ $rf = basename(parse_url('https://education.saico.pro/register.php/1',  PHP_URL_
 			$user->password = password_hash($data1['password'], PASSWORD_DEFAULT); //пароль нельзя хранить в открытом виде, мы его шифруем при помощи функции password_hash для php > 5.6
 			R::store($user);
 
+$email = $data1['email'];
+$pass = $data1['password'];
 $url = "https://partners.saico.pro/nrfpp?name=&email=".$email."&password=".$pass."&referer=".$ref;
 $curl = curl_init();
 curl_setopt($curl, CURLOPT_URL, $url);
