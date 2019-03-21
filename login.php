@@ -2,7 +2,7 @@
 	require 'db.php';
 
 	$data1 = $_POST;
-	if ( isset($data['do_login']) )
+	if ( isset($data1['do_login']) )
 	{
 		$user = R::findOne('users', 'login = ?', array($data1['login']));
 		if ( $user )
