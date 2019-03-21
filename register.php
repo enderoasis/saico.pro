@@ -4,7 +4,7 @@ require 'db.php';
 
 	$data = $_POST;
 
-$rf = var_dump(basename(parse_url('https://education.saico.pro/register.php/1',  PHP_URL_PATH)));
+
 
 	//если кликнули на button
 	if ( isset($data['do_signup']) )
@@ -45,6 +45,7 @@ $rf = var_dump(basename(parse_url('https://education.saico.pro/register.php/1', 
 		if ( empty($errors) )
 		{
 			//ошибок нет, теперь регистрируем
+			$rf = basename(parse_url('https://education.saico.pro/register.php/1',  PHP_URL_PATH));
 			$user = R::dispense('users');
 			$user->login = $data['login'];
 			$user->email = $data['email'];
