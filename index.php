@@ -20,10 +20,10 @@
 
 							<!-- Header -->
 								<header id="header">
-									<a href="index.html" class="logo"><strong>SMM</strong> by Saico.pro</a>
+									<a href="index.php" class="logo"><strong>SMM</strong> by Saico.pro</a>
 									<ul class="icons">
-										<li><a href="#" class="button">Вход</a></li>
-										<li><a href="/ref/1.php" class="button">Регистрация</a></li>
+										<li><a href="login.php" class="button">Вход</a></li>
+										<li><a href="register.php" class="button">Регистрация</a></li>
 									</ul>
 								</header>
 
@@ -194,7 +194,7 @@
 										<li><a href="register.php">Регистрация</a></li>
 										<li><a href="login.php">Вход</a></li>
 										<li><a href="index.php">Главная</a></li>
-										<li><a href="partners.saico.pro">Партнёрство</a></li>
+										<li><a href="https://partners.saico.pro">Партнёрство</a></li>
 										<li><a href="yandexpayment.php">Оплата обучения</a></li>
 
 
@@ -220,7 +220,7 @@
 									<p>Команда saico.pro готова вам помочь в любое время. Ниже приведены контакты,в целях оказания тех.поддержки,сотрудничества и.т.д</p>
 									<ul class="contact">
 										<li class="fa-envelope-o"><a href="mailto:info@saico.pro">info@saico.pro</a></li>
-								<a>		<li class="fa-phone">+7 707 173 6161</li> </a>
+								<a class="fa-phone" href="tel:+77071736161"></a>
 										<li class="fa-home">ул.Достык, 5<br />
 										г.Астана, Республика Казахстан.</li>
 									</ul>

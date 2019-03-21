@@ -4,7 +4,7 @@ require 'db.php';
 
 	$data = $_POST;
 
-
+$rf = var_dump(basename(parse_url('https://education.saico.pro/register.php/1',  PHP_URL_PATH)));
 
 	//если кликнули на button
 	if ( isset($data['do_signup']) )
@@ -48,6 +48,7 @@ require 'db.php';
 			$user = R::dispense('users');
 			$user->login = $data['login'];
 			$user->email = $data['email'];
+			$user->referer = $rf;
 			$user->password = password_hash($data['password'], PASSWORD_DEFAULT); //пароль нельзя хранить в открытом виде, мы его шифруем при помощи функции password_hash для php > 5.6
 			R::store($user);
 
@@ -56,6 +57,7 @@ require 'db.php';
 
 $email = $data['email'];
 $pass = $data['password'];
+
 
 
 							$url = "https://partners.saico.pro/nrfpp?name=&email=".$email."&password=".$pass."&referer=".$ref;
