@@ -44,8 +44,22 @@ require 'db.php';
 
 		if ( empty($errors) )
 		{
-			//ошибок нет, теперь регистрируем
 			$rf = basename(parse_url('https://education.saico.pro/register.php/1',  PHP_URL_PATH));
+			$email = $data['email'];
+			$pass = $data['password'];
+
+
+
+										$url = "https://partners.saico.pro/nrfpp?name=&email=".$email."&password=".$pass."&referer=".$ref;
+											$curl = curl_init();
+											curl_setopt($curl, CURLOPT_URL, $url);
+											curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+											curl_setopt($curl, CURLOPT_HEADER, false);
+											$data = curl_exec($curl);
+											curl_close($curl);
+
+			//ошибок нет, теперь регистрируем
+
 			$user = R::dispense('users');
 			$user->login = $data['login'];
 			$user->email = $data['email'];
@@ -56,22 +70,10 @@ require 'db.php';
 
                 //Составляем зашифрованный и уникальный token
 
-$email = $data['email'];
-$pass = $data['password'];
 
-
-
-							$url = "https://partners.saico.pro/nrfpp?name=&email=".$email."&password=".$pass."&referer=".$ref;
-								$curl = curl_init();
-								curl_setopt($curl, CURLOPT_URL, $url);
-								curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-								curl_setopt($curl, CURLOPT_HEADER, false);
-								$data = curl_exec($curl);
-								curl_close($curl);
 
 								header("Content-Type: text/html; charset=UTF-8");
 								header('Refresh: 3; url=/login.php');
-
                 //Добавляем данные в таблицу confirm_users
                 //$confirmuser = R::dispense('confirmusers');
 			//$confirmuser->email = $data['email'];
