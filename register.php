@@ -63,7 +63,6 @@ header('Refresh: 3; url=login.php');
 <<<<<<< HEAD
 								header("Content-Type: text/html; charset=UTF-8");
 								header('Refresh: 3; url=/login.php');
-=======
 
 
 >>>>>>> parent of 6ab5a1b... Update register.php
