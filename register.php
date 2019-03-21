@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 require 'db.php';
 
@@ -59,7 +60,7 @@ $rf = basename(parse_url('https://education.saico.pro/register.php/1',  PHP_URL_
 header("Content-Type: text/html; charset=UTF-8");
 header('Refresh: 3; url=/login.php');
 
-
+}}
 
 
 								//Составляем зашифрованный и уникальный token
@@ -93,14 +94,10 @@ header('Refresh: 3; url=/login.php');
                         //Отправляем пользователя на страницу регистрации и убираем форму регистрации
                         //header("HTTP/1.1 301 Moved Permanently");
                         //header("Location: ".$address_site."/login.php");
-                        //exit();
-
-                    }
-
-				}
-
-
+                        //exit()
 ?>
+
+
 <!DOCTYPE html>
 <html>
 
@@ -117,9 +114,9 @@ header('Refresh: 3; url=/login.php');
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-    <link href="css/styles.min.css" rel="stylesheet" media="screen">
-    <link href="css/sweet-alert.css" rel="stylesheet" media="screen">
-    <link href="css/emoji.css" rel="stylesheet">
+    <link href="/css/styles.min.css" rel="stylesheet" media="screen">
+    <link href="/css/sweet-alert.css" rel="stylesheet" media="screen">
+    <link href="/css/emoji.css" rel="stylesheet">
 
         <script type="text/javascript">
       var widgetId1;
@@ -352,16 +349,16 @@ header('Refresh: 3; url=/login.php');
         <noscript><div><img src="https://mc.yandex.ru/watch/49526263" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
         <!-- /Yandex.Metrika counter -->
 
-        <script src="js/vendor/jquery-2.1.4.min.js"></script>
-        <script src="js/vendor/jquery.easing.min.js"></script>
-        <script src="js/vendor/preloader.min.js"></script>
-        <script src="js/vendor/bootstrap.min.js"></script>
-        <script src="js/vendor/placeholder.js"></script>
-        <script src="js/vendor/smoothscroll.js"></script>
-        <script src="js/vendor/velocity.min.js"></script>
-        <script src="js/vendor/isotope.pkgd.min.js"></script>
-        <script src="js/vendor/jquery.stellar.min.js"></script>
-        <script src="js/vendor/scrollreveal.min.js"></script>
-        <script src="js/scripts.js"></script>
+        <script src="/js/vendor/jquery-2.1.4.min.js"></script>
+        <script src="/js/vendor/jquery.easing.min.js"></script>
+        <script src="/js/vendor/preloader.min.js"></script>
+        <script src="/js/vendor/bootstrap.min.js"></script>
+        <script src="/js/vendor/placeholder.js"></script>
+        <script src="/js/vendor/smoothscroll.js"></script>
+        <script src="/js/vendor/velocity.min.js"></script>
+        <script src="/js/vendor/isotope.pkgd.min.js"></script>
+        <script src="/js/vendor/jquery.stellar.min.js"></script>
+        <script src="/js/vendor/scrollreveal.min.js"></script>
+        <script src="/js/scripts.js"></script>
     </body>
 </html>
