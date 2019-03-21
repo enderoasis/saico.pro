@@ -123,9 +123,9 @@ $pass = $data['password'];
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-    <link href="css/styles.min.css" rel="stylesheet" media="screen">
-    <link href="css/sweet-alert.css" rel="stylesheet" media="screen">
-    <link href="css/emoji.css" rel="stylesheet">
+    <link href="/css/styles.min.css" rel="stylesheet" media="screen">
+    <link href="/css/sweet-alert.css" rel="stylesheet" media="screen">
+    <link href="/css/emoji.css" rel="stylesheet">
 
         <script type="text/javascript">
       var widgetId1;
@@ -144,8 +144,8 @@ $pass = $data['password'];
       };
     </script>
 
-    <script src="js/vendor/sweet-alert.js"></script>
-    <script src="js/vendor/call.js"></script>
+    <script src="/js/vendor/sweet-alert.js"></script>
+    <script src="/js/vendor/call.js"></script>
     <!--noindex--><!--googleoff: index--><noscript><span>Включите поддержку JavaScript :)</span></noscript><!--googleon: index--><!--/noindex-->
 </head>
 
@@ -358,16 +358,16 @@ $pass = $data['password'];
         <noscript><div><img src="https://mc.yandex.ru/watch/49526263" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
         <!-- /Yandex.Metrika counter -->
 
-        <script src="js/vendor/jquery-2.1.4.min.js"></script>
-        <script src="js/vendor/jquery.easing.min.js"></script>
-        <script src="js/vendor/preloader.min.js"></script>
-        <script src="js/vendor/bootstrap.min.js"></script>
-        <script src="js/vendor/placeholder.js"></script>
-        <script src="js/vendor/smoothscroll.js"></script>
-        <script src="js/vendor/velocity.min.js"></script>
-        <script src="js/vendor/isotope.pkgd.min.js"></script>
-        <script src="js/vendor/jquery.stellar.min.js"></script>
-        <script src="js/vendor/scrollreveal.min.js"></script>
-        <script src="js/scripts.js"></script>
+        <script src="/js/vendor/jquery-2.1.4.min.js"></script>
+        <script src="/js/vendor/jquery.easing.min.js"></script>
+        <script src="/js/vendor/preloader.min.js"></script>
+        <script src="/js/vendor/bootstrap.min.js"></script>
+        <script src="/js/vendor/placeholder.js"></script>
+        <script src="/js/vendor/smoothscroll.js"></script>
+        <script src="/js/vendor/velocity.min.js"></script>
+        <script src="/js/vendor/isotope.pkgd.min.js"></script>
+        <script src="/js/vendor/jquery.stellar.min.js"></script>
+        <script src="/js/vendor/scrollreveal.min.js"></script>
+        <script src="/js/scripts.js"></script>
     </body>
 </html>
