@@ -1,14 +1,14 @@
 <?php
 	require 'db.php';
 
-	$data = $_POST;
+	$data1 = $_POST;
 	if ( isset($data['do_login']) )
 	{
-		$user = R::findOne('users', 'login = ?', array($data['login']));
+		$user = R::findOne('users', 'login = ?', array($data1['login']));
 		if ( $user )
 		{
 			//логин существует
-			if ( password_verify($data['password'], $user->password) )
+			if ( password_verify($data1['password'], $user->password) )
 			{
 				//если пароль совпадает, то нужно авторизовать пользователя
 				$_SESSION['logged_user'] = $user;
