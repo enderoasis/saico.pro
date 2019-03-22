@@ -42,7 +42,7 @@
     <meta http-equiv="Cache-Control" content="no-cache">
     <meta http-equiv="expires" content="0">
     <title>saico.pro</title>
-
+    <link rel="icon" href="https://partners.saico.pro/favicon.png">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
