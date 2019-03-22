@@ -66,7 +66,7 @@ $data = curl_exec($curl);
 curl_close($curl);
 
 header("Content-Type: text/html; charset=UTF-8");
-header('Refresh: 3; url=/login.php');
+header('Refresh: 3; url=/welcome.php');
 
 }}
 
