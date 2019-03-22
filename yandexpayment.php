@@ -19,8 +19,8 @@
 
 							<!-- Header -->
 								<header id="header">
-									<a href="index.html" class="logo"><strong>Обучение</strong> by Saico.pro</a>
-								
+									<a href="index.php" class="logo"><strong>Обучение</strong> by Saico.pro</a>
+
 								</header>
 
 							<!-- Content -->
