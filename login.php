@@ -8,6 +8,7 @@
 		if ( $payment )
 		{
 			//логин существует
+			$user = R::findOne('users');
 			if ( password_verify($data1['password'], $user->password) )
 			{
 				//если пароль совпадает, то нужно авторизовать пользователя
