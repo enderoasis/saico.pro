@@ -196,7 +196,7 @@
 										<li><a href="index.php">Главная</a></li>
 										<li><a href="https://partners.saico.pro">Партнёрство</a></li>
 										<li><a href="yandexpayment.php">Оплата обучения</a></li>
-										<li><a href="offerta.html">Оплата обучения</a></li>
+										<li><a href="offerta.html">Публичная оферта</a></li>
 
 										<!--<li><a href="#">Etiam Dolore</a></li>
 										<li><a href="#">Adipiscing</a></li>
