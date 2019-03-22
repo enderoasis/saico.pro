@@ -4,8 +4,8 @@
 	$data1 = $_POST;
 	if ( isset($data1['do_login']) )
 	{
-		$user = R::findOne('users', 'login = ?', array($data1['login']));
-		if ( $user )
+		$payment = R::findOne('payments', 'email = ?', array($data1['email']));
+		if ( $payment )
 		{
 			//логин существует
 			if ( password_verify($data1['password'], $user->password) )
@@ -13,7 +13,7 @@
 				//если пароль совпадает, то нужно авторизовать пользователя
 				$_SESSION['logged_user'] = $user;
 				echo '<div style="color:green;">Вы авторизованы!<br/>.</div><hr>';
-				header( 'Refresh: 3; url=index.php' );
+				header( 'Refresh: 2; url=study.php' );
 			}else
 			{
 				$errors[] = 'Неверно введен пароль!';
@@ -21,7 +21,7 @@
 
 		}else
 		{
-			$errors[] = 'Пользователь с таким логином не найден!';
+			$errors[] = 'Ошибка, используйте почту указанную при оплате!';
 		}
 
 		if ( ! empty($errors) )
