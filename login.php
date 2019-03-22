@@ -167,8 +167,8 @@
 
                         <input type="hidden" name="action" class="form-control" value="login">
                         <div class="form-group">
-                            <label class = "label lblorder text-left">Ваш логин:</label>
-                            <input type="text" name="login" class="form-control" value="<?php echo @$data1['login']; ?>" placeholder="Логин" required>
+                            <label class = "label lblorder text-left">Ваша почта:</label>
+                            <input type="text" name="login" class="form-control" value="<?php echo @$data1['email']; ?>" placeholder="Ваша почта" required>
                         </div>
                         <div class="form-group">
                             <label class = "label lblorder text-left">Ваш пароль:</label>
