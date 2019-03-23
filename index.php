@@ -22,7 +22,7 @@
 							<!-- Header -->
 								<header id="header">
 									<a href="index.php" class="logo"><strong>SMM</strong> by Saico.pro</a>
-									
+
 								</header>
 
 							<!-- Banner -->
@@ -40,7 +40,7 @@
 										</ul>
 									</div>
 									<span class="image object">
-										<img src="image/pc1.jpeg" alt="" />
+										<img src="image/23.PNG" alt="" />
 									</span>
 								</section>
 
