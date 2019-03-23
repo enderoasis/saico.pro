@@ -211,7 +211,7 @@ header('Refresh: 3; url=/welcome.php');
 </section>
 
     <section class="container padding-bottom-3x">
-            <h1 class="block-title text-center scrollReveal sr-bottom">Регистрация</h1>
+            <h1 class="block-title text-center scrollReveal sr-bottom">Пожалуйста,для начала пройдите регистрацию.</h1>
 		    <hr class="scrollReveal sr-bottom">
 
             <div class="row padding-top padding-bottom-3x scrollReveal sr-scaleUp sr-delay-2 sr-ease-in-out-back">
