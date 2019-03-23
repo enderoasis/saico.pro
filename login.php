@@ -1,6 +1,6 @@
 <?php
 	require 'db.php';
-
+session_start();
 	$data1 = $_POST;
 	if ( isset($data1['do_login']) )
 	{

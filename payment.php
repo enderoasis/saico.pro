@@ -13,13 +13,13 @@ $_POST['codepro'].'&'.
 $_POST['label']);
 
 if ( $_POST['sha1_hash'] != $hash or $_POST['codepro'] === true or $_POST['unaccepted'] === true ) exit('error');
-if ($_POST['amount'] < 2) exit('error');
+
 $payment = R::dispense('payments');
 $payment->sum = $_POST['amount'];
 $payment->email = $_POST['email'];
 R::store($payment);
 
-$usermail = "shop@lendel.kz";
+$usermail = $_POST['email'];
 $userpaid = $_POST['amount'];
 
 
