@@ -18,7 +18,7 @@
 			if ( password_verify($data1['password'], $user->password))
 			{
 		 $st = 1;
-		 $check	= R::findOne('users','status = ?', array($st);
+		 $check	= R::findOne('users','status = ?', array($st));
 	 }}
 	 else
 	 {
