@@ -7,10 +7,7 @@
 	{
 		$user = R::findOne('users', 'email = ?', array($data1['email']));
 	}
-		else
-		{
-			echo '<div id="errors" style="color:red;">Неправильно указана почта!<br/>.</div><hr>';
-		}
+
 
 		if ( $user )
 		{
@@ -20,16 +17,25 @@
 		 $st = 1;
 		 $check	= R::findOne('users','status = ?', array($st));
 	 }}
-	 else
-	 {
-		echo '<div id="errors" style="color:red;">Вы не оплатили курс!<br/>.</div><hr>';
-	 }
+
 
 	if	( $check)
 	{		//если пароль совпадает, то нужно авторизовать пользователя
 				$_SESSION['logged_user'] = $user;
 				echo '<div style="color:green;">Вы авторизованы!<br/>.</div><hr>';
-				header( 'Refresh: 3; url=index.php' );
+				header( 'Refresh: 3; url=study.php' );
+			}
+			else
+			{
+				$errors[] = 'Вы не произвели оплату за курс!';
+			}
+			else
+			{
+				$errors[] = 'Неверно введена почта!';
+			}
+			else
+			{
+				$errors[] = 'Неверно введен пароль!';
 			}
 
 		if ( ! empty($errors) )
