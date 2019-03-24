@@ -9,7 +9,7 @@
 	}
 		else
 		{
-			$errors[] = 'Проверьте правильность набора, почты или пароля!';
+			echo '<div style="color:red;">Неправильно указана почта!<br/>.</div><hr>';
 		}
 
 		if ( $user )
@@ -22,7 +22,7 @@
 	 }}
 	 else
 	 {
-		 $errors[] = 'Вы не произвели оплату!';
+		echo '<div style="color:red;">Вы не оплатили курс!<br/>.</div><hr>';
 	 }
 
 	if	( $check)
