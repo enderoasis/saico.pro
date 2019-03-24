@@ -50,7 +50,7 @@ require 'db.php';
 //$page_path = basename(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
 //$rf = basename(parse_url('https://education.saico.pro/register.php/1',  PHP_URL_PATH));
 
-$link = $_SERVER['PHP_SELF'];
+
     $link_array = $_GET['ref'];
 
 
