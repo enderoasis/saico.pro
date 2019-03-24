@@ -52,11 +52,11 @@ require 'db.php';
 
 $link = $_SERVER['PHP_SELF'];
     $link_array = $_GET['ref'];
-    $red = end($link_array);
+
 
 			$user->login = $data1['login'];
 			$user->email = $data1['email'];
-			$user->referer = $red;
+			$user->referer = $link_array;
 			$user->password = password_hash($data1['password'], PASSWORD_DEFAULT); //пароль нельзя хранить в открытом виде, мы его шифруем при помощи функции password_hash для php > 5.6
 			R::store($user);
 
