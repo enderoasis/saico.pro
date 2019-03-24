@@ -1,6 +1,6 @@
 <?php
 
-session_start();
+
 require 'db.php';
 
 	$data1 = $_POST;

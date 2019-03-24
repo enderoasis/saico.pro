@@ -1,6 +1,6 @@
 <?php
 	require 'db.php';
-
+session_start();
 	$data1 = $_POST;
 
 	if ( isset($data1['do_login']) )
@@ -15,7 +15,7 @@
 			if ( password_verify($data1['password'], $user->password))
 			{
 		 $st = 1;
-		 
+
 		 $check	= R::findOne('users','status = ?', array($st));
 	 }}
 
@@ -23,8 +23,9 @@
 	if	( $check)
 	{		//если пароль совпадает, то нужно авторизовать пользователя
 				$_SESSION['logged_user'] = $user;
+				$_SESSION['state'] = "true";
 				echo '<div style="color:green;">Вы авторизованы!<br/>.</div><hr>';
-				header( 'Refresh: 3; url=study.php' );
+				header( 'Refresh: 3; url=check.php' );
 			}
 			else
 			{
