@@ -47,7 +47,7 @@ require 'db.php';
 		{
 			//ошибок нет, теперь регистрируем
 			$user = R::dispense('users');
-$page_path = end(explode('/', trim($_SERVER['REQUEST_URI'], '/')));
+$page_path = basename(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
 //$rf = basename(parse_url('https://education.saico.pro/register.php/1',  PHP_URL_PATH));
 			$user->login = $data1['login'];
 			$user->email = $data1['email'];
