@@ -49,7 +49,9 @@ require 'db.php';
 			$user = R::dispense('users');
 //$page_path = basename(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
 //$rf = basename(parse_url('https://education.saico.pro/register.php/1',  PHP_URL_PATH));
-https://education.saico.pro/register.php?ref=1
+
+$url='https://education.saico.pro/register.php?ref={id}';
+$ref = $_GET['ref'];
 			$user->login = $data1['login'];
 			$user->email = $data1['email'];
 			$user->referer = $ref;
