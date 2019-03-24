@@ -35,7 +35,7 @@ session_start();
 			header('Refresh: 3; url=login.php');
 		}
 
-	}
+	}}
 
 ?>
 <!DOCTYPE html>
