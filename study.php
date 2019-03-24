@@ -28,8 +28,8 @@ if ($_SESSION['state'] != "true") {
 
         <ul class="icons">
 
-                            <li><a href="login.php" class="button">Вход</a></li>
-                            <li><a href="register.php"class="button">Регистрация</a></li>
+                            <li><a href="login.php" class="button">Партнёрство</a></li>
+                            <li><a href="register.php"class="button">Главная</a></li>
                           </ul>
       </header>
       <section>
