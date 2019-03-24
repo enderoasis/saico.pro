@@ -20,7 +20,9 @@
 							<!-- Header -->
 								<header id="header">
 									<a href="index.php" class="logo"><strong>Обучение</strong> by Saico.pro</a>
+									<ul class="icons">
 
+																			<li><a href="index.php" class="button">Вернуться на главную</a></li>
 								</header>
 
 							<!-- Content -->
