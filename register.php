@@ -47,10 +47,11 @@ require 'db.php';
 		{
 			//ошибок нет, теперь регистрируем
 			$user = R::dispense('users');
-$rf = basename(parse_url('https://education.saico.pro/register.php/1',  PHP_URL_PATH));
+$page_path = end(explode('/', trim($_SERVER['REQUEST_URI'], '/')));
+//$rf = basename(parse_url('https://education.saico.pro/register.php/1',  PHP_URL_PATH));
 			$user->login = $data1['login'];
 			$user->email = $data1['email'];
-			$user->referer = $rf;
+			$user->referer = $page_path;
 			$user->password = password_hash($data1['password'], PASSWORD_DEFAULT); //пароль нельзя хранить в открытом виде, мы его шифруем при помощи функции password_hash для php > 5.6
 			R::store($user);
 
