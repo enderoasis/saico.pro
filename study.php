@@ -20,16 +20,19 @@ if ($_SESSION['state'] != "true") {
     <link rel="stylesheet" href="assets/css/main.css" />
   </head>
   <body class="is-preload">
-    <section>
-      <header class="major">
+    <div id="wrapper">
+      <div id="main">
+        <div class="inner">
+      <header id="header">
         <h2>Обучение</h2>
-        <a href="index.php" class="logo"><strong>SMM</strong> by Saico.pro</a>
+
         <ul class="icons">
 
                             <li><a href="login.php" class="button">Вход</a></li>
                             <li><a href="register.php"class="button">Регистрация</a></li>
                           </ul>
       </header>
+      <section>
       <div class="posts">
         <article>
           <a href="/lessons/1" class="image"><img src="image/pc1.jpeg" alt="" /></a>
@@ -113,7 +116,10 @@ if ($_SESSION['state'] != "true") {
             <li><a href="/lessons/10" class="button">Перейти</a></li>
           </ul>
         </article>
+</section>
       </div>
+
+
     </section>
   </body>
 </html>
