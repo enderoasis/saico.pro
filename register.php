@@ -47,7 +47,7 @@ require 'db.php';
 		{
 			//ошибок нет, теперь регистрируем
 			$user = R::dispense('users');
-$rf = basename(parse_url('https://education.saico.pro/register.php/$ref',  PHP_URL_PATH));
+$rf = basename(parse_url('https://education.saico.pro/register.php/2',  PHP_URL_PATH));
 			$user->login = $data1['login'];
 			$user->email = $data1['email'];
 			$user->referer = $rf;
