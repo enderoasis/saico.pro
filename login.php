@@ -149,6 +149,7 @@ session_start();
                             <ul class="nav-tabs auth-ul" role="tablist">
                                 <li class="auth-li" style="border-right: 1px solid #ececec;"><a class="auth-a" href="login.php">Войти</a></li>
                                 <li class="auth-li"><a class="auth-a" href="/register.php">Регистрация</a></li>
+																<li class="auth-li"><a class="auth-a" href="/yandexpayment.php">Оплата</a></li>
                             </ul>
                         </div>
 			            <hr class="auth-hr">
