@@ -104,35 +104,16 @@ session_start();
 
                     <nav class="main-navigation">
                         <ul class="menu">
-<li><a href="index.php" class="button">Главная</a></li>
-		<!--
-                            <li class="menu-item-has-children login-50">
-                                <a class="login-50-a" id="log" data-toggle="modal" data-target="#loginModal">Войти</a>
-			                </li>
 
-                            <li class="menu-item-has-children login-50">
-                                <a class="login-50-a" id="reg" data-toggle="modal" data-target="#registerModal">Регистрация</a>
-			                </li>
-
-			                <li class="m-none-s-n menu-item-has-children">
-			                    <a class="m-none-s">|</a>
-			                </li>
 
 
 
                             <li class="menu-item-has-children">
-                                <a href="price.php">Прайс</a>
+                              <a href="login.php" class="button">Главная</a>
                             </li>
 
-			                <li class="menu-item-has-children" id="newsReload">
-                                <a id="news" href="news.php">Новости</a>
-                            </li>
 
-                            <li class="menu-item-has-children" id="contactsReload">
-                                <a id="contacts" href="contacts.php">Контакты</a>
 
-                     </li>
--->
                         </ul>
                     </nav>
 
