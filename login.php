@@ -109,7 +109,7 @@ session_start();
 
 
 													                            <li class="menu-item-has-children login-50">
-													                                <a class="login-50-a" id="log" data-toggle="modal" href="/index.php" data-target="#loginModal">Главная</a>
+													                                <a class="login-50-a" id="log"  href="/index.php">Главная</a>
 																                </li>
 
 
