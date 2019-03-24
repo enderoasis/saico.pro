@@ -108,10 +108,9 @@ session_start();
 
 
 
-                            <li class="menu-item-has-children">
-                              <a href="index.php" class="button">Главная</a>
-                            </li>
-
+													                            <li class="menu-item-has-children login-50">
+													                                <a class="login-50-a" id="log" data-toggle="modal" data-target="#loginModal">Войти</a>
+																                </li>
 
 
                         </ul>
