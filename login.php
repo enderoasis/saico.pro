@@ -109,7 +109,7 @@ session_start();
 
 
                             <li class="menu-item-has-children">
-                              <a href="login.php" class="button">Главная</a>
+                              <a href="index.php" class="button">Главная</a>
                             </li>
 
 
