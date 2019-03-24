@@ -5,7 +5,8 @@ session_start();
 
 	if ( isset($data1['do_login']) )
 	{
-		$user = R::findOne('users', 'email = ?', array($data1['email']));
+		$user = R::findOne('users', 'email = ?', array($data1['email']));}
+
 		if ( $user )
 		{
 			//логин существует
@@ -13,17 +14,20 @@ session_start();
 			{
 		 $st = 1;
 		 $check	= R::findOne('users','status = ?', $st);
+	 }}
 	if	( $check)
 	{		//если пароль совпадает, то нужно авторизовать пользователя
 				$_SESSION['logged_user'] = $user;
 				echo '<div style="color:green;">Вы авторизованы!<br/>.</div><hr>';
 				header( 'Refresh: 3; url=index.php' );
-			}else
+			}
+			else
 			{
 				$errors[] = 'Вы не произвели оплату!';
 			}
 
-		}else
+
+		else
 		{
 			$errors[] = 'Проверьте правильность набора, почты или пароля!';
 		}
@@ -34,8 +38,6 @@ session_start();
 			echo '<div id="errors" style="color:red;">' .array_shift($errors). '</div><hr>';
 			header('Refresh: 3; url=login.php');
 		}
-
-	}}
 
 ?>
 <!DOCTYPE html>
