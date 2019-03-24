@@ -51,7 +51,7 @@ require 'db.php';
 //$rf = basename(parse_url('https://education.saico.pro/register.php/1',  PHP_URL_PATH));
 
 $url='https://education.saico.pro/register.php?ref={id}';
-$ref = $_GET['ref'];
+$ref = $_GET['id'];
 			$user->login = $data1['login'];
 			$user->email = $data1['email'];
 			$user->referer = $ref;
