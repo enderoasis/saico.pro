@@ -9,7 +9,7 @@
 	}
 		else
 		{
-			echo '<div style="color:red;">Неправильно указана почта!<br/>.</div><hr>';
+			echo '<div id="errors" style="color:red;">Неправильно указана почта!<br/>.</div><hr>';
 		}
 
 		if ( $user )
@@ -18,11 +18,11 @@
 			if ( password_verify($data1['password'], $user->password))
 			{
 		 $st = 1;
-		 $check	= R::findOne('users','status = ?', $st);
+		 $check	= R::findOne('users','status = ?', array($st);
 	 }}
 	 else
 	 {
-		echo '<div style="color:red;">Вы не оплатили курс!<br/>.</div><hr>';
+		echo '<div id="errors" style="color:red;">Вы не оплатили курс!<br/>.</div><hr>';
 	 }
 
 	if	( $check)
