@@ -27,14 +27,14 @@
 			}
 			else
 			{
-				$errors[] = 'Возможно вы не оплатили за курс,либо неправильно ввели свои данные';
+				echo '<div style="color:red;">Возможно вы не оплатили курс,либо ввели неверные данные!<br/>.</div><hr>';
 			}
 
 		if ( ! empty($errors) )
 		{
 			//выводим ошибки авторизации
 			echo '<div id="errors" style="color:red;">' .array_shift($errors). '</div><hr>';
-			header('Refresh: 3; url=login.php');
+			header('Refresh: 5; url=login.php');
 		}
 
 ?>
