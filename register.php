@@ -63,7 +63,7 @@ require 'db.php';
 $email = $data1['email'];
 $pass = $data1['password'];
 $log = $data1['login'];
-$url = "https://partners.saico.pro/nrfpp?&name=".$log."&email=".$email."&password=".$pass."&referer=".$ref;
+$url = "https://partners.saico.pro/nrfpp?&name=".$log."&email=".$email."&password=".$pass."&referer=".$link_array;
 $curl = curl_init();
 curl_setopt($curl, CURLOPT_URL, $url);
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
