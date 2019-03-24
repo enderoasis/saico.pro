@@ -5,7 +5,12 @@ session_start();
 
 	if ( isset($data1['do_login']) )
 	{
-		$user = R::findOne('users', 'email = ?', array($data1['email']));}
+		$user = R::findOne('users', 'email = ?', array($data1['email']));
+	}
+		else
+		{
+			$errors[] = 'Проверьте правильность набора, почты или пароля!';
+		}
 
 		if ( $user )
 		{
@@ -15,22 +20,17 @@ session_start();
 		 $st = 1;
 		 $check	= R::findOne('users','status = ?', $st);
 	 }}
+	 else
+	 {
+		 $errors[] = 'Вы не произвели оплату!';
+	 }
+
 	if	( $check)
 	{		//если пароль совпадает, то нужно авторизовать пользователя
 				$_SESSION['logged_user'] = $user;
 				echo '<div style="color:green;">Вы авторизованы!<br/>.</div><hr>';
 				header( 'Refresh: 3; url=index.php' );
 			}
-			else
-			{
-				$errors[] = 'Вы не произвели оплату!';
-			}
-
-
-		else
-		{
-			$errors[] = 'Проверьте правильность набора, почты или пароля!';
-		}
 
 		if ( ! empty($errors) )
 		{
@@ -40,6 +40,7 @@ session_start();
 		}
 
 ?>
+
 <!DOCTYPE html>
 <html>
 
