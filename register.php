@@ -49,8 +49,7 @@ require 'db.php';
 			$user = R::dispense('users');
 //$page_path = basename(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
 //$rf = basename(parse_url('https://education.saico.pro/register.php/1',  PHP_URL_PATH));
-$url1= 'https://education.saico.pro/register.php?ref={id}';
-$ref = $_GET['ref'];
+https://education.saico.pro/register.php?ref=1
 			$user->login = $data1['login'];
 			$user->email = $data1['email'];
 			$user->referer = $ref;
@@ -219,7 +218,7 @@ header('Refresh: 3; url=/welcome.php');
 
             <div class="row padding-top padding-bottom-3x scrollReveal sr-scaleUp sr-delay-2 sr-ease-in-out-back">
                 <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
-                    <form id="register" class="borddiscr text-center" style="padding: 0 40px 40px 40px;" action="register.php"  method="post">
+                    <form id="register" class="borddiscr text-center" style="padding: 0 40px 40px 40px;" action=""  method="post">
 
                         <div class="text-center auth-div">
                             <ul class="nav-tabs auth-ul" role="tablist">
