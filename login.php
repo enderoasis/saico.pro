@@ -2,34 +2,37 @@
 	require 'db.php';
 session_start();
 	$data1 = $_POST;
+
 	if ( isset($data1['do_login']) )
 	{
-		$payment = R::findOne('payments', 'email = ?', array($data1['email']));
-		if ( $payment )
+		$user = R::findOne('users', 'email = ?', array($data1['email']));
+		if ( $user )
 		{
 			//логин существует
-			$user = R::findOne('users');
-			if ( password_verify($data1['password'], $user->password) )
+			if ( password_verify($data1['password'], $user->password))
 			{
-				//если пароль совпадает, то нужно авторизовать пользователя
+		 $st = 1;
+		 $check	= R::findOne('users','status = ?', $st);
+	if	( $check)
+	{		//если пароль совпадает, то нужно авторизовать пользователя
 				$_SESSION['logged_user'] = $user;
 				echo '<div style="color:green;">Вы авторизованы!<br/>.</div><hr>';
-				header( 'Refresh: 2; url=study.php' );
+				header( 'Refresh: 3; url=index.php' );
 			}else
 			{
-				$errors[] = 'Неверно введен пароль!';
+				$errors[] = 'Вы не произвели оплату!';
 			}
 
 		}else
 		{
-			$errors[] = 'Ошибка, используйте почту указанную при оплате!';
+			$errors[] = 'Проверьте правильность набора, почты или пароля!';
 		}
 
 		if ( ! empty($errors) )
 		{
 			//выводим ошибки авторизации
 			echo '<div id="errors" style="color:red;">' .array_shift($errors). '</div><hr>';
-			header('Refresh: 5; url=login.php');
+			header('Refresh: 3; url=login.php');
 		}
 
 	}

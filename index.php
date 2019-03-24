@@ -40,7 +40,7 @@
 										</ul>
 									</div>
 									<span class="image object">
-										<img src="image/23.PNG" alt="" />
+										<img src="image/23.png" alt="" />
 									</span>
 								</section>
 
