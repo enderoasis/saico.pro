@@ -109,7 +109,7 @@ session_start();
 
 
 													                            <li class="menu-item-has-children login-50">
-													                                <a class="login-50-a" id="log" data-toggle="modal" data-target="#loginModal">Войти</a>
+													                                <a class="login-50-a" id="log" data-toggle="modal" href="/index.php" data-target="#loginModal">Главная</a>
 																                </li>
 
 
@@ -148,7 +148,7 @@ session_start();
                             <ul class="nav-tabs auth-ul" role="tablist">
                                 <li class="auth-li" style="border-right: 1px solid #ececec;"><a class="auth-a" href="login.php">Войти</a></li>
                                 <li class="auth-li"><a class="auth-a" href="/register.php">Регистрация</a></li>
-																
+
                             </ul>
                         </div>
 			            <hr class="auth-hr">
