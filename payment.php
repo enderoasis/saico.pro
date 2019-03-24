@@ -14,12 +14,11 @@ $_POST['label']);
 
 if ( $_POST['sha1_hash'] != $hash or $_POST['codepro'] === true or $_POST['unaccepted'] === true ) exit('error');
 
-$one = 1;
-$user = R::dispense('users');
-$user->balance = $_POST['amount'];
-$user->payment_email = $_POST['email'];
-$user->status = $one;
-R::store($user);
+$payment = R::dispense('payments');
+$payment->sum = $_POST['amount'];
+$payment->email = $_POST['email'];
+R::store($payment);
+
 
 $usermail = $_POST['email'];
 $userpaid = $_POST['amount'];
