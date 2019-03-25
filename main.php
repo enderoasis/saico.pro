@@ -7,7 +7,8 @@ session_start();
   $fnd	= R::findOne('payments','status = ?', array($st));
   }
 if ($fnd) {
-  header( 'Location: /study.php', true, 303 );
+  header( "Location: https://education.saico.pro/study.php");
+
 }
  ?>
 

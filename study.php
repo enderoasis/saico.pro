@@ -2,7 +2,7 @@
 
 session_start();
 if ($user != $_SESSION['logged_user']) {
-		header( 'Location: /login.php', true, 303 );
+  header( "Location: https://education.saico.pro/login.php");
 }
 
 
