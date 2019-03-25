@@ -24,7 +24,7 @@ session_start();
 		if ( !$user )
 		{
 			//выводим ошибки авторизации
-			echo '<div id="errors" style="color:red;">' .array_shift($errors). '</div><hr>';
+			echo 	echo '<div style="color:green;">Ошибка, укажите корректную почту или пароль!<br/>.</div><hr>';
 			header( 'Location: /login.php', true, 303 );
 		}
 
