@@ -19,14 +19,14 @@ session_start();
 			$_SESSION['logged_user'] = $user;
 
 			echo '<div style="color:green;">Вы авторизованы!<br/>.</div><hr>';
-	header( "Location: https://education.saico.pro/main.php");
+		header( 'Refresh: 1; url=main.php' );
 	 }}
 
 		if ( !$user )
 		{
 			//выводим ошибки авторизации
 		 	echo '<div style="color:green;">Ошибка, укажите корректную почту или пароль!<br/>.</div><hr>';
-			header( "Location: https://education.saico.pro/login.php");
+			header( 'Refresh: 1; url=login.php' );
 		}
 
 ?>
