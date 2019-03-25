@@ -28,7 +28,7 @@ if ($_SESSION['state'] != "true") {
 
         <ul class="icons">
 
-                            <li><a href="https://partners.saico.pro" class="button">Партнёрство</a></li>
+                            <li><a href="https://partners.saico.pro" class="button2">Партнёрство</a></li>
                             <li><a href="/index.php"class="button">Главная</a></li>
                           </ul>
       </header>
