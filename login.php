@@ -26,7 +26,7 @@ session_start();
 		{
 			//выводим ошибки авторизации
 		 	echo '<div style="color:green;">Ошибка, укажите корректную почту или пароль!<br/>.</div><hr>';
-			header( 'Refresh: 1; url=login.php' );
+		
 		}
 
 ?>
