@@ -14,25 +14,14 @@ session_start();
 			//логин существует
 			if ( password_verify($data1['password'], $user->password))
 			{
-		 $st = 1;
-
-		 $check	= R::findOne('users','status = ?', array($st));
+				$check	=  array($data1['email']);
+ 			 $_SESSION['mail'] = $check;
+			$_SESSION['logged_user'] = $user;
+			echo '<div style="color:green;">Вы авторизованы!<br/>.</div><hr>';
+	header( 'Location: /study.php', true, 303 );
 	 }}
 
-
-	if	( $check)
-	{		//если пароль совпадает, то нужно авторизовать пользователя
-				$_SESSION['logged_user'] = $user;
-				$_SESSION['state'] = "true";
-				echo '<div style="color:green;">Вы авторизованы!<br/>.</div><hr>';
-		header( 'Location: /study.php', true, 303 );
-			}
-			else
-			{
-				echo '<div style="color:red;">Возможно вы не оплатили курс,либо ввели неверные данные!<br/>.</div><hr>';
-			}
-
-		if ( ! empty($errors) )
+		if ( !$user )
 		{
 			//выводим ошибки авторизации
 			echo '<div id="errors" style="color:red;">' .array_shift($errors). '</div><hr>';
