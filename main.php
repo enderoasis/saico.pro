@@ -1,3 +1,18 @@
+<?php
+session_start();
+ $_SESSION['mail'] = $check;
+ $st = 1;
+ 	$user = R::findOne('payments', 'email = ?', array($check));
+  if ($user) {
+  $fnd	= R::findOne('payments','status = ?', array($st));
+  }
+if ($fnd) {
+  header( 'Location: /study.php', true, 303 );
+}
+ ?>
+
+
+
 <!DOCTYPE HTML>
 
 <html>

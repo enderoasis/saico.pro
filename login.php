@@ -18,7 +18,7 @@ session_start();
  			 $_SESSION['mail'] = $check;
 			$_SESSION['logged_user'] = $user;
 			echo '<div style="color:green;">Вы авторизованы!<br/>.</div><hr>';
-	header( 'Location: /study.php', true, 303 );
+	header( 'Location: /main.php', true, 303 );
 	 }}
 
 		if ( !$user )
