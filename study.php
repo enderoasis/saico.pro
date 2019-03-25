@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-if (!$user) {
+if ($user != $_SESSION['logged_user']) {
 		header( 'Location: /login.php', true, 303 );
 }
 
