@@ -25,7 +25,7 @@ session_start();
 				$_SESSION['logged_user'] = $user;
 				$_SESSION['state'] = "true";
 				echo '<div style="color:green;">Вы авторизованы!<br/>.</div><hr>';
-				header( 'Refresh: 3; url=check.php' );
+				header( 'url=check.php' );
 			}
 			else
 			{
@@ -36,7 +36,7 @@ session_start();
 		{
 			//выводим ошибки авторизации
 			echo '<div id="errors" style="color:red;">' .array_shift($errors). '</div><hr>';
-			header('Refresh: 5; url=login.php');
+			header('url=login.php');
 		}
 
 ?>
@@ -49,7 +49,7 @@ session_start();
     <meta http-equiv="Cache-Control" content="no-cache">
     <meta http-equiv="expires" content="0">
     <title>saico.pro</title>
-    <link rel="icon" href="https://partners.saico.pro/favicon.png">
+      <link rel="icon" href="https://partners.saico.pro/favicon.png">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
