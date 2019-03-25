@@ -1,4 +1,5 @@
 <?php
+require 'db.php';
 session_start();
  $_SESSION['mail'] = $check;
  $st = 1;
