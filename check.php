@@ -1,11 +1,11 @@
 <?php
 session_start();
 if ($_SESSION['state'] = "true") {
-	header('Refresh: 1; url=study.php');
+	header( 'Location: /study.php', true, 303 );
 }
 
 else {
-  	header('Refresh: 5; url=login.php');
+	header( 'Location: /login.php', true, 303 );
 }
 
  ?>

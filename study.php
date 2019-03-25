@@ -2,7 +2,7 @@
 
 session_start();
 if ($_SESSION['state'] != "true") {
-	header('Refresh: 1; url=login.php');
+		header( 'Location: /login.php', true, 303 );
 }
 
 
