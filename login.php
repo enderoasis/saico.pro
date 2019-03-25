@@ -17,15 +17,16 @@ session_start();
 				$check	=  array($data1['email']);
  			 $_SESSION['mail'] = $check;
 			$_SESSION['logged_user'] = $user;
+
 			echo '<div style="color:green;">Вы авторизованы!<br/>.</div><hr>';
-	header( 'Location: /main.php', true, 303 );
+	header( "Location: https://education.saico.pro/main.php");
 	 }}
 
 		if ( !$user )
 		{
 			//выводим ошибки авторизации
 		 	echo '<div style="color:green;">Ошибка, укажите корректную почту или пароль!<br/>.</div><hr>';
-			header( 'Location: /login.php', true, 303 );
+			header( "Location: https://education.saico.pro/login.php");
 		}
 
 ?>
