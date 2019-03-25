@@ -25,7 +25,7 @@ session_start();
 				$_SESSION['logged_user'] = $user;
 				$_SESSION['state'] = "true";
 				echo '<div style="color:green;">Вы авторизованы!<br/>.</div><hr>';
-				header( 'url=check.php' );
+		header( 'Location: /study.php', true, 303 );
 			}
 			else
 			{
@@ -36,7 +36,7 @@ session_start();
 		{
 			//выводим ошибки авторизации
 			echo '<div id="errors" style="color:red;">' .array_shift($errors). '</div><hr>';
-			header('url=login.php');
+			header( 'Location: /login.php', true, 303 );
 		}
 
 ?>
