@@ -2,8 +2,8 @@
 session_start();
  $_SESSION['mail'] = $check;
  $st = 1;
- 	$user = R::findOne('payments', 'email = ?', array($check));
-  if ($user) {
+ 	$fon = R::findOne('payments', 'email = ?', array($check));
+  if ($fon) {
   $fnd	= R::findOne('payments','status = ?', array($st));
   }
 if ($fnd) {
