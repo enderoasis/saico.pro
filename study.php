@@ -1,8 +1,8 @@
 <?php
 
 session_start();
-if ($user != $_SESSION['logged_user']) {
-  header( "Location: https://education.saico.pro/login.php");
+if (!isset($_SESSION['status'])) {
+  header( "Location: https://education.saico.pro/main.php");
 }
 
 

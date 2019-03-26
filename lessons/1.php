@@ -1,4 +1,13 @@
+<?php
 
+session_start();
+if (!isset($_SESSION['status'])) {
+  header( "Location: https://education.saico.pro/main.php");
+}
+
+
+
+ ?>
 <html>
 	<head>
 		<title>Обучение: Как сократить расходы на рекламу в Instagram </title>

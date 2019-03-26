@@ -1,3 +1,13 @@
+<?php
+
+session_start();
+if (!isset($_SESSION['status'])) {
+  header( "Location: https://education.saico.pro/main.php");
+}
+
+
+
+ ?>
 <html>
 	<head>
 		<title>Учебный портал</title>
@@ -27,7 +37,7 @@
 							<!-- Content -->
 								<section>
 									<header class="main">
-										<h1>Учимся правильно фотографировать</h1>
+										<h1>7 Ошибок в продвижении аккаунта в Instagram</h1>
 									</header>
 
 									<!-- Content -->
@@ -35,18 +45,15 @@
 										<h2 id="elements"></h2>
 										<div class="row gtr-200">
 											<div class="col-6 col-12-medium">
-												<img src="/image/9.PNG">
-												<img src="/image/10.PNG">
-												<img src="/image/11.PNG">
-												<img src="/image/12.PNG">
-												<img src="/image/13.PNG">
-												<img src="/image/14.PNG">
-												<img src="/image/15.PNG">
-												<img src="/image/16.PNG">
-                        <img src="/image/17.PNG">
-                        <img src="/image/18.PNG">
-                        <img src="/image/19.PNG">
-                        <img src="/image/20.PNG">
+												<img src="/image/1.PNG">
+												<img src="/image/2.PNG">
+												<img src="/image/3.PNG">
+												<img src="/image/4.PNG">
+												<img src="/image/5.PNG">
+												<img src="/image/6.PNG">
+												<img src="/image/7.PNG">
+												<img src="/image/8.PNG">
+
 													<div class="row">
 
 
