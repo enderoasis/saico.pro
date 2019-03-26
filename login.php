@@ -14,7 +14,7 @@ session_start();
 			//логин существует
 			if ( password_verify($data1['password'], $user->password))
 			{
-				$check	=  array($data1['email']);
+				$check	=  $data1['email'];
  			 $_SESSION['mail'] = $check;
 			$_SESSION['logged_user'] = $user;
 
