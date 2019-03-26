@@ -6,7 +6,7 @@ if (!isset($_SESSION['logged_user'])) {
   header( "Location: https://education.saico.pro/login.php");
 }
 if (!isset($_SESSION['status'])) {
-  	echo '<div style="color:green;">Проверка статуса оплаты прошла успешно, Добро пожаловать!<br/>.</div><hr>';
+  	echo '<div style="color:green;">Статус неактивен<br/>.</div><hr>';
   header( "Location: https://education.saico.pro/main.php");
 }
 

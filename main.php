@@ -17,6 +17,10 @@ else {
   if ($fon1) {
     $fnd1 = R::findOne('payments','status = ?', array($st));
   }
+  if ($fnd1) {
+    header( "Location: https://education.saico.pro/study.php");
+    $_SESSION['status'] = "OK";
+  }
  ?>
 
 
