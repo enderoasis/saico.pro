@@ -23,8 +23,8 @@ $payment->status = 1;
 R::store($payment);
 
 //Если пользователь уже зарегистрирован , то вписываем статус в users
-q1 = R::findOne('users', 'email = ?', $_POST['email']);
-if (q1) {
+$q1 = R::findOne('users', 'email = ?', $_POST['email']);
+if ($q1) {
 $user = R::dispense('users');
 $user->status = 1;
 R::store($user);
