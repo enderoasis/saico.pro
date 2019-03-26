@@ -20,6 +20,13 @@ $payment->email = $_POST['email'];
 $payment->status = 1;
 R::store($payment);
 
+q1 = R::findOne('users', 'email = ?', $_POST['email']);
+if (q1) {
+$user = R::dispense('users');
+$user->status = 1;
+}
+
+
 
 $usermail = $_POST['email'];
 $userpaid = $_POST['amount'];

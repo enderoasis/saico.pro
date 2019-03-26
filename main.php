@@ -3,15 +3,20 @@ require 'db.php';
 session_start();
  $_SESSION['mail'] = $check;
  $st = 1;
- 	$fon = R::findOne('payments', 'email = ?', array($check));
+ 	$fon = R::findOne('users', 'email = ?', array($check));
   if ($fon) {
-  $fnd	= R::findOne('payments','status = ?', array($st));
+  $fnd	= R::findOne('users','status = ?', array($st));
   }
 if ($fnd) {
   header( "Location: https://education.saico.pro/study.php");
   $_SESSION['status'] = "OK";
 }
-
+else {
+  $fon1 = R::findOne('payments', 'email = ?', array($check));
+}
+  if ($fon1) {
+    $fnd1 = R::findOne('payments','status = ?', array($st));
+  }
  ?>
 
 
