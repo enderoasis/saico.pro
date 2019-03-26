@@ -20,7 +20,7 @@
 
 							<!-- Header -->
 								<header id="header">
-									<a href="index.php" class="logo"><strong>Вы</strong> успешно зарегистрировались!</a>
+									<a href="index.php" class="logo"><strong>Education</strong>Saico.pro</a>
 									<ul class="icons">
 										<li><a href="login.php" class="button">Вход</a></li>
 										<li><a href="register.php" class="button">Регистрация</a></li>
@@ -35,7 +35,7 @@
 											</h1>
 
 										</header>
-										<p>Добро пожаловать на марафон "SMM10"!
+										<p><b>Вы успешно зарегистрировались!</b> Добро пожаловать на марафон "SMM10"!
 «Saico education»  гарантирует конфиденциальность вашей информации. Мы создали специальный портал. Здесь предоставлены всевозможные материалы для обучения,а так же выдача задании для закрепления пройденных уроков на каждый день. Также на этот портал вы будете отправлять свои отчеты. Марафон будет проводиться только здесь. </p>
 										<ul class="actions">
 											<li><a href="#1" class="button big">Перейти</a></li>
