@@ -1,7 +1,7 @@
 <?php
 require 'db.php';
 session_start();
-
+	$check	=  $_SESSION['mail'];
  $st = 1;
  	$fon = R::findOne('users', 'email = ?', array($check));
   if ($fon) {

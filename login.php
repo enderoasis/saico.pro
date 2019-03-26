@@ -14,8 +14,8 @@ session_start();
 			//логин существует
 			if ( password_verify($data1['password'], $user->password))
 			{
-				$check	=  $_POST['email'];
- 			 $_SESSION['mail'] = $check;
+			
+ 			 $_SESSION['mail'] = $_POST['email'];
 			$_SESSION['logged_user'] = $user;
 
 			echo '<div style="color:green;">Вы авторизованы!<br/>.</div><hr>';
