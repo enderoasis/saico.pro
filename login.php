@@ -14,12 +14,12 @@ session_start();
 			//логин существует
 			if ( password_verify($data1['password'], $user->password))
 			{
-			
+
  			 $_SESSION['mail'] = $_POST['email'];
 			$_SESSION['logged_user'] = $user;
 
 			echo '<div style="color:green;">Вы авторизованы!<br/>.</div><hr>';
-		header( 'Refresh: 0; url=main.php' );
+		header( 'Refresh: 0; url=check.php' );
 	 }}
 
 	else

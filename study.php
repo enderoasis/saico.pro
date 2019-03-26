@@ -3,11 +3,11 @@
 session_start();
 if (!isset($_SESSION['logged_user'])) {
   	echo '<div style="color:red;">Пожалуйста, выполните вход!<br/>.</div><hr>';
-  header( "Location: https://education.saico.pro/login.php");
+header( 'Refresh: 0; url=login.php' );
 }
 if (!isset($_SESSION['status'])) {
   	echo '<div style="color:green;">Статус неактивен<br/>.</div><hr>';
-  header( "Location: https://education.saico.pro/main.php");
+header( 'Refresh: 0; url=main.php' );
 }
 
 
