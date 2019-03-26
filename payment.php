@@ -13,13 +13,14 @@ $_POST['codepro'].'&'.
 $_POST['label']);
 
 if ( $_POST['sha1_hash'] != $hash or $_POST['codepro'] === true or $_POST['unaccepted'] === true ) exit('error');
-
+// на случай, Если пользователь не регистрировался
 $payment = R::dispense('payments');
 $payment->sum = $_POST['amount'];
 $payment->email = $_POST['email'];
 $payment->status = 1;
 R::store($payment);
 
+//Если пользователь уже зарегистрирован , то вписывается в него
 q1 = R::findOne('users', 'email = ?', $_POST['email']);
 if (q1) {
 $user = R::dispense('users');
