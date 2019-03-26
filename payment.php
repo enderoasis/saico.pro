@@ -17,6 +17,7 @@ if ( $_POST['sha1_hash'] != $hash or $_POST['codepro'] === true or $_POST['unacc
 $payment = R::dispense('payments');
 $payment->sum = $_POST['amount'];
 $payment->email = $_POST['email'];
+$payment->status = 1;
 R::store($payment);
 
 
