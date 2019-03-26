@@ -1,7 +1,12 @@
 <?php
 
 session_start();
+if (!isset($_SESSION['logged_user'])) {
+  	echo '<div style="color:red;">Пожалуйста, выполните вход!<br/>.</div><hr>';
+  header( "Location: https://education.saico.pro/login.php");
+}
 if (!isset($_SESSION['status'])) {
+  	echo '<div style="color:green;">Проверка статуса оплаты прошла успешно, Добро пожаловать!<br/>.</div><hr>';
   header( "Location: https://education.saico.pro/main.php");
 }
 
