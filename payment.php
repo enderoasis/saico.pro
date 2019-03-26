@@ -14,6 +14,8 @@ $_POST['label']);
 
 if ( $_POST['sha1_hash'] != $hash or $_POST['codepro'] === true or $_POST['unaccepted'] === true ) exit('error');
 // на случай, Если пользователь не регистрировался
+if ($_POST['amount'] < 5) exit('error');
+
 $payment = R::dispense('payments');
 $payment->sum = $_POST['amount'];
 $payment->email = $_POST['email'];
