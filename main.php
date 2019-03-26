@@ -11,6 +11,7 @@ if ($fnd) {
   header( "Location: https://education.saico.pro/study.php");
 
 }
+
  ?>
 
 

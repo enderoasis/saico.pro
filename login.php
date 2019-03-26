@@ -19,17 +19,14 @@ session_start();
 			$_SESSION['logged_user'] = $user;
 
 			echo '<div style="color:green;">Вы авторизованы!<br/>.</div><hr>';
-		header( 'Refresh: 1; url=main.php' );
+		header( 'Refresh: 0; url=main.php' );
 	 }}
-else {
-	$errors[] = 'Неверно введен пароль!';
-}
-		if ( ! empty($errors) )
-		{
-			//выводим ошибки авторизации
-		 	echo '<div style="color:green;">Ошибка, укажите корректную почту или пароль!<br/>.</div><hr>';
-			header( 'Refresh: 0; url=login.php' );
-		}
+
+	else
+	{
+		echo '<div style="color:green;">Ошибка, укажите корректную почту или пароль!<br/>.</div><hr>';
+	}
+
 
 ?>
 
