@@ -8,7 +8,7 @@ session_start();
   $fnd	= R::findOne('users','status = ?', array($st));
   }
 if ($fnd) {
-  header( "Location: https://education.saico.pro/study.php");
+	header( 'Refresh: 0; url=study.php' );
   $_SESSION['status'] = "OK";
 }
 else {
@@ -18,7 +18,7 @@ else {
     $fnd1 = R::findOne('payments','status = ?', array($st));
   }
   if ($fnd1) {
-    header( "Location: https://education.saico.pro/study.php");
+  	header( 'Refresh: 0; url=study.php' );
     $_SESSION['status'] = "OK";
   }
  ?>
