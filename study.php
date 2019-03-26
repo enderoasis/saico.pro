@@ -1,14 +1,16 @@
 <?php
 
 session_start();
-if (!isset($_SESSION['logged_user'])) {
-  	echo '<div style="color:red;">Пожалуйста, выполните вход!<br/>.</div><hr>';
-header( 'Refresh: 0; url=login.php' );
-}
 if (!isset($_SESSION['status'])) {
   	echo '<div style="color:green;">Статус неактивен<br/>.</div><hr>';
 header( 'Refresh: 0; url=main.php' );
 }
+
+if (!isset($_SESSION['logged_user'])) {
+  	echo '<div style="color:red;">Пожалуйста, выполните вход!<br/>.</div><hr>';
+header( 'Refresh: 0; url=login.php' );
+}
+
 
 
 
