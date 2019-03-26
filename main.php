@@ -1,6 +1,10 @@
 <?php
 require 'db.php';
 session_start();
+if (!isset($_SESSION['logged_user'])) {
+  	echo '<div style="color:red;">Пожалуйста, выполните вход!<br/>.</div><hr>';
+	header( 'Refresh: 0; url=login.php' );
+}
 	$check	=  $_SESSION['mail'];
  $st = 1;
  	$fon = R::findOne('users', 'email = ?', array($check));
