@@ -14,16 +14,5 @@ if ($fnd) {
 	header( 'Refresh: 0; url=study.php' );
 
 }
-else {
-  $fon1 = R::findOne('payments', 'email = ?', array($check));
-}
-  if ($fon1) {
-    $st = 1;
-    $fnd1 = R::findOne('payments','status = ?', array($st));
-  }
-  if ($fnd1) {
-    $_SESSION['status'] = "OK";
-  	header( 'Refresh: 0; url=study.php' );
 
-  }
  ?>
