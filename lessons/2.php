@@ -1,13 +1,11 @@
 <?php
 
 session_start();
-if (!isset($_SESSION['status'])) {
-  header( "Location: https://education.saico.pro/main.php");
+if ($_SESSION['status'] = "OK") {
+  	echo '<div style="color:green;">Статус неактивен<br/>.</div><hr>';
+header( 'Refresh: 0; url=main.php' );
 }
-
-
-
- ?>
+?>
 <html>
 	<head>
 		<title>Учебный портал</title>

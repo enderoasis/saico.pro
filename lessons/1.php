@@ -1,11 +1,6 @@
 <?php
 
-session_start();
-if (!isset($_SESSION['status'])) {
-  header( "Location: https://education.saico.pro/main.php");
-}
-
-
+require 'check.php';
 
  ?>
 <html>
