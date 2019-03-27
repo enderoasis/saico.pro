@@ -19,7 +19,7 @@ if ($fnd) {
 else {
 
 
-  header( 'Refresh: 0; url=main.php' );
+  echo $check;
 }
 
 
