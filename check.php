@@ -4,10 +4,10 @@ session_start();
 
 	$check	=  $_SESSION['mail'];
 
- 	$fon = R::findOne('users', 'email = ?', array($check));
+ 	$fon = R::findOne('payments', 'email = ?', array($check));
   if ($fon) {
     $st = 1;
-  $fnd	= R::findOne('users','status = ?', array($st));
+  $fnd	= R::findOne('payments','status = ?', array($st));
   }
 if ($fnd) {
   $_SESSION['status'] = "OK";
