@@ -24,7 +24,7 @@
 									<a href="index.php" class="logo"><strong>SMM</strong> by Saico.pro</a>
 									<ul class="icons">
 
-																			<li><a href="login.php" class="button">Вход</a></li>
+																		
 																			<li><a href="register.php"class="button">Регистрация</a></li>
 																		</ul>
 
