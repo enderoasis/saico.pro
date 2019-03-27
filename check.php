@@ -2,6 +2,10 @@
 require 'db.php';
 session_start();
 
+if (!isset($_SESSION['logged_user'])) {
+  	echo '<div style="color:red;">Пожалуйста, выполните вход!<br/>.</div><hr>';
+header( 'Refresh: 0; url=login.php' );
+}
 	$check	=  $_SESSION['mail'];
 
  	$fon = R::findOne('payments', 'email = ?', array($check));
@@ -11,7 +15,7 @@ session_start();
   }
 if ($fnd) {
   $_SESSION['status'] = "OK";
-	header( 'Refresh: 0; url=study.php' );
+	
 
 }
 else {

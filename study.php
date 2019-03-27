@@ -1,18 +1,6 @@
 <?php
 
-session_start();
-if ($_SESSION['status'] != "OK") {
-  	echo '<div style="color:green;">Статус неактивен<br/>.</div><hr>';
-header( 'Refresh: 0; url=main.php' );
-}
-
-if (!isset($_SESSION['logged_user'])) {
-  	echo '<div style="color:red;">Пожалуйста, выполните вход!<br/>.</div><hr>';
-header( 'Refresh: 0; url=login.php' );
-}
-
-
-
+require 'check.php';
 
  ?>
 
