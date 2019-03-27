@@ -14,5 +14,8 @@ if ($fnd) {
 	header( 'Refresh: 0; url=study.php' );
 
 }
+else {
+  header( 'Refresh: 0; url=main.php' );
+}
 
  ?>
