@@ -18,7 +18,7 @@ if ($fnd) {
 	}
 else {
 
-  $fromuser = R::findOne('payments', 'email = ?', array($check));
+  $fromuser = R::findOne('users', 'email = ?', array($check));
 }
   if ($fromuser) {
     $sd = 1;
@@ -27,6 +27,7 @@ else {
 if ($fromuserfound) {
   $_SESSION['status'] = "OK";
 }
+
 else {
   header( 'Refresh: 0; url=main.php' );
 }
