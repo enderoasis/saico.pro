@@ -19,7 +19,7 @@ session_start();
 			$_SESSION['logged_user'] = "yes";
 
 			echo '<div style="color:green;">Вы авторизованы!<br/>.</div><hr>';
-		header( 'Refresh: 0; url=check.php' );
+		header( 'Refresh: 0; url=study.php' );
 	 }}
 
 	else
