@@ -14,6 +14,7 @@ if ($users) {
   if ($users->status == 1) {
     $st = 1;
   $_SESSION['status'] = $st;
+
   }
 }
 else {
@@ -23,14 +24,14 @@ else {
 
 
 
- 	$fon = R::findOne('payments', 'email = ?', array($check));
-  if ($fon) {
-    $st = 1;
-  $fnd	= R::findOne('payments','status = ?', array($st));
-  }
-if ($fnd) {
-  $_SESSION['status'] = "OK";
-	}
+ //	$fon = R::findOne('payments', 'email = ?', array($check));
+//  if ($fon) {
+  //  $st = 1;
+  //$fnd	= R::findOne('payments','status = ?', array($st));
+  //}
+//if ($fnd) {
+  //$_SESSION['status'] = "OK";
+	//}
 
 
 
