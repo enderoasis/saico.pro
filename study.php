@@ -16,9 +16,10 @@ if ($users) {
   $_SESSION['status'] = $st;
 
   }
-}
-else {
-  header( 'Refresh: 0; url=main.php' );
+  else {
+    header( 'Refresh: 0; url=main.php' );
+  }
+
 }
 
 
