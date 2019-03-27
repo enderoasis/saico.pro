@@ -15,11 +15,21 @@ header( 'Refresh: 0; url=login.php' );
   }
 if ($fnd) {
   $_SESSION['status'] = "OK";
-	
+	}
+else {
 
+  $fromuser = R::findOne('payments', 'email = ?', array($check));
+}
+  if ($fromuser) {
+    $sd = 1;
+    $fromuserfound = R::findOne('users','status = ?', array($sd));
+  }
+if ($fromuserfound) {
+  $_SESSION['status'] = "OK";
 }
 else {
   header( 'Refresh: 0; url=main.php' );
 }
+
 
  ?>
