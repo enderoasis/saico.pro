@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-if ($_SESSION['status'] = "OK") {
+if ($_SESSION['status'] != "OK") {
   	echo '<div style="color:green;">Статус неактивен<br/>.</div><hr>';
 header( 'Refresh: 0; url=main.php' );
 }
