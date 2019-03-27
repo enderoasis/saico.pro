@@ -27,9 +27,6 @@ else {
 if ($fromuserfound) {
   $_SESSION['status'] = "OK";
 }
-elseif ($fnd === true and $fromuserfound === true) {
-  $_SESSION['status'] = "OK";
-}
 else {
   header( 'Refresh: 0; url=main.php' );
 }
