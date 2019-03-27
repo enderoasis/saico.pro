@@ -1,6 +1,6 @@
 <?php
 
-require 'check.php';
+require '/check.php';
 
  ?>
 <html>
