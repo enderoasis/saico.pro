@@ -18,17 +18,7 @@ if ($fnd) {
 	}
 else {
 
-  $fromuser = R::findOne('users', 'email = ?', array($check));
-}
-  if ($fromuser) {
-    $sd = 1;
-    $fromuserfound = R::findOne('users','status = ?', array($sd));
-  }
-if ($fromuserfound) {
-  $_SESSION['status'] = "OK";
-}
 
-else {
   header( 'Refresh: 0; url=main.php' );
 }
 
