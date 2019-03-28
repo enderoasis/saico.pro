@@ -1,7 +1,7 @@
 <?php
 require 'db.php';
 session_start();
-	if ( isset($data1['do_exit']) )
+	if ( isset($_POST['do_exit']) )
 {
 session_unset();
 
