@@ -6,7 +6,7 @@ $_SESSION['mail'] = $pc;
 
 if ($user->email == $pc) {
 	echo "YES";
-	echo "$user";
+	echo $user;
 $getstatus = R::find('users', 'status = ?', array(1));
 }
 
