@@ -1,17 +1,4 @@
-<?php
-require 'db.php';
-	session_start();
-	if ( isset($_POST['do_exit']) )
-{
 
-	session_unset();
-	session_destroy();
-
-header("Location: /login.php");
-}
-
-
- ?>
 <!DOCTYPE HTML>
 
 <html>
@@ -37,8 +24,8 @@ header("Location: /login.php");
 									<ul class="icons">
 
 																			<li><a href="index.php" class="button">Вернуться на главную</a></li>
+																			li><a href="logout.php" class="button">Вернуться на главную</a></li>
 																		</ul>
-																		<button type="submit" name="do_exit">Выход</button>
 								</header>
 
 							<!-- Content -->
