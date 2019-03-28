@@ -18,7 +18,7 @@ header( 'Refresh: 0; url=login.php' );
     if ($state == 1) {
 
       $_SESSION['status'] = $st;
-      echo $st;
+      echo '$st';
       echo $state;
     }
   }
