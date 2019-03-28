@@ -11,10 +11,10 @@ session_start();
 
 		if ( $user )
 		{
-			//логин существует
+		$user2 = R::find('users','status = ?', array( 1 ));
 			if ( password_verify($data1['password'], $user->password))
 			{
-
+				$_SESSION['stat'] = $user2;
  			 $_SESSION['mail'] = $_POST['email'];
 			$_SESSION['logged_user'] = $user;
 
