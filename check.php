@@ -3,8 +3,8 @@ require 'db.php';
 session_start();
 
 $_SESSION['mail'] = $pc;
-$p = "enderoasis@gmail.com";
-if ($user->email == $p) {
+
+if ($user->email == $pc) {
 
 	echo "HI";
 }
