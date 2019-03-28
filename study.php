@@ -5,7 +5,7 @@ if (!isset( $_SESSION['logged_user'] )) {
   header( 'Refresh: 0; url=login.php' );
 }
 
- if (!isset( $_SESSION['stat'])) {
+ if (!isset( 	$_SESSION['haspaid'] )) {
     header( 'Refresh: 0; url=main.php' );
  }
 
@@ -37,7 +37,7 @@ if (!isset( $_SESSION['logged_user'] )) {
                           </ul>
       </header>
       <section>
-      
+
         <div class="posts">
           <article>
             <a href="/lessons/1.php" class="image"><img src="image/p2.png" alt="" /></a>
