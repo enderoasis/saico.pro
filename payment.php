@@ -19,18 +19,15 @@ if ($_POST['amount'] < 5) exit('error');
 $payment = R::dispense('payments');
 $payment->sum = $_POST['amount'];
 $payment->email = $_POST['email'];
-$payment->status = 1;
+$payment->status = '1';
 R::store($payment);
 
 //Если пользователь уже зарегистрирован , то вписываем статус в users
-$q1 = R::findOne('users', 'email = ?', $_POST['email']);
-if ($q1) {
-$user = R::dispense('users');
-$user->status = 1;
+$pc1 = = $_POST['email'];
+//$q1 = R::exec( 'UPDATE `users` SET `status`="1" WHERE `email` = ?', array($pc1) );
+$user = R::load('users' , array($pc1));
+$user->status = '1';
 R::store($user);
-}
-
-
 
 $usermail = $_POST['email'];
 $userpaid = $_POST['amount'];
