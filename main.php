@@ -3,7 +3,7 @@
 
 <html>
 	<head>
-		<title>Обучение by Saico.pro</title>
+		<title>Отказ в доступе</title>
 		<meta charset="utf-8" />
 		    <link rel="icon" href="https://partners.saico.pro/favicon.png">
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />

@@ -3,7 +3,7 @@
 session_start();
 	$data1 = $_POST;
 
-	
+
 
 	if ( isset($data1['do_login']) )
 	{
@@ -39,7 +39,7 @@ session_start();
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="Cache-Control" content="no-cache">
     <meta http-equiv="expires" content="0">
-    <title>saico.pro</title>
+    <title>Авторизация</title>
       <link rel="icon" href="https://partners.saico.pro/favicon.png">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">

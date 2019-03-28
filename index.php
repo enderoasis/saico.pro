@@ -3,7 +3,7 @@
 
 <html>
 	<head>
-		<title>Saico Education</title>
+		<title>Saico Education - Главная</title>
     <link rel="icon" href="https://partners.saico.pro/favicon.png">
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
