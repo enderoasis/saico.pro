@@ -11,7 +11,7 @@ session_start();
 
 		if ( $user )
 		{
-		$user2 = R::find('users','status = ?', array( 1 ));
+		
 			if ( password_verify($data1['password'], $user->password))
 			{
 				$_SESSION['stat'] = $user2;
