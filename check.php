@@ -11,8 +11,8 @@ $getstatus = R::exec('SELECT `status` FROM `users` WHERE `email` = ?', array($pc
 
 var_dump ($getstatus);
 }
- if( $getstatus == '1' ) {
-	 $_SESSION['cond'] = $getstatus;
+ if( $getstatus == $stat ) {
+	 $_SESSION['stat'] = $getstatus;
 	  header( 'Refresh: 0; url=study.php' );
  }
 
