@@ -8,26 +8,55 @@ header( 'Refresh: 0; url=login.php' );
 }
 
 	$check	=  $_SESSION['mail'];
+
   $cets = R::findOne('users', 'email = ?', array($check));
   if ($cets) {
-    if ($cets->status == 1) {
       $st = 1;
+    $state = R::find('users','status = ?', array( $st ));
+    if ($state) {
+
+      $_SESSION['status'] = $st;
+    }
+  }
+  if (!$cets) {
+    $st1 = 1;
+    $state1 = R::find('payments','status = ?', array( $st1 ));
+    if ($state1) {
+
       $_SESSION['status'] = $st;
     }
     else {
-      $users = R::findOne('payments', 'email = ?', array($check));
+      header( 'Refresh: 0; url=main.php' );
     }
   }
-if ($users) {
-  if ($users->status == 1) {
-    $st = 1;
-  $_SESSION['status'] = $st;
+ //elseif (!$state) {
+  //$cets1 = R::findOne('payments', 'email = ?', array($check));
+//}
+//  elseif ($cets1) {
+  //  $st1 = 1;
+    //$state1 = R::find('payments','status = ?', array( $st1 ));
+  //}
+    //    elseif (!$cets1) {
+      //    header( 'Refresh: 0; url=main.php' );
+        //}
+      //}
 
-  }
-  else {
-    header( 'Refresh: 0; url=main.php' );
-  }
-}
+    //else {
+      //$users = R::findOne('payments', 'email = ?', array($check));
+    //}
+  //}
+//if ($users) {
+  //$st = 1;
+//$state = R::find('payments','status = ?', array( $st ));
+  //if ($state) {
+    //$st = 1;
+  //$_SESSION['status'] = $st;
+
+//  }
+  //else {
+    //header( 'Refresh: 0; url=main.php' );
+  //}
+//}
 
 
 
