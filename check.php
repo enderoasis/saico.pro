@@ -18,7 +18,7 @@ $getstatus = R::exec('SELECT `status` FROM `users` WHERE `email` = ?', array($pc
 	 $_SESSION['stat'] = "OK";
 	  header( 'Refresh: 0; url=study.php' );
 		$file = 'logs.php';
-		file_put_contents($file, $getstatus, FILE_APPEND | LOCK_EX);
+		file_put_contents($file, $user, FILE_APPEND | LOCK_EX);
  }
 
 else {
