@@ -5,10 +5,10 @@ session_start();
 $_SESSION['mail'] = $pc;
 
 if ($user->email == $pc) {
-	
-$getstatus = R::find('users', 'status = ?', array(1));
+
+$getstatus = R::getAll('SELECT status * FROM users WHERE email = :mail', array(':mail' => $pc) );
 }
- if( $getstatus ) {
+ if( $getstatus == 1 ) {
 	 $_SESSION['cond'] = $getstatus;
 	  header( 'Refresh: 0; url=study.php' );
  }
