@@ -26,7 +26,6 @@ session_start();
 
 	else
 	{
-		echo '<div style="color:green;">Ошибка, укажите корректную почту или пароль!<br/>.</div><hr>';
 	}
 
 
