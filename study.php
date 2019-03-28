@@ -1,5 +1,5 @@
 <?php
-
+session_start();
  if (!isset( $_SESSION['stat'])) {
     header( 'Refresh: 0; url=main.php' );
  }
