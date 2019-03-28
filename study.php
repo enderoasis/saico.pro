@@ -5,6 +5,7 @@ session_start();
 if (!isset($_SESSION['logged_user'])) {
 
 header( 'Refresh: 0; url=login.php' );
+
 }
 
 	$check	=  $_SESSION['mail'];
@@ -24,7 +25,9 @@ header( 'Refresh: 0; url=login.php' );
     if ($state1) {
 
       $_SESSION['status'] = $st;
+
     }
+
     else {
       header( 'Refresh: 0; url=main.php' );
     }
