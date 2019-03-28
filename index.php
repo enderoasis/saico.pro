@@ -194,7 +194,7 @@
 										<h2>Меню</h2>
 									</header>
 									<ul>
-										<li><a href="study.php">Учебный портал</a></li>
+										<li><a href="check.php">Учебный портал</a></li>
 										<li><a href="index.php">Главная</a></li>
 										<li><a href="/partnership">Партнёрство</a></li>
 										<li><a href="yandexpayment.php">Оплата обучения</a></li>

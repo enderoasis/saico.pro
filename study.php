@@ -1,5 +1,4 @@
 <?php
-require 'check.php';
  //elseif (!$state) {
   //$cets1 = R::findOne('payments', 'email = ?', array($check));
 //}
