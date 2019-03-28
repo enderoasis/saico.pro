@@ -1,63 +1,8 @@
 <?php
- //elseif (!$state) {
-  //$cets1 = R::findOne('payments', 'email = ?', array($check));
-//}
-//  elseif ($cets1) {
-  //  $st1 = 1;
-    //$state1 = R::find('payments','status = ?', array( $st1 ));
-  //}
-    //    elseif (!$cets1) {
-      //    header( 'Refresh: 0; url=main.php' );
-        //}
-      //}
 
-    //else {
-      //$users = R::findOne('payments', 'email = ?', array($check));
-    //}
-  //}
-//if ($users) {
-  //$st = 1;
-//$state = R::find('payments','status = ?', array( $st ));
-  //if ($state) {
-    //$st = 1;
-  //$_SESSION['status'] = $st;
-
-//  }
-  //else {
-    //header( 'Refresh: 0; url=main.php' );
-  //}
-//}
-
-
-
-//$users = R::findOne('payments', 'email = ?', array($check));
-
-//if ($users) {
-  //if ($users->status == 1) {
-    //$st = 1;
-  //$_SESSION['status'] = $st;
-
-  //}
-  //else {
-    //header( 'Refresh: 0; url=main.php' );
-  //}
-
-//}
-
-
-
-
-
- //	$fon = R::findOne('payments', 'email = ?', array($check));
-//  if ($fon) {
-  //  $st = 1;
-  //$fnd	= R::findOne('payments','status = ?', array($st));
-  //}
-//if ($fnd) {
-  //$_SESSION['status'] = "OK";
-	//}
-
-
+ if (!isset( $_SESSION['stat'])) {
+    header( 'Refresh: 0; url=main.php' );
+ }
 
  ?>
 
