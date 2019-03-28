@@ -5,13 +5,17 @@ session_start();
 $_SESSION['mail'] = $pc;
 
 if ($user->email == $pc) {
-	echo "YES";
-	echo $user;
+	
 $getstatus = R::find('users', 'status = ?', array(1));
 }
+ if( $getstatus ) {
+	 $_SESSION['cond'] = $getstatus;
+	  header( 'Refresh: 0; url=study.php' );
+ }
 
-elseif(!$getstatus) {
-  echo "BYE";
+else {
+ header( 'Refresh: 0; url=main.php' );
+
 }
 
 	?>
