@@ -24,7 +24,7 @@
 									<ul class="icons">
 
 																			<li><a href="index.php" class="button">Вернуться на главную</a></li>
-																			li><a href="logout.php" class="button">Вернуться на главную</a></li>
+																			<li><a href="logout.php" class="button">Вернуться на главную</a></li>
 																		</ul>
 								</header>
 
