@@ -82,6 +82,7 @@
 
                             <li><a href="https://partners.saico.pro" class="button2">Партнёрство</a></li>
                             <li><a href="/index.php"class="button">Главная</a></li>
+                            <li><a href="/logout.php" class="button">Выход</a></li>
                           </ul>
       </header>
       <section>
