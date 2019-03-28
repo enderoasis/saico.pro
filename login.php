@@ -3,6 +3,8 @@
 session_start();
 	$data1 = $_POST;
 
+	
+
 	if ( isset($data1['do_login']) )
 	{
 		$user = R::findOne('users', 'email = ?', array($data1['email']));
@@ -14,7 +16,7 @@ session_start();
 
 			if ( password_verify($data1['password'], $user->password))
 			{
-				
+
  			 $_SESSION['mail'] = $_POST['email'];
 			$_SESSION['logged_user'] = $user;
 
