@@ -98,7 +98,7 @@ if (!isset( $_SESSION['logged_user'] )) {
             </ul>
           </article>
           <article>
-            <a href="/lessons/8.php" class="image"><img src="image/p8.jpg" alt="" /></a>
+            <a href="/lessons/8.php" class="image"><img src="image/p8.png" alt="" /></a>
             <h3>Дополнительные функции </h3>
             <p>Instagram является визуальной социальной страницей, и поэтому мы загружаем фото-видео материалы. Чтобы изменить качество фото, мы используем обрабатывающие программы, подробнее о них. </p>
             <ul class="actions">
