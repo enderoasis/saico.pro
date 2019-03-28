@@ -1,11 +1,13 @@
 <?php
 require 'db.php';
-session_start();
+	session_start();
 	if ( isset($_POST['do_exit']) )
 {
-session_unset();
 
-	header( 'Refresh: 0; url=login.php' );
+	session_unset();
+	session_destroy();
+
+header("Location: /login.php");
 }
 
 
