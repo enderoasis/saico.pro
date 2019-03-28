@@ -1,13 +1,17 @@
 <?php
 require 'db.php';
 session_start();
+if isset(($_SESSION['status'])) {
+	  header( 'Refresh: 0; url=main.php' );
+}
 
+else {
 
 
 	$check	=  $_SESSION['mail'];
 
   $cets = R::findOne('users', 'email = ?', array($check));
-
+}
   if ($cets) {
       $st = 1;
     $state = R::find('users','status = ?', array( $st ));
