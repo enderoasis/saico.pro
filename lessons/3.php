@@ -1,34 +1,16 @@
 <?php
-require 'db.php';
 session_start();
 
-if (!isset($_SESSION['logged_user'])) {
-
-header( 'Refresh: 0; url=login.php' );
+if (!isset( $_SESSION['logged_user'] )) {
+  header( 'Refresh: 0; url=login.php' );
 }
 
-	$check	=  $_SESSION['mail'];
-  $cets = R::findOne('users', 'email = ?', array($check));
-  if ($cets) {
-    if ($cets->status == 1) {
-      $st = 1;
-      $_SESSION['status'] = $st;
-    }
-    else {
-      $users = R::findOne('payments', 'email = ?', array($check));
-    }
-  }
-if ($users) {
-  if ($users->status == 1) {
-    $st = 1;
-  $_SESSION['status'] = $st;
-
-  }
-  else {
+ if (!isset( 	$_SESSION['haspaid'] )) {
     header( 'Refresh: 0; url=main.php' );
-  }
-}
-?>
+ }
+
+
+ ?>
 <html>
 	<head>
 		<title>Учебный портал</title>
