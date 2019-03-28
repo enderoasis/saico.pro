@@ -1,4 +1,15 @@
+<?php
+require 'db.php';
+session_start();
+	if ( isset($data1['do_exit']) )
+{
+session_unset();
 
+	header( 'Refresh: 0; url=login.php' );
+}
+
+
+ ?>
 <!DOCTYPE HTML>
 
 <html>
@@ -24,6 +35,7 @@
 									<ul class="icons">
 
 																			<li><a href="index.php" class="button">Вернуться на главную</a></li>
+																			<li><button class="button" type="submit" name="do_exit">Выход</button></li>
 								</header>
 
 							<!-- Content -->
