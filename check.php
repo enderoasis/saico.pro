@@ -17,7 +17,7 @@ else {
     $state = R::find('users','status = ?', array( $st ));
     if ($state) {
 
-      $_SESSION['status'] = $s1;
+      $_SESSION['status'] = "OK";
       header( 'Refresh: 0; url=study.php' );
     }
   }
@@ -26,7 +26,7 @@ else {
     $state1 = R::find('payments','status = ?', array( $st1 ));
     if ($state1) {
 
-      $_SESSION['status'] = $s1;
+      $_SESSION['status'] = "OK";
   header( 'Refresh: 0; url=study.php' );
     }
 
