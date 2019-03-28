@@ -37,7 +37,8 @@ header("Location: /login.php");
 									<ul class="icons">
 
 																			<li><a href="index.php" class="button">Вернуться на главную</a></li>
-																			<button type="submit" name="do_exit">Выход</button>
+																		</ul>
+																		<button type="submit" name="do_exit">Выход</button>
 								</header>
 
 							<!-- Content -->
