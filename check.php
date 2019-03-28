@@ -10,7 +10,7 @@ if ($user->email == $pc) {
 $getstatus = R::find('users', 'status = ?', array(1));
 }
 
-else {
+elseif(!$getstatus) {
   echo "BYE";
 }
 
