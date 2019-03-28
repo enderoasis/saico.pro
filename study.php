@@ -37,9 +37,7 @@ if (!isset( $_SESSION['logged_user'] )) {
                           </ul>
       </header>
       <section>
-        <header class="major">
-          <h2>Обучение</h2>
-        </header>
+      
         <div class="posts">
           <article>
             <a href="/lessons/1.php" class="image"><img src="image/p2.png" alt="" /></a>
