@@ -32,7 +32,7 @@
                       <header class="main" >
 
                         <h2><p><b> Форма для загрузки файлов </b></p></h2>
-                        <form action="upload.php" method="post" enctype="multipart/form-data">
+                        <form action="lessons/upload.php" method="post" enctype="multipart/form-data">
 <p>Оформляйте в Microsoft Word, ФИО и с указанием вашей почты. Проверка работ в течении трёх суток.</p>
                         <input type="file" name="filename"><br>
                         <h1></h1>
