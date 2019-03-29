@@ -6,7 +6,11 @@ $pc2 = $_SESSION['pc2'];
 $identification = R::findOne('users', ' email = ? ', array($pc2));
 $limit = 200;
 if ($identification->id <= $limit) {
-	$_SESSION['haspaid'] = $limit;
+	$identification->status = '1';
+	R::store($user);
+
+
+
 }
 
 
