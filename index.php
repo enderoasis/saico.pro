@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+
 <!DOCTYPE HTML>
 
 <html>
@@ -25,8 +25,8 @@
 									<ul class="icons">
 
 
-																		<div id="content"> <?php if (isset($_SESSION['reg'])){echo 'style="display:none;"';} ?>	<li><a href="register.php" class="button">Регистрация</a></li></div>
-																				<li><a href="login.php" class="button">Вход</a></li>
+																			<li><a href="register.php"class="button">Регистрация</a></li>
+																				<li><a href="login.php"class="button">Вход</a></li>
 																		</ul>
 
 								</header>
