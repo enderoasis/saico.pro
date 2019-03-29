@@ -25,9 +25,12 @@ R::store($payment);
 //Если пользователь уже зарегистрирован , то вписываем статус в users
 $pc1 =  $_POST['email'];
 //$q1 = R::exec( 'UPDATE `users` SET `status`="1" WHERE `email` = ?', array($pc1) );
-$user = R::load('users' , array($pc1));
-$user->status = '1';
-R::store($user);
+$user = R::findOne('users', ' email = ? ', array($pc1));
+if ($user) {
+  $user->status = '1';
+  R::store($user);
+  // code...
+}
 
 $usermail = $_POST['email'];
 $userpaid = $_POST['amount'];
