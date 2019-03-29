@@ -1,4 +1,6 @@
 <?php
+require 'db.php';
+
 session_start();
 $pc2 = $_SESSION['pc2'];
 $identification = R::findOne('users', ' email = ? ', array($pc2));
