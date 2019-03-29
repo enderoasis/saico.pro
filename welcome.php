@@ -7,7 +7,7 @@ $identification = R::findOne('users', ' email = ? ', array($pc2));
 $limit = 200;
 if ($identification->id <= $limit) {
 	$identification->status = '1';
-	R::store($user);
+	R::store($identification);
 
 
 
