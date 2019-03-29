@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 
 require 'db.php';
 
@@ -46,6 +46,7 @@ require 'db.php';
 		if ( empty($errors) )
 		{
 			//ошибок нет, теперь регистрируем
+			$_SESSION['pc2'] = $data1['email'];
 			$user = R::dispense('users');
 //$page_path = basename(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
 //$rf = basename(parse_url('https://education.saico.pro/register.php/1',  PHP_URL_PATH));

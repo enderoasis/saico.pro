@@ -1,3 +1,17 @@
+<?php
+session_start();
+$pc2 = $_SESSION['pc2'];
+$identification = R::findOne('users', ' email = ? ', array($pc2));
+$limit = 200;
+if ($identification->id <= $limit) {
+	$_SESSION['haspaid'] = $limit;
+}
+
+
+
+ ?>
+
+
 <!DOCTYPE HTML>
 
 <html>
@@ -23,7 +37,7 @@
 									<a href="index.php" class="logo"><strong>Education</strong>Saico.pro</a>
 									<ul class="icons">
 
-										<li><a href="register.php" class="button">Регистрация</a></li>
+
 									</ul>
 								</header>
 
