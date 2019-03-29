@@ -3,6 +3,9 @@
 session_start();
 	$data1 = $_POST;
 
+	if (isset( $_SESSION['logged_user'] )) {
+	  header( 'Refresh: 0; url=check.php' );
+	}
 
 
 	if ( isset($data1['do_login']) )
