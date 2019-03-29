@@ -21,12 +21,12 @@
 
 							<!-- Header -->
 								<header id="header">
-									<a href="index.php" class="logo"><strong>SMM</strong> by Saico.pro</a>
+								<a href="index.php" class="logo"><strong>SMM</strong> by Saico.pro</a>
 									<ul class="icons">
 
 
-																			<li><a href="register.php"class="button">Регистрация</a></li>
-																				<li><a href="login.php"class="button">Вход</a></li>
+		<?php if (!isset($_SESSION['reg'])	) {  ?>	<li><a href="register.php"class="button">Регистрация</a></li> <?php } ?>
+			<?php if (!isset($_SESSION['logged_user'])	) {  ?>	<li><a href="login.php"class="button">Вход</a></li>  <?php } ?>  
 																		</ul>
 
 								</header>
