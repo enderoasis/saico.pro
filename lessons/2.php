@@ -32,8 +32,7 @@ if (!isset( $_SESSION['logged_user'] )) {
 									<a href="index.html" class="logo"><strong>Обучение</strong> by Saico.pro</a>
 									<ul class="icons">
 										<li><a href="/index.php" class="button">Главная</a></li>
-										<li><a href="/login.php" class="button">Вход</a></li>
-										<li><a href="/register.php"class="button">Регистрация</a></li>
+									<li><a href="/send.php" class="button">Домашнее задание</a></li>
 									</ul>
 								</header>
 
