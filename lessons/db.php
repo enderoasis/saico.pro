@@ -6,7 +6,7 @@ if ( !R::testconnection() )
 {
 		exit ('Нет соединения с базой данных');
 }
-$address_site = "auth.saico.pro";
-$email_admin = "info@saico.pro";
+$address_site = "education.saico.pro";
+$email_admin = "admin@saico.pro";
 
 ?>
