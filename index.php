@@ -1,4 +1,4 @@
-
+<?php session_start(); ?>
 <!DOCTYPE HTML>
 
 <html>
@@ -26,7 +26,7 @@
 
 
 		<?php if (!isset($_SESSION['reg'])	) {  ?>	<li><a href="register.php"class="button">Регистрация</a></li> <?php } ?>
-			<?php if (!isset($_SESSION['logged_user'])	) {  ?>	<li><a href="login.php"class="button">Вход</a></li>  <?php } ?>  
+			<?php if (!isset($_SESSION['logged_user'])	) {  ?>	<li><a href="login.php"class="button">Вход</a></li>  <?php } ?>
 																		</ul>
 
 								</header>
