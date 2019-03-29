@@ -33,7 +33,7 @@ if (!isset( $_SESSION['logged_user'] )) {
 									<ul class="icons">
 										<li><a href="/index.php" class="button">Главная</a></li>
 										<li><a href="/send.php" class="button">Домашнее задание</a></li>
-                    
+
 									</ul>
 								</header>
 
