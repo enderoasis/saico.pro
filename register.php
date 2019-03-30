@@ -54,18 +54,17 @@ require 'db.php';
 
 
 
-
+$ref = $_GET['ref'];
 
 			$user->login = $data1['login'];
 			$user->email = $data1['email'];
-			$user->referer = $link_array;
+			$user->referer = $ref;
 			$user->password = password_hash($data1['password'], PASSWORD_DEFAULT); //пароль нельзя хранить в открытом виде, мы его шифруем при помощи функции password_hash для php > 5.6
 			R::store($user);
 
 $email = $data1['email'];
 $pass = $data1['password'];
 $log = $data1['login'];
-$ref = $_GET['ref'];
 $url = "https://partners.saico.pro/nrfpp?&name=".$log."&email=".$email."&password=".$pass."&referer=".$ref;
 $curl = curl_init();
 curl_setopt($curl, CURLOPT_URL, $url);
