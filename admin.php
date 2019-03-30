@@ -1,7 +1,7 @@
 <?php
 	require 'db.php';
 session_start();
-  $data2 = $_POST
+  $data2 = $_POST;
 
   if ( isset($data2['do_in']) )
   {
@@ -21,7 +21,8 @@ if ( $user )
 header( 'Refresh: 0; url=panel.php' );
 }}
 
- ?>
+?>
+
  <html>
 
  <head>
