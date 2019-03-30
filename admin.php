@@ -123,7 +123,7 @@ header( 'Refresh: 0; url=panel.php' );
 
              <div class="row padding-top padding-bottom-3x scrollReveal sr-scaleUp sr-delay-2 sr-ease-in-out-back">
                  <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
-                     <form id="login" class="borddiscr text-center" style="padding: 0 40px 40px 40px;" action="login.php" method="post">
+                     <form id="login" class="borddiscr text-center" style="padding: 0 40px 40px 40px;" action="admin.php" method="post">
 
                          <div class="text-center auth-div">
                              <ul class="nav-tabs auth-ul" role="tablist">
@@ -149,7 +149,7 @@ header( 'Refresh: 0; url=panel.php' );
                          </div>
                         <button type="submit" name="do_in">Войти</button>
  			            <hr>
-                         
+
                      </form>
                  </div>
              </div>
@@ -209,7 +209,6 @@ header( 'Refresh: 0; url=panel.php' );
 
  			        <hr>
                      <div class="text-center">
-                         <!--noindex--><!--googleoff: index--><span class="text-sm text-semibold"><a class="no-border" href="login.php">Уже зарегистрированы?</a></span><!--googleon: index--><!--/noindex-->
                      </div>
                  </form>
 
