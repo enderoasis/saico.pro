@@ -1,21 +1,25 @@
 <?php
 	require 'db.php';
 session_start();
-  $data = $_POST
-  if ( isset($data['do_in']) )
+  $data2 = $_POST
+
+  if ( isset($data2['do_in']) )
   {
-  $user = R::findOne('users' , 'email = ?' , array($data['email']));
+  $user = R::findOne('users' , 'email = ?' , array($data2['email']));
 }
 
 if ( $user )
- {
+{
 
-  if ( password_verify($_POST['password'], $user->password)) { header( 'Refresh: 0; url=panel.php' ); }
+  if ( password_verify($data2['password'], $user->password))
+  {
 
-  else {     header( 'Refresh: 0; url=index.php' );   }
+
+  $_SESSION['logged_admin'] = "YES";
 
 
-}
+header( 'Refresh: 0; url=panel.php' );
+}}
 
  ?>
  <html>
@@ -131,11 +135,11 @@ if ( $user )
                          <input type="hidden" name="action" class="form-control" value="login">
                          <div class="form-group">
                              <label class = "label lblorder text-left">Ваша почта:</label>
-                             <input type="email" name="email" class="form-control" value="<?php echo @$data['email']; ?>" placeholder="Ваша почта" required>
+                             <input type="email" name="email" class="form-control" value="<?php echo @$data2['email']; ?>" placeholder="Ваша почта" required>
                          </div>
                          <div class="form-group">
                              <label class = "label lblorder text-left">Ваш пароль:</label>
-                             <input type="password" name="password" class="form-control" value="<?php echo @$data['password']; ?>" placeholder="Пароль" required>
+                             <input type="password" name="password" class="form-control" value="<?php echo @$data2['password']; ?>" placeholder="Пароль" required>
                          </div>
                          <div id="captcha" class="form-group" style="display:none">
                              <hr>
