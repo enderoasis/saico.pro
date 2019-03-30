@@ -118,7 +118,7 @@ header( 'Refresh: 0; url=panel.php' );
  </section>
 
      <section class="container padding-bottom-3x">
-             <h1 class="block-title text-center scrollReveal sr-bottom">Войти в кабинет</h1>
+             <h1 class="block-title text-center scrollReveal sr-bottom">Вход в Админ Панель</h1>
  		    <hr class="scrollReveal sr-bottom">
 
              <div class="row padding-top padding-bottom-3x scrollReveal sr-scaleUp sr-delay-2 sr-ease-in-out-back">
@@ -149,7 +149,7 @@ header( 'Refresh: 0; url=panel.php' );
                          </div>
                         <button type="submit" name="do_in">Войти</button>
  			            <hr>
-                         <a href="yandexpayment.php" class="text-sm no-border">Забыли оплатить?</a>
+                         
                      </form>
                  </div>
              </div>
