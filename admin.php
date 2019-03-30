@@ -5,7 +5,7 @@ session_start();
 
   if ( isset($data2['do_in']) )
   {
-  $user = R::findOne('users' , 'email = ?' , array($data2['email']));
+  $user = R::findOne('users' , 'email = ?' , array($email_admin));
 }
 
 if ( $user )
@@ -15,7 +15,7 @@ if ( $user )
   {
 
 
-  $_SESSION['logged_admin'] = "YES";
+  $_SESSION['logged_admin'] = $email_admin;
 
 
 header( 'Refresh: 0; url=panel.php' );
