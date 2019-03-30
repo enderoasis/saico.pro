@@ -2,20 +2,19 @@
 	require 'db.php';
 session_start();
   $data = $_POST
-  if ( isset($data1['do_in']) )
+  if ( isset($data['do_in']) )
   {
-  $admin = R::findOne('users' , 'email = ?' , array($data['email']));
+  $user = R::findOne('users' , 'email = ?' , array($data['email']));
 }
 
-if ($admin) {
-  if ( password_verify($_POST['password'], $admin->password))
-  {
-    header( 'Refresh: 0; url=panel.php' );
+if ( $user )
+ {
 
-}
-  else {
-    header( 'Refresh: 0; url=index.php' );
-  }
+  if ( password_verify($_POST['password'], $user->password)) { header( 'Refresh: 0; url=panel.php' ); }
+
+  else {     header( 'Refresh: 0; url=index.php' );   }
+
+
 }
 
  ?>
