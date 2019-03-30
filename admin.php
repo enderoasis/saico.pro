@@ -1,8 +1,12 @@
 <?php
 	require 'db.php';
-
+session_start();
   $data = $_POST
-  $admin = R::findOne('users' , 'email = ?' , array($_POST['email']));
+  if ( isset($data1['do_in']) )
+  {
+  $admin = R::findOne('users' , 'email = ?' , array($data['email']));
+}
+
 if ($admin) {
   if ( password_verify($_POST['password'], $admin->password))
   {
@@ -139,7 +143,7 @@ if ($admin) {
                              <label class = "label lblorder text-left">Подтвердите что вы не робот:</label>
                              <div class = "g-recaptcha" id="cl"></div>
                          </div>
-                        <button type="submit" name="do_login">Войти</button>
+                        <button type="submit" name="do_in">Войти</button>
  			            <hr>
                          <a href="yandexpayment.php" class="text-sm no-border">Забыли оплатить?</a>
                      </form>
@@ -198,7 +202,7 @@ if ($admin) {
                          <div class = "g-recaptcha" id="chr"></div>
                      </div>
  			        <hr>
-                    
+
  			        <hr>
                      <div class="text-center">
                          <!--noindex--><!--googleoff: index--><span class="text-sm text-semibold"><a class="no-border" href="login.php">Уже зарегистрированы?</a></span><!--googleon: index--><!--/noindex-->
