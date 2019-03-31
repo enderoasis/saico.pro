@@ -125,7 +125,7 @@ if (!isset( $_SESSION['logged_user'] )) {
               <li><a href="/lessons/10.php" class="button">Начать</a></li>
             </ul>
           </article>
-            <h2>Десять Статей</h2>
+                  <h2>Десять Статей</h2>
         </div>
       </section>
       </div>
