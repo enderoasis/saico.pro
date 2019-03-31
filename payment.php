@@ -20,6 +20,7 @@ $payment = R::dispense('payments');
 $payment->sum = $_POST['amount'];
 $payment->email = $_POST['email'];
 $payment->status = '1';
+$payment->transid = $_POST['operation_id'];
 R::store($payment);
 
 //Если пользователь уже зарегистрирован , то вписываем статус в users
