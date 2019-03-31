@@ -126,7 +126,7 @@ if (!isset( $_SESSION['logged_user'] )) {
             </ul>
           </article>
           <header class="major">
-            <h2>10 Статей</h2>
+            <h2>  10 Статей</h2>
           </header>
         </div>
       </section>
