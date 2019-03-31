@@ -130,6 +130,6 @@ if (!isset( $_SESSION['logged_user'] )) {
       </div>
 
 
-    </section>
+  
   </body>
 </html>
