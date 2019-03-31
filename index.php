@@ -1,4 +1,9 @@
-<?php session_start(); ?>
+<?php
+ session_start();
+ $ref = $_GET['ref'];
+ $ref = $_SESSION['refid'];
+
+?>
 <!DOCTYPE HTML>
 
 <html>
