@@ -7,7 +7,7 @@ $operation = R::findOne('payments', ' transid = ? ', array($op));
   if ($operation) {
 $operation->email = $mail;
 $operation->sum = $total;
- printf("<p>Почта пользователя: ".$mail ." Сумма оплаты: " .$total .</p>);
+ printf("Почта пользователя: ".$mail ." Сумма оплаты: " .$total .);
 }
 
 
