@@ -54,7 +54,6 @@ require 'db.php';
 
 
 
-$ref = $_GET['ref'];
 
 			$user->login = $data1['login'];
 			$user->email = $data1['email'];
