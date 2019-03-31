@@ -127,7 +127,7 @@ if (!isset( $_SESSION['logged_user'] )) {
           </article>
 
         </div>
-        <header class="major">
+    <!--    <header class="major">
           <h2>  10 Статей</h2>
         </header>
         <div class="posts">
@@ -138,7 +138,7 @@ if (!isset( $_SESSION['logged_user'] )) {
             <ul class="actions">
               <li><a href="/lessons/1.php" class="button">Начать</a></li>
             </ul>
-          </article>
+          </article> -->
       </section>
       </div>
 
