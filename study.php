@@ -30,7 +30,7 @@ if (!isset( $_SESSION['logged_user'] )) {
       <div id="main">
         <div class="inner">
       <header id="header">
-        <h2></h2>
+        <h2>Образовательный портал</h2>
 
         <ul class="icons">
 
@@ -130,6 +130,6 @@ if (!isset( $_SESSION['logged_user'] )) {
       </div>
 
 
-  
+
   </body>
 </html>
