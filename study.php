@@ -128,6 +128,9 @@ if (!isset( $_SESSION['logged_user'] )) {
 
         </div>
       <header class="major">
+        <h1></h1>
+        <h1></h1>
+        <h1></h1>
           <h2>  10 Статей</h2>
         </header>
         <div class="posts">
