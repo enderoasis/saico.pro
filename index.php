@@ -1,7 +1,7 @@
 <?php
  session_start();
- $ref = $_GET['ref'];
- $ref = $_SESSION['refid'];
+ $_SESSION['refid']; = $_GET['ref'];
+ 
 
 ?>
 <!DOCTYPE HTML>
