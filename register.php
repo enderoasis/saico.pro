@@ -53,7 +53,7 @@ require 'db.php';
 //$rf = basename(parse_url('https://education.saico.pro/register.php/1',  PHP_URL_PATH));
 
 
-
+ $ref = $_SESSION['refid'];
 
 			$user->login = $data1['login'];
 			$user->email = $data1['email'];
