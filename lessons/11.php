@@ -10,7 +10,7 @@
 	<META NAME="CHANGED" CONTENT="20190217;91200000000000">
 	<META NAME="AppVersion" CONTENT="14.0000">
 	<META NAME="DocSecurity" CONTENT="0">
-    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="/assets/css/main.css" />
         <link rel="icon" href="https://partners.saico.pro/favicon.png">
 	<META NAME="HyperlinksChanged" CONTENT="false">
 	<META NAME="LinksUpToDate" CONTENT="false">
