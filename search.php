@@ -10,6 +10,8 @@ $operation->status = $state;
 echo $mail;
 echo $state;
 }
-
+else {
+	echo "Оплаты с таким номером транзакции не найден."
+}
 
  ?>
