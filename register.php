@@ -73,7 +73,7 @@ $data = curl_exec($curl);
 curl_close($curl);
 
 header("Content-Type: text/html; charset=UTF-8");
-header( "Location: https://education.saico.pro/welcome.php");
+header( "Location: https://education.saico.pro/");
 
 
 }}
