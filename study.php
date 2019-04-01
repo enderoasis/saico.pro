@@ -45,20 +45,20 @@ if (!isset( $_SESSION['logged_user'] )) {
         </header>
         <div class="posts">
           <article>
-            <a href="/lessons/21.php" class="image"><img src="image/p2.png" alt="" /></a>
+            <a href="/lessons/1.php" class="image"><img src="image/p2.png" alt="" /></a>
             <h3>1. Как сократить расходы на рекламу</h3>
             <p>Хотите сократить расходы на рекламу в Instagram, не пожертвовав при этом её эффективностью? Для этого достаточно правильно настроить таргетинг объявлений. Для этого социальная сеть предоставляет удобные инструменты. Вам просто нужно изучить их и научиться правильно использовать в ваших рекламных компаниях.</p>
             <ul class="actions">
-              <li><a href="/lessons/21.php" class="button">Начать</a></li>
+              <li><a href="/lessons/1.php" class="button">Начать</a></li>
             </ul>
           </article>
           <article>
-            <a href="/lessons/2.php" class="image"><img src="image/p3.png" alt="" /></a>
+            <a href="/lessons/21.php" class="image"><img src="image/p3.png" alt="" /></a>
             <h3>2. 7 самых распространенных ошибок в продвижении компании или бренда в Инстаграм</h3>
             <p>Это базовая ошибка, но, к сожалению, время от времени мы все еще наталкиваемся на такие вот закрытые аккаунты брендов. Если закрытые аккаунты для личных профилей — это нормально, то для компаний это, как минимум, странно.
 </p>
             <ul class="actions">
-              <li><a href="/lessons/2.php" class="button">Начать</a></li>
+              <li><a href="/lessons/21.php" class="button">Начать</a></li>
             </ul>
           </article>
           <article>
