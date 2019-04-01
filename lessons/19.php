@@ -1,14 +1,4 @@
-<?php
-session_start();
 
-if (!isset( $_SESSION['logged_user'] )) {
-  header( 'Refresh: 0; url=/login.php' );
-}
-
- if (!isset( 	$_SESSION['haspaid'] )) {
-    header( 'Refresh: 0; url=/main.php' );
- }
-?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <HTML>
 <HEAD>
