@@ -19,9 +19,9 @@ if (!isset( $_SESSION['logged_user'] )) {
  	<META NAME="GENERATOR" CONTENT="LibreOffice 4.1.6.2 (Linux)">
  	<META NAME="AUTHOR" CONTENT="Пользователь Windows">
  	<META NAME="CREATED" CONTENT="20190103;102300000000000">
- 	<META NAME="CHANGEDBY" CONTENT="Microsoft Office User">
- 	<META NAME="CHANGED" CONTENT="20190124;160800000000000">
- 	<META NAME="AppVersion" CONTENT="16.0000">
+ 	<META NAME="CHANGEDBY" CONTENT="Пользователь Windows">
+ 	<META NAME="CHANGED" CONTENT="20190401;42500000000000">
+ 	<META NAME="AppVersion" CONTENT="14.0000">
  	<META NAME="DocSecurity" CONTENT="0">
  	<META NAME="HyperlinksChanged" CONTENT="false">
  	<META NAME="LinksUpToDate" CONTENT="false">
@@ -308,8 +308,8 @@ if (!isset( $_SESSION['logged_user'] )) {
  <P STYLE="margin-top: 0.19in; margin-bottom: 0.19in; line-height: 100%">
  <BR><BR>
  </P>
- <P STYLE="margin-top: 0.19in; margin-bottom: 0.19in; line-height: 100%">
- <FONT FACE="Times New Roman, serif"><FONT SIZE=3><BR><BR></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=3><SPAN STYLE="background: #00ff00">Социальные
+ <P STYLE="margin-top: 0.19in; margin-bottom: 0.19in; line-height: 100%"><A NAME="_GoBack"></A>
+ <FONT FACE="Times New Roman, serif"><FONT SIZE=3><BR><BR>Социальные
  сети это инструмент используя который
   Вы можете заработать  миллионы долларов
  . Большинство из нас используют социальные
@@ -318,7 +318,7 @@ if (!isset( $_SESSION['logged_user'] )) {
  отдыхает. Но от этого нет никакой пользы
  для Вас. Знающие люди используют
  социальные сети как кране эффективный
- инструмент заработка .</SPAN></FONT></FONT></P>
+ инструмент заработка .</FONT></FONT></P>
  <P STYLE="margin-top: 0.19in; margin-bottom: 0.19in; line-height: 100%">
  <FONT FACE="Times New Roman, serif"><FONT SIZE=3>-Ваш ник или
  логин должны быть понятны. Если ваш
@@ -410,7 +410,7 @@ if (!isset( $_SESSION['logged_user'] )) {
  <P STYLE="margin-top: 0.19in; margin-bottom: 0.19in; line-height: 100%">
  <FONT FACE="Times New Roman, serif"><FONT SIZE=3>Вот пример
  некорректных Instagram аккаунтов</FONT></FONT></P>
- <P STYLE="margin-top: 0.19in; margin-bottom: 0.19in; line-height: 100%"><A NAME="_GoBack"></A>
+ <P STYLE="margin-top: 0.19in; margin-bottom: 0.19in; line-height: 100%">
  <IMG SRC="_1_html_d932d5f0.png" NAME="Рисунок 9" ALIGN=BOTTOM WIDTH=624 HEIGHT=411 BORDER=0></P>
  <P STYLE="margin-top: 0.19in; margin-bottom: 0.19in; line-height: 100%">
  <FONT FACE="Times New Roman, serif"><FONT SIZE=3><BR><BR>Пример
