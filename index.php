@@ -1,8 +1,10 @@
 <?php
+require 'db.php';
  session_start();
+
  $_SESSION['refid'] = $_GET['ref'];
  $pc2 = $_SESSION['pc2'];
- 
+
  $identification = R::findOne('users', ' email = ? ', array($pc2));
  $limit = 201;
  if ($identification->id <= $limit) {
