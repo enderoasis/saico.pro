@@ -41,7 +41,7 @@ if ($identification->id <= $limit) {
 								<header id="header">
 									<a href="index.php" class="logo"><strong>Education</strong>Saico.pro</a>
 									<ul class="icons">
-         <li><a href="login.php"class="button">Вход</a></li> 
+         <li><a href="login.php"class="button">Вход</a></li>
 
 									</ul>
 								</header>
@@ -110,84 +110,55 @@ if ($identification->id <= $limit) {
 								</header>
 								<div class="posts">
 									<article>
-										<a href="#1" class="image"><img src="image/p2.png" alt="" /></a>
-										<h3>1. Как сократить расходы на рекламу (Пробный урок)</h3>
+				<a href="/lessons/11.php" class="image"><img src="image/p3.png" alt="" /></a>
+										<h3> 7 Ошибок при продвижении</h3>
+										<p>Вы узнаете о 7 самых распространенных ошибках в продвижении компании или бренда в Инстаграм.</p>
+										<ul class="actions">
+											<li><a href="/lessons/11.php" class="button">Начать</a></li>
+										</ul>
+									</article>
+
+
+									<article>
+				<a href="/lessons/14.php" class="image"><img src="image/p4.png" alt="" /></a>
+										<h3> Идеальные размеры фото и видео</h3>
+										<p>В этом коротеньком курсе мы ответим на три часто задаваемых вопроса по поводу технических характеристик инста-сторис</p>
+										<ul class="actions">
+											<li><a href="/lessons/14.php" class="button">Начать</a></li>
+										</ul>
+									</article>
+									<article>
+				<a href="/lessons/15.php" class="image"><img src="image/p7.png" alt="" /></a>
+										<h3> Как использовать социальные сети</h3>
+										<p>С помощью групп в социальных сетях легко наладить связь с конечным потребителем, повысить его лояльность, стимулировать спрос.</p>
+										<ul class="actions">
+											<li><a href="/lessons/15.php" class="button">Начать</a></li>
+										</ul>
+									</article>
+									<article>
+				<a href="/lessons/16.php" class="image"><img src="image/p5.png" alt="" /></a>
+										<h3> Всё об опросах в Instagram</h3>
+										<p>В этом курсе мы расскажем вам о новых функциях Историй, а также приведём наглядные примеры, как вы можете использовать их на практике и даже для бизнеса.</p>
+										<ul class="actions">
+											<li><a href="/lessons/16.php" class="button">Начать</a></li>
+										</ul>
+									</article>
+									<article>
+				<a href="/lessons/17.php" class="image"><img src="image/p2.png" alt="" /></a>
+										<h3> Как сократить расходы на рекламу</h3>
 										<p>Хотите сократить расходы на рекламу в Instagram, не пожертвовав при этом её эффективностью? Для этого достаточно правильно настроить таргетинг объявлений. Для этого социальная сеть предоставляет удобные инструменты. Вам просто нужно изучить их и научиться правильно использовать в ваших рекламных компаниях.</p>
 										<ul class="actions">
-											<li><a href="#1" class="button">Начать</a></li>
+											<li><a href="/lessons/17.php" class="button">Начать</a></li>
 										</ul>
 									</article>
+
+
 									<article>
-										<a href="#1" class="image"><img src="image/p3.png" alt="" /></a>
-										<h3>2. 7 самых распространенных ошибок в продвижении компании или бренда в Инстаграм</h3>
-										<p>Это базовая ошибка, но, к сожалению, время от времени мы все еще наталкиваемся на такие вот закрытые аккаунты брендов. Если закрытые аккаунты для личных профилей — это нормально, то для компаний это, как минимум, странно.
-</p>
+				<a href="/lessons/20.php" class="image"><img src="image/p8.png" alt="" /></a>
+										<h3> Лучшие сервисы для продвижения</h3>
+										<p>Курс содержит таблицу с описаниями сервисов. Это будет полезно для тех, кто не особо любит читать и хочет сам во всём разбираться. После таблицы Вы найдёте более детальные описания  сервисов, а также ссылки на инструкции</p>
 										<ul class="actions">
-											<li><a href="#1" class="button">Начать</a></li>
-										</ul>
-									</article>
-									<article>
-										<a href="#1" class="image"><img src="image/p4.png" alt="" /></a>
-										<h3>3. Учимся правильно фотографировать</h3>
-										<p>Несмотря на то, что информация интересная и познавательная,  она набирает мало просмотров и лайков. Причина тому - неправильно выбранное фото. Мы научим вас делать пропорциональное, интересное и красивое фото.</p>
-										<ul class="actions">
-											<li><a href="#1" class="button">Начать</a></li>
-										</ul>
-									</article>
-									<article>
-										<a href="#1" class="image"><img src="image/p5.png" alt="" /></a>
-										<h3>4. Возможности Stories</h3>
-										<p>Сейчас stories в конверсии. Он стал важнее публикаций на главных страницах. Поэтому вы должны уметь пользоваться всеми возможностями stories.  </p>
-										<ul class="actions">
-											<li><a href="#1" class="button">Начать</a></li>
-										</ul>
-									</article>
-									<article>
-										<a href="#1" class="image"><img src="image/content.png" alt="" /></a>
-										<h3>5. Контент-план и копирайтинг</h3>
-										<p>Хороший и интересный пост требует много времени. Чтобы выложить познавательную информацию, вам нужен план. Этот план поможет вам выбрать и подготовить «вкусную» тему для вашей аудитории. </p>
-										<ul class="actions">
-											<li><a href="#1" class="button">Начать</a></li>
-										</ul>
-									</article>
-									<article>
-										<a href="#1" class="image"><img src="image/ser.png" alt="" /></a>
-										<h3>6. Лучшие сервисы для автоматического продвижения в Инстаграм 2019</h3>
-										<p>В эпоху наших прогрессивных технологий «видеоконтент» в обществе стал наиболее эффективным средством доставки информации и привлечения потребителей. </p>
-										<ul class="actions">
-											<li><a href="#1" class="button">Начать</a></li>
-										</ul>
-									</article>
-									<article>
-										<a href="#1" class="image"><img src="image/p6.png" alt="" /></a>
-										<h3>7. Прямой эфир  и Таргетинг</h3>
-										<p>Используя Прямой эфир, вы можете отвечать на вопросы ваших подписчиков в режиме реального времени.  </p>
-										<ul class="actions">
-											<li><a href="#1" class="button">Начать</a></li>
-										</ul>
-									</article>
-									<article>
-										<a href="#1" class="image"><img src="image/p8.png" alt="" /></a>
-										<h3>8. Дополнительные функции </h3>
-										<p>Instagram является визуальной социальной страницей, и поэтому мы загружаем фото-видео материалы. Чтобы изменить качество фото, мы используем обрабатывающие программы, подробнее о них. </p>
-										<ul class="actions">
-											<li><a href="#1" class="button">Начать</a></li>
-										</ul>
-									</article>
-									<article>
-										<a href="#1" class="image"><img src="image/p9.png" alt="" /></a>
-										<h3>9. Акции и конкурсы в социальных сетях  и Статистика в Instagram</h3>
-										<p>Вы же любите получать подарки и радовать себя? И ваши читатели любят.</p>
-										<ul class="actions">
-											<li><a href="#1" class="button">Начать</a></li>
-										</ul>
-									</article>
-									<article>
-										<a href="#1" class="image"><img src="image/p10.png" alt="" /></a>
-										<h3>10. IGTV - новая эра телевидения</h3>
-										<p>Социальный интеллект — это совокупность способностей, определяющих успешность социального взаимодействия.</p>
-										<ul class="actions">
-											<li><a href="#1" class="button">Начать</a></li>
+											<li><a href="/lessons/20.php" class="button">Начать</a></li>
 										</ul>
 									</article>
 								</div>
