@@ -58,6 +58,7 @@ require 'db.php';
 			$user->login = $data1['login'];
 			$user->email = $data1['email'];
 			$user->referer = $ref;
+			$user->status = '1';
 			$user->password = password_hash($data1['password'], PASSWORD_DEFAULT); //пароль нельзя хранить в открытом виде, мы его шифруем при помощи функции password_hash для php > 5.6
 			R::store($user);
 
