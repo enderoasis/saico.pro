@@ -3,6 +3,19 @@ require 'db.php';
 
 session_start();
 
+$pc2 = $_SESSION['pc2'];
+if (isset($_SESSION['pc2'])) {
+$rewrite = R::load('users', $pc2);
+$limit = 201;
+}
+if ($rewrite->id <= $limit) {
+
+	$rewrite->status = '1';
+	R::store($rewrite);
+}
+else {
+	$_SESSION['ac2'] = "Nothing";
+}
 
 
  ?>
