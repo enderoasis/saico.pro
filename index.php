@@ -156,6 +156,8 @@
 
 						</div>
 					</div>
+        </div>
+      </div>
 
 				<!-- Sidebar -->
 					<div id="sidebar">
@@ -176,20 +178,9 @@
 										<li><a href="yandexpayment.php">Оплата обучения</a></li>
 										<li><a href="offerta.html">Публичная оферта</a></li>
 
-										<!--<li><a href="#">Etiam Dolore</a></li>
-										<li><a href="#">Adipiscing</a></li>
-										<li>-->
 
-
-										<!--<li><a href="#">Maximus Erat</a></li>
-										<li><a href="#">Sapien Mauris</a></li>
-										<li><a href="#">Amet Lacinia</a></li> -->
 									</ul>
 								</nav>
-</div>
-</div>
-</div>
-</div>
 
 							<!-- Section -->
 
@@ -210,38 +201,19 @@
 
 							<!-- Footer -->
 								<footer id="footer">
-									<p class="copyright">&copy; Все права защищены. Design: by D.T</p>
+									<p class="copyright">&copy; Все права защищены. Saico LTD</p>
 								</footer>
 
 						</div>
 					</div>
-<div id="1" class="modalDialog">
-	<div>
-		<a href="#close" title="Закрыть" class="close">X</a>
-		<h2>Первый урок является пробным и бесплатным </h2>
-		<p>Чтобы получить доступ ко всем материалам курса ,пожалуйста оплатите данный курс. <br>
-			 После оплаты, вам будут доступны все материалы, а так же возможность участия в нашей партнёрской программе , в которой можно будет подзаработать,тем самым покрыв затраты на обучение и не только.<br>
-			 <a href="yandexpayment.php" class="button" >Перейти к оплате</a>
-			 <a href="first.html" class="button" >Перейти к уроку</a>
 
-			 <h1>
-
-			 </h1>
-			 <h1>
-
-			 </h1>
-			 <strong>С уважением, Администрация Сайта.</strong>
-			</p>
-	</div>
-</div>
-			
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<script src="/assets/js/jquery.min.js"></script>
+			<script src="/assets/js/browser.min.js"></script>
+			<script src="/assets/js/breakpoints.min.js"></script>
+			<script src="/assets/js/util.js"></script>
+			<script src="/assets/js/main.js"></script>
 
 	</body>
 </html>
