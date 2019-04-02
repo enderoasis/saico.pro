@@ -186,6 +186,10 @@
 										<li><a href="#">Amet Lacinia</a></li> -->
 									</ul>
 								</nav>
+</div>
+</div>
+</div>
+</div>
 
 							<!-- Section -->
 
@@ -230,7 +234,7 @@
 			</p>
 	</div>
 </div>
-			</div>
+			
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
