@@ -3,16 +3,16 @@ require 'db.php';
 
 session_start();
 
-$pc2 = $_SESSION['pc2'];
-if (isset($pc2)) {
-$identification = R::findOne('users', ' email = ? ', array($pc2));
-$limit = 201;
-}
-if ($identification->id <= $limit) {
-  $identification = R::dispense('users');
-  $identification->status = '1';
+//$pc2 = $_SESSION['pc2'];
+//if (isset($pc2)) {
+//$identification = R::findOne('users', ' email = ? ', array($pc2));
+//$limit = 201;
+//}
+//if ($identification->id <= $limit) {
+//  $identification = R::dispense('users');
+  //$identification->status = '1';
 
-	R::store($identification);
+	//R::store($identification);
  ?>
 
 
