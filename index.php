@@ -4,11 +4,9 @@
 
 
 ?>
-<!DOCTYPE HTML>
-
 <html>
 	<head>
-		<title>Saico Education - Welcome</title>
+		<title>Saico Education - Главная</title>
     <link rel="icon" href="https://partners.saico.pro/favicon.png">
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -28,7 +26,8 @@
 								<header id="header">
 									<a href="index.php" class="logo"><strong>Education</strong>Saico.pro</a>
 									<ul class="icons">
-         <li><a href="login.php"class="button">Вход</a></li>
+        <?php if (!isset($_SESSION['reg']) ) { ?> <li><a href="register.php"class="button">Регистрация</a></li> <?php } ?>
+         <?php if (!isset($_SESSION['logged_user']) ) { ?> <li><a href="login.php"class="button">Вход</a></li> <?php } ?>
 
 									</ul>
 								</header>
@@ -41,7 +40,7 @@
 											</h1>
 
 										</header>
-										<p><b>Вы успешно зарегистрировались!</b>
+
 «Saico education»  гарантирует конфиденциальность вашей информации. Мы создали специальный портал. Здесь предоставлены всевозможные материалы для обучения,а так же выдача задании для закрепления пройденных уроков на каждый день. Также на этот портал вы будете отправлять свои отчеты. Марафон будет проводиться только здесь. </p>
 										<ul class="actions">
 											<li><a href="#1" class="button big">Перейти</a></li>
