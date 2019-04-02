@@ -9,7 +9,7 @@ $identification = R::findOne('users', ' email = ? ', array($pc2));
 $limit = 201;
 }
 if ($identification->id <= $limit) {
-  $identification = R::dispense('users');
+
   $identification->status = '1';
 
 	R::store($identification);
