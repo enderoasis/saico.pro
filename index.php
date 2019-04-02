@@ -182,7 +182,7 @@
 										<li><a href="#">Sapien Mauris</a></li>
 										<li><a href="#">Amet Lacinia</a></li> -->
 									</ul>
-								</nav>
+
 
 							<!-- Section -->
 
@@ -200,7 +200,7 @@
 										г.Астана, Республика Казахстан.</li>
 									</ul>
 								</section>
-
+</nav>
 							<!-- Footer -->
 								<footer id="footer">
 									<p class="copyright">&copy; Все права защищены. Design: by D.T</p>
