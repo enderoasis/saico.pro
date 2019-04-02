@@ -47,7 +47,7 @@
 										</ul>
 									</div>
 									<span class="image object">
-                    <video> <source src="/videos/tips.mp4"> </video>
+										<img src="image/23.png" alt="" />
 									</span>
 								</section>
 
