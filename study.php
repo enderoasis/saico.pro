@@ -30,7 +30,7 @@ if (!isset( $_SESSION['logged_user'] )) {
       <div id="main">
         <div class="inner">
       <header id="header">
-        <h2>Образовательный портал</h2>
+  
 
         <ul class="icons">
 
