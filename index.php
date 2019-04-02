@@ -47,7 +47,7 @@
 										</ul>
 									</div>
 									<span class="image object">
-									 <video width="678" height="349" controls="controls" poster="videos/duel.jpg">
+									 <video width="478" height="449" controls="controls" poster="videos/duel.jpg">
                      <source src="videos/tips.mp4"> </video>
 									</span>
 								</section>
