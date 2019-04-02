@@ -1,6 +1,6 @@
 <?php
 require 'db.php';
-
+ini_set('error_reporting', E_STRICT);
 session_start();
 
 $pc2 = $_SESSION['pc2'];
