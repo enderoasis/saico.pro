@@ -13,7 +13,7 @@ $limit = 201;
 }
 if ($uid <= $limit) {
 	$identification->status = '1';
-	R::store($identification);
+	R::storeAll($identification);
 
 
 
