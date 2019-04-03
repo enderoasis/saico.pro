@@ -92,7 +92,7 @@
 							<!-- Section -->
 							<section>
 								<header class="major">
-									<h2>Обучение</h2>
+									<h2>В открытом доступе: </h2>
 								</header>
 								<div class="posts">
 									<article>
