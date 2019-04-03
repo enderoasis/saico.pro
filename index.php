@@ -204,7 +204,7 @@
 </nav>
 							<!-- Footer -->
 								<footer id="footer">
-									<p class="copyright">&copy; Все права защищены. Design: by D.T</p>
+									<p class="copyright">&copy; Все права защищены.</p>
 								</footer>
 
 						</div>
