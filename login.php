@@ -162,7 +162,7 @@ session_start();
                         </div>
                        <button type="submit" name="do_login">Войти</button>
 			            <hr>
-                        <a href="yandexpayment.php" class="text-sm no-border">Забыли оплатить?</a>
+                        <a href="reset_password.php" class="text-sm no-border">Забыли пароль?</a>
                     </form>
                 </div>
             </div>
