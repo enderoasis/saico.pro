@@ -42,7 +42,7 @@
  									</header>
 
                   <form name="form1" method="post" action="vosst_pass.php">
-                  <p><i>Логин </i><input type="text" name="username" size="30" /></p>
+                  <p><i>Укажите свою почту </i><input type="text" name="username" size="30" /></p>
                   <p>
                       <input type="submit" value="Восстановление" size="30">
                   </p>
