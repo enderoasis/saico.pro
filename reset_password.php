@@ -17,6 +17,11 @@
  		    <link rel="icon" href="https://partners.saico.pro/favicon.png">
  		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
  		<link rel="stylesheet" href="/assets/css/main.css" />
+    <style>
+    #recover {
+      width: 300px;
+      }
+    </style>
  	</head>
  	<body class="is-preload">
 
@@ -42,7 +47,7 @@
  									</header>
 
                   <form name="form1" method="post" action="vosst_pass.php">
-                  <p><i>Укажите свою почту </i><input type="text" name="username" size="40" /></p>
+                  <p><i>Укажите свою почту </i><input type="text" name="username" id="recover" size="40" /></p>
                   <p>
                       <input type="submit" value="Восстановление" size="40">
                   </p>
