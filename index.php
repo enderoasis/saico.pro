@@ -26,7 +26,7 @@
 								<header id="header">
 									<a href="index.php" class="logo"><strong>Обучение</strong> by Saico.pro</a>
 									<ul class="icons">
-        <?php if (!isset($_SESSION['reg']) ) { ?> <li><a href="register.php"class="button">Регистрация</a></li> <?php } ?>
+        <?php if (!isset($_SESSION['reg']) && !isset($_SESSION['logged_user'] )) { ?> <li><a href="register.php"class="button">Регистрация</a></li> <?php } ?>
          <?php if (!isset($_SESSION['logged_user']) ) { ?> <li><a href="login.php"class="button">Вход</a></li> <?php } ?>
 
 									</ul>
@@ -43,7 +43,7 @@
 
 «Saico education»  гарантирует конфиденциальность вашей информации. Мы создали специальный портал. Здесь предоставлены всевозможные материалы для обучения,а также выдача заданий для закрепления пройденных уроков на каждый день. Также на этот портал вы будете отправлять свои отчеты. Марафон будет проводиться только здесь. </p>
 										<ul class="actions">
-										
+
 										</ul>
 									</div>
 									<span class="image object">
