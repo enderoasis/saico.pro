@@ -5,8 +5,8 @@ if (!isset( $_SESSION['logged_user'] )) {
   header( 'Refresh: 0; url=login.php' );
 }
 
-  if (!isset( $_SESSION['haspaid'])) {
-    header( 'Refresh: 0; url=main.php' );
+elseif (!isset( $_SESSION['haspaid'])) {
+    header( 'Refresh: 0; url=check.php' );
   }
 
 
@@ -30,7 +30,7 @@ if (!isset( $_SESSION['logged_user'] )) {
       <div id="main">
         <div class="inner">
       <header id="header">
-  
+
 
         <ul class="icons">
 
