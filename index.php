@@ -27,7 +27,7 @@
 									<a href="index.php" class="logo"><strong>Обучение</strong> by Saico.pro</a>
 									<ul class="icons">
         <?php if (!isset($_SESSION['reg']) && !isset($_SESSION['logged_user'] )) { ?> <li><a href="register.php"class="button">Регистрация</a></li> <?php } ?>
-         <?php if (!isset($_SESSION['logged_user']) ) { ?> <li><a href="login.php"class="button">Вход</a></li> <?php } ?>
+         <?php if (!isset($_SESSION['logged_user']) && !isset($_SESSION['refid'] ) ) { ?> <li><a href="login.php"class="button">Вход</a></li> <?php } ?>
 
 									</ul>
 								</header>
