@@ -58,7 +58,6 @@ require 'db.php';
 			$user->login = $data1['login'];
 			$user->email = $data1['email'];
 			$user->referer = $ref;
-			$user->status = '1';
 			$user->password = password_hash($data1['password'], PASSWORD_DEFAULT); //пароль нельзя хранить в открытом виде, мы его шифруем при помощи функции password_hash для php > 5.6
 			R::store($user);
 
@@ -181,13 +180,6 @@ header( "Location: https://education.saico.pro/welcome.php");
                         <ul class="menu">
 
 
-                            <li class="menu-item-has-children login-50">
-                                <a class="login-50-a" id="log" data-toggle="modal" data-target="#loginModal">Войти</a>
-			                </li>
-
-                            <li class="menu-item-has-children login-50">
-                                <a class="login-50-a" id="reg" data-toggle="modal" data-target="#registerModal">Регистрация</a>
-			                </li>
 
 			                <li class="m-none-s-n menu-item-has-children">
 			                    <a class="m-none-s">|</a>
