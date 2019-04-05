@@ -1,17 +1,12 @@
 <?php
-require 'db.php';
-
-session_start();
+ session_start();
 
 
- ?>
 
-
-<!DOCTYPE HTML>
-
+?>
 <html>
 	<head>
-		<title>Saico Education - Welcome</title>
+		<title>Saico Education - Добро пожаловать</title>
     <link rel="icon" href="https://partners.saico.pro/favicon.png">
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -29,9 +24,10 @@ session_start();
 
 							<!-- Header -->
 								<header id="header">
-									<a href="index.php" class="logo"><strong>Education</strong>Saico.pro</a>
+									<a href="index.php" class="logo"><strong>Обучение</strong> by Saico.pro</a>
 									<ul class="icons">
-         <li><a href="login.php"class="button">Вход</a></li>
+        <?php if (!isset($_SESSION['reg']) && !isset($_SESSION['logged_user'] )) { ?> <li><a href="register.php"class="button">Регистрация</a></li> <?php } ?>
+         <?php if (!isset($_SESSION['logged_user']) && !isset($_SESSION['refid'] ) ) { ?> <li><a href="login.php"class="button">Вход</a></li> <?php } ?>
 
 									</ul>
 								</header>
@@ -44,14 +40,19 @@ session_start();
 											</h1>
 
 										</header>
-										<p><b>Вы успешно зарегистрировались!</b>
-«Saico education»  гарантирует конфиденциальность вашей информации. Мы создали специальный портал. Здесь предоставлены всевозможные материалы для обучения,а так же выдача задании для закрепления пройденных уроков на каждый день. Также на этот портал вы будете отправлять свои отчеты. Марафон будет проводиться только здесь. </p>
+
+                    Возникли вопросы: как сделать бизнес аккаунт в социальных сетях более популярным? Как найти свою целевую аудиторию? Как сделать рекламу своего продукта или услуг более адресной и прибыльным бизнес? <br>
+                    10 шагов к успешному маркетингу в социальных сетях.<br>
+                    Мы научим тебя пользоваться социальными сетями в качестве каналов для продвижения компании, бренда, услуг и решать прочие бизнес-задачи.<br>
+                    10 дней теоритических знаний и практических решений.<br>
+                    Плюс приятный бонус за участие в партнерской программе.<br>
+                    Будь с нами! Пройди марафон "SMM 10" стань "акулой" социальных сетей! </p>
 										<ul class="actions">
-											<li><a href="#1" class="button big">Перейти</a></li>
+
 										</ul>
 									</div>
 									<span class="image object">
-										<img src="image/23.png" alt="" />
+				<img src="image/23.png" alt="" />
 									</span>
 								</section>
 
@@ -73,16 +74,16 @@ session_start();
 											<span class="icon fa-paper-plane"></span>
 											<div class="content">
 												<h3>Необходимые практические упражнения</h3>
-												<p>Благодаря балансу теории и практики курса, вы освоите все возможности социальных сетей: от создания вирусного контента до настроек таргетированной рекламы, научитесь определять бюджет на продвижение и прогнозировать его результат.</p>
+												<p>Благодаря балансу теории и практики курса вы освоите все возможности социальных сетей: от создания вирусного контента до настроек таргетированной рекламы, научитесь определять бюджет на продвижение и прогнозировать его результат.</p>
 											</div>
 										</article>
-										<!--<article>
+									<article>
 											<span class="icon fa-rocket"></span>
 											<div class="content">
-												<h3>Сертификация </h3>
-												<p>Успешное окончание курса дает возможность получить уникальный сертификат об окончании.</p>
+												<h3>Высокие результаты обучения </h3>
+												<p>Как показывают исследования американских ученых, результаты дистанционного обучения не уступают или даже превосходят результаты традиционных форм обучения. Большую часть учебного материала студент-дистанционник изучает самостоятельно. Это улучшает запоминание и понимание пройденных тем. А возможность сразу применить знания на практике, на работе помогает закрепить их. Кроме того, использование в процессе обучения новейших технологий делает его интереснее и живее.</p>
 											</div>
-										</article>-->
+										</article>
 										<article>
 											<span class="icon fa-signal"></span>
 											<div class="content">
@@ -96,7 +97,7 @@ session_start();
 							<!-- Section -->
 							<section>
 								<header class="major">
-									<h2>Обучение</h2>
+									<h2>В открытом доступе: </h2>
 								</header>
 								<div class="posts">
 									<article>
@@ -112,7 +113,7 @@ session_start();
 									<article>
 				<a href="/lessons/14.php" class="image"><img src="image/p4.png" alt="" /></a>
 										<h3> Идеальные размеры фото и видео</h3>
-										<p>В этом коротеньком курсе мы ответим на три часто задаваемых вопроса по поводу технических характеристик инста-сторис</p>
+										<p>В этом курсе мы ответим на три часто задаваемых вопроса по поводу технических характеристик инста-сторис</p>
 										<ul class="actions">
 											<li><a href="/lessons/14.php" class="button">Начать</a></li>
 										</ul>
@@ -146,7 +147,7 @@ session_start();
 									<article>
 				<a href="/lessons/20.php" class="image"><img src="image/p8.png" alt="" /></a>
 										<h3> Лучшие сервисы для продвижения</h3>
-										<p>Курс содержит таблицу с описаниями сервисов. Это будет полезно для тех, кто не особо любит читать и хочет сам во всём разбираться. После таблицы Вы найдёте более детальные описания  сервисов, а также ссылки на инструкции</p>
+										<p>Курс содержит таблицу с описаниями сервисов. Это будет полезно для тех, кто не особо любит читать и хочет сам во всём разбираться. После таблицы вы найдёте более детальные описания  сервисов и ссылки на инструкции</p>
 										<ul class="actions">
 											<li><a href="/lessons/20.php" class="button">Начать</a></li>
 										</ul>
@@ -172,7 +173,7 @@ session_start();
 									</header>
 									<ul>
 										<li><a href="login.php">Учебный портал</a></li>
-										<li><a href="index.php">Главная</a></li>
+										<li><a href="/info">Видеоинструкция</a></li>
 										<li><a href="/partnership">Партнёрство</a></li>
 										<li><a href="yandexpayment.php">Оплата обучения</a></li>
 										<li><a href="offerta.html">Публичная оферта</a></li>
@@ -186,7 +187,7 @@ session_start();
 										<li><a href="#">Sapien Mauris</a></li>
 										<li><a href="#">Amet Lacinia</a></li> -->
 									</ul>
-								</nav>
+
 
 							<!-- Section -->
 
@@ -194,20 +195,21 @@ session_start();
 							<!-- Section -->
 								<section>
 									<header class="major">
+                    <h1></h1>
 										<h2>Связь с нами</h2>
 									</header>
-									<p>Команда saico.pro готова вам помочь в любое время. Ниже приведены контакты,в целях оказания тех.поддержки,сотрудничества и.т.д</p>
+									<p>Команда saico.pro готова вам помочь в любое время. Ниже приведены контакты в целях оказания тех.поддержки,более эффективного сотрудничества и.т.д</p>
 									<ul class="contact">
 										<li class="fa-envelope-o"><a href="mailto:info@saico.pro">info@saico.pro</a></li>
 							<li class="fa-phone">+7 707 173 6161</li>
-										<li class="fa-home">ул.Достык, 5<br />
+										<li class="fa-home">ул. Достык, 5<br />
 										г.Астана, Республика Казахстан.</li>
 									</ul>
 								</section>
-
+</nav>
 							<!-- Footer -->
 								<footer id="footer">
-									<p class="copyright">&copy; Все права защищены. Design: by D.T</p>
+									<p class="copyright">&copy; Все права защищены.</p>
 								</footer>
 
 						</div>
@@ -239,6 +241,20 @@ session_start();
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+      <!-- Yandex.Metrika counter -->
+      <script type="text/javascript" >
+         (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+         m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+         (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
+         ym(53150563, "init", {
+              clickmap:true,
+              trackLinks:true,
+              accurateTrackBounce:true,
+              webvisor:true
+         });
+      </script>
+      <noscript><div><img src="https://mc.yandex.ru/watch/53150563" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+      <!-- /Yandex.Metrika counter -->
 	</body>
 </html>
