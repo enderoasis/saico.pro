@@ -255,5 +255,11 @@
       </script>
       <noscript><div><img src="https://mc.yandex.ru/watch/53150563" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
       <!-- /Yandex.Metrika counter -->
+      <script>
+window.replainSettings = { id: 'd3e5b20f-5045-4169-88b1-19210da6b86c' };
+(function(u){var s=document.createElement('script');s.type='text/javascript';s.async=true;s.src=u;
+var x=document.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);
+})('https://widget.replain.cc/dist/client.js');
+</script>
 	</body>
 </html>
