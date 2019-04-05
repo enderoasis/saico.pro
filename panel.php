@@ -4,6 +4,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
 <link rel="stylesheet" type="text/css" href="style.css">
+<style>
+#rec {
+  width: 300px;
+  }
+</style>
 <title>Вывод данных</title>
 </head>
 
@@ -11,7 +16,7 @@
 <fieldset>
 <form method="post" action="search.php">
 <label for="first_name">№ Транзакции:</label><br/>
-<input type="text" name="first_name" value="<?php echo @$_POST['tr']; ?>" size="150"><br/>
+<input type="text" name="first_name" id="rec" value="<?php echo @$_POST['tr']; ?>" size="150"><br/>
 <?php $_SESSION['opid'] = $_POST['tr']; ?>
 <input id="submit" type="submit" value="Найти"><br/>
 </form>
