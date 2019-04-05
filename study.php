@@ -34,7 +34,7 @@ elseif (!isset( $_SESSION['haspaid'])) {
 
         <ul class="icons">
 
-                            <li><a href="https://partners.saico.pro" class="button2">Партнёрство</a></li>
+                            <li><a href="https://partners.saico.pro" class="button">Партнёрство</a></li>
                             <li><a href="/index.php"class="button">Главная</a></li>
                             <li><a href="/logout.php" class="button">Выход</a></li>
                             <li><a href="/send.php" class="button">Домашнее задание</a></li>
