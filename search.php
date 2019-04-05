@@ -5,10 +5,7 @@ session_start();
 $op = $_SESSION['opid'];
 $operation = R::findOne('payments', ' transid = ? ', array($op));
   if ($operation) {
-$operation->email = $mail;
-$operation->status = $state;
-echo $mail;
-echo $state;
+echo "OK";
 }
 else {
 	echo "Оплаты с таким номером транзакции не найден.";
