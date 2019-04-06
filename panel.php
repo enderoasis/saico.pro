@@ -1,4 +1,20 @@
-<?php session_start(); ?>
+<?php
+session_start();
+$data3 = $_POST;
+
+if ( isset($data3['find']) )
+{
+$op = $data3['tr'];
+$operation = R::findOne('payments', ' transid = ? ', array($op));
+}
+if ($operation) {
+ echo $operation->email;
+ echo "Success";
+}
+
+
+
+?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -16,9 +32,9 @@
 <fieldset>
 <form method="post" action="search.php">
 <label for="first_name">№ Транзакции:</label><br/>
-<input type="text" name="first_name" id="rec" value="<?php echo @$_POST['tr']; ?>" size="150"><br/>
-<?php $_SESSION['opid'] = $_POST['tr']; ?>
-<input id="submit" type="submit" value="Найти"><br/>
+<input type="text" name="first_name" id="rec" value="<?php echo @$data3['tr']; ?>" size="150"><br/>
+
+<button type="submit" name="find">Найти</button><br/>
 </form>
 </fieldset>
 </body>
