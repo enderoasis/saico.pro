@@ -30,7 +30,7 @@ if ($operation) {
 
 <body>
 <fieldset>
-
+<form method="post" action="panel.php">
 <label for="first_name">№ Транзакции:</label><br/>
 <input type="text" name="first_name" id="rec" value="<?php echo @$data3['tr']; ?>" size="150"><br/>
 
