@@ -8,6 +8,7 @@ session_start();
 	if ($operation->transid == $op) {
 
 	 echo "Success";
+	 echo $op;
 	}
 	else {
 	  echo "Fail";
