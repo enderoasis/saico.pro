@@ -1,16 +1,4 @@
-<?php
-session_start();
-$data3 = $_POST;
 
-if ( isset($data3['first_name']) )
-{
-$_SESSION['trans'] = $data3['tr'];
-header( "Location: https://education.saico.pro/search.php");
-}
-
-
-
-?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -29,7 +17,18 @@ header( "Location: https://education.saico.pro/search.php");
 <form method="post" action="search.php">
 <label for="first_name">№ Транзакции:</label><br/>
 <input type="text" name="first_name" id="rec" value="<?php echo @$data3['tr']; ?>" size="150"><br/>
+<?php
+session_start();
+$data3 = $_POST;
 
+
+$_SESSION['trans'] = $data3['tr'];
+header( "Location: https://education.saico.pro/search.php");
+
+
+
+
+?>
 <button type="submit" name="find">Найти</button><br/>
 </form>
 </fieldset>
