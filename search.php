@@ -9,9 +9,15 @@ session_start();
 
 	 echo "Success";
 	 echo $op;
+	 unset($_SESSION['trans']);
+	 	session_unset();
+	 	session_destroy();
 	}
 	else {
 	  echo "Fail";
 		echo $op;
+		unset($_SESSION['logged_user']);
+			session_unset();
+			session_destroy();
 	}
  ?>
