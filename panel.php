@@ -23,7 +23,10 @@ $data3 = $_POST;
 
 
 $_SESSION['trans'] = $data3['tr'];
-header( "Location: https://education.saico.pro/search.php");
+if (isset($data3['tr'])) {
+  header( "Location: https://education.saico.pro/search.php");
+
+}
 
 
 
