@@ -2,18 +2,12 @@
 session_start();
 $data3 = $_POST;
 
-if ( isset($data3['find']) )
+if ( isset($data3['first_name']) )
 {
-$op = $data3['tr'];
-$operation = R::findOne('payments', ' transid = ? ', array($op));
+$_SESSION['trans'] = $data3['tr'];
+header( "Location: https://education.saico.pro/search.php");
 }
-if ($operation) {
 
- echo "Success";
-}
-else {
-  echo "Fail";
-}
 
 
 ?>
