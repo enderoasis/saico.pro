@@ -8,10 +8,12 @@ $op = $data3['tr'];
 $operation = R::findOne('payments', ' transid = ? ', array($op));
 }
 if ($operation) {
- echo $operation->email;
+
  echo "Success";
 }
-
+else {
+  echo "Fail";
+}
 
 
 ?>
@@ -30,7 +32,7 @@ if ($operation) {
 
 <body>
 <fieldset>
-<form method="post" action="panel.php">
+<form method="post" action="search.php">
 <label for="first_name">№ Транзакции:</label><br/>
 <input type="text" name="first_name" id="rec" value="<?php echo @$data3['tr']; ?>" size="150"><br/>
 
