@@ -5,7 +5,7 @@ session_start();
 	$op = $_SESSION['trans'];
 	$operation = R::findOne('payments', ' transid = ? ', array($op));
 
-	if ($operation) {
+	if ($operation->transid == $op) {
 
 	 echo "Success";
 	}
