@@ -8,8 +8,12 @@ session_start();
 	if ($operation->transid == $op) {
 
 	 echo "Success";
+	 session_unset();
+	 session_destroy();
 	}
 	else {
 	  echo "Fail";
+		session_unset();
+		session_destroy();
 	}
  ?>
