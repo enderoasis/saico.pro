@@ -11,5 +11,6 @@ session_start();
 	}
 	else {
 	  echo "Fail";
+		echo $op;
 	}
  ?>
