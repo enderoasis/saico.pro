@@ -9,11 +9,13 @@ session_start();
 
 	 echo "Success";
 	 session_unset();
+	 unset($_SESSION['trans']);
 	 session_destroy();
 	}
 	else {
 	  echo "Fail";
 		session_unset();
+		unset($_SESSION['trans']);
 		session_destroy();
 	}
  ?>
