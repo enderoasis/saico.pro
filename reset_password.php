@@ -1,16 +1,10 @@
 <?php
 
 
-$data2 = $_POST;
 
-if ( isset($data2['do_reset']) )
-{
-  $reset = R::findOne('users', 'email = ?', array($data2['email']));
-}
 
-if ($reset) {
-  header( 'Refresh: 0; url=recover_pass.php' );
-}
+
+
 
 
 
@@ -52,10 +46,10 @@ if ($reset) {
  										<h2>Восстановление пароля </h2>
  									</header>
 
-                  <form name="form1" method="post" action="recover_pass.php">
-                  <p><i>Укажите свою почту </i><input type="text" name="email" id="recover" value="<?php echo @$data2['email'];?>" size="40" /></p>
+                  <form name="form1" method="post" action="vosst_pass.php">
+                  <p><i>Укажите свою почту </i><input type="text" name="username" id="recover" size="40" /></p>
                   <p>
-                      <input type="submit" name="do_reset" value="Восстановление" size="40">
+                      <input type="submit" value="Восстановление" size="40">
                   </p>
                 </form>
 
