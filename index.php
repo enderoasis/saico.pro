@@ -172,7 +172,7 @@
 									</header>
 									<ul>
 										<li><a href="login.php">Учебный портал</a></li>
-										<li><a href="/info">Видеоинструкция</a></li>
+									    <!--<li><a href="/info">Видеоинструкция</a></li> -->
 										<li><a href="/partnership">Партнёрство</a></li>
 										<li><a href="yandexpayment.php">Оплата обучения</a></li>
 										<li><a href="offerta.html">Публичная оферта</a></li>
