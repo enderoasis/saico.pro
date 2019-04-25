@@ -22,7 +22,8 @@ if ($clients) {
  <html lang="en" dir="ltr">
    <head>
      <meta charset="utf-8">
-     <title></title>
+     <title>Восстановление доступа</title>
+     <link href="/css/styles.min.css" rel="stylesheet" media="screen">
    </head>
    <body>
      <section>
@@ -34,9 +35,9 @@ if ($clients) {
        </header>
 
        <form name="form1" method="post" action="recover_pass.php">
-       <p><i>Укажите почту</i><input type="text" name="email" id="recover" value="<?php echo @$global['tra'];?>" size="40" /></p>
+       <p><i>Укажите почту</i><input type="text" сlass="form-control" name="email" id="recover" value="<?php echo @$global['tra'];?>" size="40" /></p>
        <p>
-           <input type="submit" name="do_fix" value="Восстановление" size="40">
+           <input type="submit" name="do_fix" class="button" value="Восстановление" size="40">
        </p>
      </form>
 
