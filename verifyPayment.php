@@ -5,30 +5,17 @@ $global = $_POST;
 $mail = $global['tra'];
 $mail2 = $_SESSION['reg'];
 $fromlog =  $_SESSION['mail'];
-if ( isset($global['do_fix']) )
+$getmail = R::findOne('payments', ' email = ? ', array($mail));
+$stat1 = '1';
+if ($getmail->status == $stat1)
 {
-  $getmail = R::findOne('payments', ' email = ? ', array($mail));
-}
-elseif ($getmail) {
-  // code...
-}
-else {
-  echo "error1";
-}
-if ($getmail) {
   $clients = R::findOne('users', ' email = ? ', array($fromlog));
-}
-else {
-  echo "error2";
-}
-if ($clients) {
   $clients->status = '1';
   R::store($clients);
-     header( 'Refresh: 0; url=check.php' );
+  header( 'Refresh: 0; url=check.php' );
 }
-else {
-  echo "error3";
-}
+
+
 
  ?>
  <!DOCTYPE html>
