@@ -41,7 +41,7 @@ if ($clients) {
        </header>
 
        <form name="form1" method="post">
-       <p><i>Укажите почту</i><input type="text" сlass="form-control" name="email" id="rec" value="<?php echo @$global['tra'];?>" size="40" /></p>
+       <p><i>Укажите почту</i><input type="text" сlass="form-control" name="email" id="rec" value="<?php echo @$_POST['tra'];?>" size="40" /></p>
        <p>
            <input type="submit" name="do_fix" class="button" id="rec" value="Восстановление" size="40">
        </p>
