@@ -57,7 +57,7 @@ if (!isset( $_SESSION['reg'] )) {
 
 								<p> Что нужно знать перед оплатой:<br>
 
-									<b><h4>Для начала нужно обязательно зарегистрироваться.</h4></b>
+
 									  <?php if (!isset($_SESSION['reg']) && !isset($_SESSION['logged_user'] )) { ?> <a href="register.php"class="button">Регистрация</a> <?php } ?> <br>
 									<h1></h1>
 			<span class="colortext">	1) Выберите способ оплаты (Яндекс Кошелек, Банковская карта)<br>
@@ -66,7 +66,7 @@ if (!isset( $_SESSION['reg'] )) {
 								4) Вы будете перенаправлены на платёжную систему Яндекса.<br>
 								5) Мы получаем только те данные,которые вы указываете у нас на сайте.<br>
 						    6) Указанную ниже сумму в 2000 рублей не менять, иначе оплата не произведётся.<br>
-							 7) Важно: Используйте и указывайте одну и ту же почту<br></span></p>
+							 7)!!! Важно: Используйте и указывайте одну и ту же почту(При регистрации и оплате) !!!<br></span></p>
 								</section>
 <iframe src="https://money.yandex.ru/quickpay/shop-widget?writer=seller&targets=%D0%9E%D0%BF%D0%BB%D0%B0%D1%82%D0%B0%20%D0%B7%D0%B0%20%D0%BA%D1%83%D1%80%D1%81%20%D0%BE%D1%82%20Saico%20Education&targets-hint=&default-sum=2000&button-text=11&payment-type-choice=on&mail=on&hint=&successURL=https%3A%2F%2Feducation.saico.pro%2F&quickpay=shop&account=410018884562159" width="100%" height="223" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
 
