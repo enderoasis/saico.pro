@@ -4,16 +4,19 @@ require 'db.php';
 $global = $_POST;
 $mail = $global['tra'];
 $mail2 = $_SESSION['reg'];
-$mail3 =  $_SESSION['mail'];
+$fromlog =  $_SESSION['mail'];
 if ( isset($global['do_fix']) )
 {
   $getmail = R::findOne('payments', ' email = ? ', array($mail));
+}
+elseif ($getmail) {
+  // code...
 }
 else {
   echo "error1";
 }
 if ($getmail) {
-  $clients = R::findOne('users', ' email = ? ', array($mail3));
+  $clients = R::findOne('users', ' email = ? ', array($fromlog));
 }
 else {
   echo "error2";
