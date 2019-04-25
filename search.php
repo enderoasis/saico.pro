@@ -12,8 +12,10 @@ $getmail = R::findOne('payments', ' email = ? ', array($input));
 $stat1 = '1';
 if ($getmail->status == $stat1)
 {
-  $clients = R::findOne('users', ' email = ? ', array($m2));}
-  if ($clients) {
+  $clients = R::findOne('users', ' email = ? ', array($m2));
+}
+  if ($clients)
+	{
     $clients->status = '1';
     R::store($clients);
     header( 'Refresh: 0; url=check.php' );  // code...
