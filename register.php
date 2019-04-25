@@ -17,10 +17,6 @@ require 'db.php';
 			$errors[] = 'Введите логин';
 		}
 
-		if ( trim($data1['email']) == '' )
-		{
-			$errors[] = 'Введите Email';
-		}
 
 		if ( $data1['password'] == '' )
 		{
@@ -46,7 +42,7 @@ require 'db.php';
 		if ( empty($errors) )
 		{
 			//ошибок нет, теперь регистрируем
-			$_SESSION['reg'] = "OK";
+			$_SESSION['reg'] = $data1['email'];
 			$_SESSION['pc2'] = $data1['email'];
 			$user = R::dispense('users');
 //$page_path = basename(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));

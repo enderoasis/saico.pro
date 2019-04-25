@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 require 'db.php';
 
 $hash = sha1($_POST['notification_type'].'&'.
@@ -24,8 +24,9 @@ R::store($payment);
 
 //Если пользователь уже зарегистрирован , то вписываем статус в users
 $pc1 =  $_POST['email'];
+$mail = $_SESSION['reg'];
 //$q1 = R::exec( 'UPDATE `users` SET `status`="1" WHERE `email` = ?', array($pc1) );
-$user = R::findOne('users', ' email = ? ', array($pc1));
+$user = R::findOne('users', ' email = ? ', array($mail));
 if ($user) {
   $user->status = '1';
   R::store($user);

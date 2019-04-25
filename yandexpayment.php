@@ -1,5 +1,9 @@
 <?php
 session_start();
+
+if (!isset( $_SESSION['reg'] )) {
+  header( 'Refresh: 0; url=register.php' );
+}
  ?>
 
 <!DOCTYPE HTML>
