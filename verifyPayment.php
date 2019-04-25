@@ -3,6 +3,7 @@ session_start();
 require 'db.php';
 $global = $_POST;
 $mail = $global['tra'];
+$_SESSION = $mail;
 $mail2 = $_SESSION['reg'];
 $fromlog =  $_SESSION['mail'];
 $getmail = R::findOne('payments', ' email = ? ', array($mail));
@@ -10,9 +11,12 @@ $stat1 = '1';
 if ($getmail->status == $stat1)
 {
   $clients = R::findOne('users', ' email = ? ', array($fromlog));
-  $clients->status = '1';
-  R::store($clients);
-  header( 'Refresh: 0; url=check.php' );
+  if ($clients) {
+    $clients->status = '1';
+    R::store($clients);
+    header( 'Refresh: 0; url=check.php' );  // code...
+  }
+
 }
 
 
@@ -43,7 +47,7 @@ if ($getmail->status == $stat1)
          </p>
        </header>
 
-       <form name="form1" method="post">
+       <form name="form1" method="post" action="search.php">
        <p><i>Укажите почту</i><input type="text" сlass="form-control" name="email" id="rec" value="<?php echo @$_POST['tra'];?>" size="40" /></p>
        <p>
            <input type="submit" name="do_fix" class="button" id="rec2" value="Восстановление" size="40">
