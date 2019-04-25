@@ -7,7 +7,7 @@ $_SESSION['inp'] = $input;
 // From registration
 $m1 = $_SESSION['reg'];
 // From login.php
-$_SESSION['mail'] = $m2
+$_SESSION['mail'] = $m2;
 $getmail = R::findOne('payments', ' email = ? ', array($input));
 $stat1 = '1';
 if ($getmail->status == $stat1)
