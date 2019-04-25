@@ -29,7 +29,7 @@ if ($clients) {
        <header class="main" >
          <h2>Восстановление доступа </h2>
          <p>Пожалуйста, укажите почту которую вы указали при <b>оплате</b>,вот здесь. <br>
-           <img src="/image/tempsnip.png">
+           <img src="/image/tempsnip.png" width="350" height="300">
          </p>
        </header>
 
