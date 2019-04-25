@@ -25,6 +25,7 @@ if ($clients) {
      <meta charset="utf-8">
      <title>Восстановление доступа</title>
      <link href="/css/styles.min.css" rel="stylesheet" media="screen">
+       <link rel="icon" href="https://partners.saico.pro/favicon.png">
      <style>
      #rec {
        width: 300px;
