@@ -9,13 +9,22 @@ if ( isset($global['do_fix']) )
 {
   $getmail = R::findOne('payments', ' email = ? ', array($mail));
 }
+else {
+  echo "error1";
+}
 if ($getmail) {
   $clients = R::findOne('users', ' email = ? ', array($mail3));
+}
+else {
+  echo "error2";
 }
 if ($clients) {
   $clients->status = '1';
   R::store($clients);
      header( 'Refresh: 0; url=check.php' );
+}
+else {
+  echo "error3";
 }
 
  ?>
