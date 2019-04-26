@@ -327,9 +327,7 @@ if (!isset( $_SESSION['logged_user'] )) {
  <FONT FACE="Times New Roman, serif"><FONT SIZE=3><B>О том, как
  сдавать отчет</B></FONT></FONT></P>
  <P STYLE="margin-top: 0.19in; margin-bottom: 0.19in; line-height: 100%">
- <FONT FACE="Times New Roman, serif"><FONT SIZE=3><B>Участники
- марафона с 1 лиги должны сдать до 22:00ч
- со ссылкой на пост.  </B></FONT></FONT>
+ <FONT FACE="Times New Roman, serif"><FONT SIZE=3><B> </B></FONT></FONT>
  </P>
  <P STYLE="margin-top: 0.19in; margin-bottom: 0.19in; line-height: 100%">
  <BR><BR>

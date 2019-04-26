@@ -519,7 +519,7 @@ if (!isset( $_SESSION['logged_user'] )) {
  </P>
  <P STYLE="margin-top: 0.19in; margin-bottom: 0.19in; line-height: 100%">
  <FONT FACE="Times New Roman, serif"><FONT SIZE=3>12. Участники
- марафона с 1 лиги должны отправить отчет
+ марафона должны отправить отчет
  до 22:00, со ссылкой на страницу и на пост.</FONT></FONT></P>
  <P STYLE="margin-top: 0.19in; margin-bottom: 0.19in; line-height: 100%">
  <FONT FACE="Times New Roman, serif"><FONT SIZE=3><I><B>Удачи!</B></I></FONT></FONT></P>

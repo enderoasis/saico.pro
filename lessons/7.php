@@ -630,7 +630,7 @@ if (!isset( $_SESSION['logged_user'] )) {
  <FONT FACE="Times New Roman, serif"><FONT SIZE=3><B>Об отчете.</B></FONT></FONT></P>
  <P STYLE="margin-top: 0.19in; margin-bottom: 0.19in; line-height: 100%">
  <FONT FACE="Times New Roman, serif"><FONT SIZE=3>Участники
- марафона с 1 лиги должны сдать работу
+ марафона должны сдать работу
  до 22:00 со ссылкой на аккаунт.</FONT></FONT></P>
  <P STYLE="margin-top: 0.19in; margin-bottom: 0.19in; line-height: 100%">
  <FONT FACE="Times New Roman, serif"><FONT SIZE=3>Предупреждаем!

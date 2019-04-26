@@ -245,7 +245,7 @@ if (!isset( $_SESSION['logged_user'] )) {
  <P STYLE="margin-top: 0.19in; margin-bottom: 0.19in; line-height: 100%">
  <FONT FACE="Times New Roman, serif"><FONT SIZE=3></FONT></FONT>
  </P>
- <P STYLE="margin-bottom: 0in; line-height: 100%"><FONT FACE="Times New Roman, serif"><FONT SIZE=3></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=3><SPAN LANG="en-US">9</SPAN></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=3>-0</FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=3><SPAN LANG="en-US">1</SPAN></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=3> </FONT></FONT>
+ <P STYLE="margin-bottom: 0in; line-height: 100%"><FONT FACE="Times New Roman, serif"><FONT SIZE=3></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=3><SPAN LANG="en-US"></SPAN></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=3></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=3><SPAN LANG="en-US"></SPAN></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=3> </FONT></FONT>
  </P>
  <P STYLE="margin-top: 0.19in; margin-bottom: 0.19in; line-height: 100%">
  <FONT FACE="Times New Roman, serif"><FONT SIZE=3><B>Задание:</B></FONT></FONT></P>
