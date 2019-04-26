@@ -287,11 +287,10 @@ HDR дает возможности сделать качественное
 свет. </FONT></FONT>
 </P>
 <P STYLE="margin-top: 0.19in; margin-bottom: 0.19in; line-height: 100%">
-<FONT FACE="Times New Roman, serif"><FONT SIZE=4 STYLE="font-size: 13pt"><B>Задание
+<FONT FACE="Times New Roman, serif"><FONT SIZE=4 STYLE="font-size: 13pt"><B>
 </B></FONT></FONT>
 </P>
-<P STYLE="margin-bottom: 0in; line-height: 100%"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>Время
-окончания: 2019-01-08 22:00:00 </FONT></FONT>
+<P STYLE="margin-bottom: 0in; line-height: 100%"><FONT FACE="Times New Roman, serif"><FONT SIZE=3> </FONT></FONT>
 </P>
 <P STYLE="margin-top: 0.19in; margin-bottom: 0.19in; line-height: 100%">
 <FONT FACE="Times New Roman, serif"><FONT SIZE=3><B>Задание:</B></FONT></FONT></P>

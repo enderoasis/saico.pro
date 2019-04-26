@@ -98,15 +98,11 @@ if (!isset( $_SESSION['logged_user'] )) {
  <P STYLE="margin-bottom: 0in; line-height: 100%"><BR>
  </P>
  <P STYLE="margin-bottom: 0in; line-height: 100%"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>Кроме
- ссылок, есть еще другие возможности. Вы
- можете увидеть их на рисунке  4. Посмотрите
- видео, чтобы разобраться как с ними
- работать. </FONT></FONT>
+ ссылок, есть еще другие возможности.</FONT></FONT>
  </P>
  <P STYLE="margin-top: 0.19in; margin-bottom: 0.19in; line-height: 100%">
- <FONT FACE="Times New Roman, serif"><FONT SIZE=4 STYLE="font-size: 13pt"><B>Задание</B></FONT></FONT></P>
- <P STYLE="margin-bottom: 0in; line-height: 100%"><FONT COLOR="#ff0000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>Время
- окончания: 2019-01-07 22:00:00 </FONT></FONT></FONT>
+ <FONT FACE="Times New Roman, serif"><FONT SIZE=4 STYLE="font-size: 13pt"></FONT></FONT></P>
+ <P STYLE="margin-bottom: 0in; line-height: 100%"><FONT COLOR="#ff0000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3></FONT></FONT></FONT>
  </P>
  <P STYLE="margin-top: 0.19in; margin-bottom: 0.19in; line-height: 100%">
  <FONT FACE="Times New Roman, serif"><FONT SIZE=3><B>Задание:</B></FONT></FONT></P>

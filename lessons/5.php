@@ -443,11 +443,10 @@ if (!isset( $_SESSION['logged_user'] )) {
  <P STYLE="margin-top: 0.19in; margin-bottom: 0.19in; line-height: 100%">
  <FONT FACE="Times New Roman, serif"><FONT SIZE=3><B>А теперь
  обратите внимание на задание:</B></FONT></FONT></P>
- <P STYLE="margin-bottom: 0in; line-height: 100%"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>Время
- окончания: 2019-02-10 22:00:00 </FONT></FONT>
+ <P STYLE="margin-bottom: 0in; line-height: 100%"><FONT FACE="Times New Roman, serif"><FONT SIZE=3></FONT></FONT>
  </P>
  <P STYLE="margin-top: 0.19in; margin-bottom: 0.19in; line-height: 100%">
- <FONT FACE="Times New Roman, serif"><FONT SIZE=3><B>Задание:</B></FONT></FONT></P>
+ <FONT FACE="Times New Roman, serif"><FONT SIZE=3></FONT></FONT></P>
  <P STYLE="margin-top: 0.19in; margin-bottom: 0.19in; line-height: 100%">
  <FONT FACE="Times New Roman, serif"><FONT SIZE=3>1. Основываясь
  на информации, предоставленной выше,

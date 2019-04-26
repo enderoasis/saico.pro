@@ -417,12 +417,10 @@ if (!isset( $_SESSION['logged_user'] )) {
  того, как заполнить страницу</FONT></FONT></P>
  <P STYLE="margin-top: 0.19in; margin-bottom: 0.19in; line-height: 100%">
  <FONT FACE="Times New Roman, serif"><FONT SIZE=4 STYLE="font-size: 13pt"><B>Задание</B></FONT></FONT></P>
- <P STYLE="margin-bottom: 0in; line-height: 100%"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>Время
- окончания: </FONT></FONT><FONT COLOR="#ff0000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>2019-01-06
- 22:00:00 </FONT></FONT></FONT>
+ <P STYLE="margin-bottom: 0in; line-height: 100%"><FONT FACE="Times New Roman, serif"></FONT>
  </P>
  <P STYLE="margin-top: 0.19in; margin-bottom: 0.19in; line-height: 100%">
- <FONT FACE="Times New Roman, serif"><FONT SIZE=3><B>Задание:</B></FONT></FONT></P>
+ <FONT FACE="Times New Roman, serif"><FONT SIZE=3></FONT></FONT></P>
  <OL>
  	<LI><P STYLE="margin-top: 0.19in; margin-bottom: 0.19in; line-height: 100%">
  	<FONT FACE="Times New Roman, serif"><FONT SIZE=3>Создайте

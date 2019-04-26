@@ -229,7 +229,7 @@ if (!isset( $_SESSION['logged_user'] )) {
  <FONT FACE="Times New Roman, serif"><FONT SIZE=3>Доброе утро,
  дорогие марафонцы! Сегодня последнее
  задание. Я надеюсь, что вы добросовестно
- выполняли все задачи в течение 13 дней.</FONT></FONT></P>
+ выполняли все задачи.</FONT></FONT></P>
  <P STYLE="margin-top: 0.19in; margin-bottom: 0.19in; line-height: 100%">
  <FONT FACE="Times New Roman, serif"><FONT SIZE=3>Есть ли в
  вашем кругу те, кто обладает большими
@@ -389,8 +389,7 @@ if (!isset( $_SESSION['logged_user'] )) {
  </FONT></FONT>
  </P>
  <P STYLE="margin-top: 0.19in; margin-bottom: 0.19in; line-height: 100%">
- <FONT FACE="Times New Roman, serif"><FONT SIZE=4 STYLE="font-size: 13pt"><B>Задание
- </B></FONT></FONT>
+ <FONT FACE="Times New Roman, serif"><FONT SIZE=4 STYLE="font-size: 13pt"></FONT></FONT>
  </P>
  <P STYLE="margin-bottom: 0in; line-height: 100%"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>Время
  окончания: 2019-01-18 22:00:00 </FONT></FONT>
@@ -457,7 +456,7 @@ if (!isset( $_SESSION['logged_user'] )) {
  можно и после его окончания.</FONT></FONT></P>
  <P STYLE="margin-top: 0.19in; margin-bottom: 0.19in; line-height: 100%">
  <FONT FACE="Times New Roman, serif"><FONT SIZE=3>10. Участники
- марафона с 1 лиги должны сдать список
+ должны сдать список
  блогеров, короткую информацию, скриншоты
   писем до 22:00. </FONT></FONT>
  </P>

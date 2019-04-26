@@ -243,11 +243,9 @@ if (!isset( $_SESSION['logged_user'] )) {
  <BR><BR>
  </P>
  <P STYLE="margin-top: 0.19in; margin-bottom: 0.19in; line-height: 100%">
- <FONT FACE="Times New Roman, serif"><FONT SIZE=3><B>Задание </B></FONT></FONT>
+ <FONT FACE="Times New Roman, serif"><FONT SIZE=3></FONT></FONT>
  </P>
- <P STYLE="margin-bottom: 0in; line-height: 100%"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>Время
- окончания: 201</FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=3><SPAN LANG="en-US">9</SPAN></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=3>-0</FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=3><SPAN LANG="en-US">1</SPAN></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=3>-15
- 22:00:00 </FONT></FONT>
+ <P STYLE="margin-bottom: 0in; line-height: 100%"><FONT FACE="Times New Roman, serif"><FONT SIZE=3></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=3><SPAN LANG="en-US">9</SPAN></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=3>-0</FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=3><SPAN LANG="en-US">1</SPAN></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=3> </FONT></FONT>
  </P>
  <P STYLE="margin-top: 0.19in; margin-bottom: 0.19in; line-height: 100%">
  <FONT FACE="Times New Roman, serif"><FONT SIZE=3><B>Задание:</B></FONT></FONT></P>
@@ -287,7 +285,7 @@ if (!isset( $_SESSION['logged_user'] )) {
  	Общее количество-  7 хэштегов.</FONT></FONT></P>
  	<LI><P STYLE="margin-top: 0.19in; margin-bottom: 0.19in; line-height: 100%">
  	<FONT FACE="Times New Roman, serif"><FONT SIZE=3>Участники
- 	марафона с 1 лиги должны скинуть отчет
+ 	 должны скинуть отчет
  	(скрины всех постов с программы
  	smmplanner, ссылку на аккаунт)  до 22:00 на
  	платформу, </FONT></FONT>
