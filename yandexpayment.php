@@ -1,7 +1,7 @@
 <?php
 session_start();
 $_SESSION['frompay'] = "OK";
-if (!isset( $_SESSION['reg'] || $_SESSION['mail'])) {
+if (!isset( $_SESSION['reg'] )) {
   header( 'Refresh: 0; url=register.php' );
 }
 
