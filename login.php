@@ -22,6 +22,7 @@ session_start();
 
  			 $_SESSION['mail'] = $_POST['email'];
 			$_SESSION['logged_user'] = $user;
+			$_SESSION['reg_user'] = $_POST['email'];
 
 			echo '<div style="color:green;">Вы авторизованы!<br/>.</div><hr>';
 		header( 'Refresh: 0; url=check.php' );
