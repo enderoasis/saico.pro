@@ -4,7 +4,7 @@ $_SESSION['frompay'] = "OK";
 if (!isset( $_SESSION['reg_user'] )) {
   header( 'Refresh: 0; url=register.php' );
 }
-elseif (!isset( $_SESSION['logged_user'])) {
+if (!isset( $_SESSION['logged_user'])) {
   header( 'Refresh: 0; url=login.php' );
 }
  ?>
