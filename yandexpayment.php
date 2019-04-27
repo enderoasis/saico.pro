@@ -1,12 +1,10 @@
 <?php
 session_start();
 $_SESSION['frompay'] = "OK";
-if (!isset( $_SESSION['reg_user'] )) {
+if (!isset($user ) ) {
   header( 'Refresh: 0; url=register.php' );
 }
-if (!isset( $_SESSION['logged_user'])) {
-  header( 'Refresh: 0; url=login.php' );
-}
+
  ?>
 
 <!DOCTYPE HTML>
