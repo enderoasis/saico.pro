@@ -1,9 +1,6 @@
 <?php
 session_start();
 $_SESSION['frompay'] = "OK";
-if (!isset($_SESSION['reg_user'] ) ) {
-  header( 'Refresh: 0; url=register.php' );
-}
 
  ?>
 
