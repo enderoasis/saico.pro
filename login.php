@@ -22,7 +22,7 @@ session_start();
 
  			 $_SESSION['mail'] = $_POST['email'];
 			$_SESSION['logged_user'] = $user;
-
+			
 			echo '<div style="color:green;">Вы авторизованы!<br/>.</div><hr>';
 		header( 'Refresh: 0; url=check.php' );
 	 }}
@@ -162,7 +162,7 @@ session_start();
                         </div>
                        <button type="submit" name="do_login">Войти</button>
 			            <hr>
-                        
+
                     </form>
                 </div>
             </div>

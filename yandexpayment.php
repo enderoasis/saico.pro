@@ -1,9 +1,10 @@
 <?php
 session_start();
 $_SESSION['frompay'] = "OK";
-if (!isset( $_SESSION['reg'] )) {
+if (!isset( $_SESSION['reg'] || $_SESSION['mail'])) {
   header( 'Refresh: 0; url=register.php' );
 }
+
  ?>
 
 <!DOCTYPE HTML>
