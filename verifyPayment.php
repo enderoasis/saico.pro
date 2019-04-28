@@ -1,9 +1,15 @@
 <?php
 session_start();
 require 'db.php';
-$global = $_POST;
-$mail = $global['tra'];
-$_SESSION['inp']= $global['tra'];
+$pst = $_POST;
+
+$pay = R::findOne('payments','email = ?', array($pst['tra']));
+$usr = R::findOne('users', 'email = ?', array($pst['tra2']));
+if ($pay) {
+  $usr->status = '1';
+  R::store($user);
+
+}
 
  ?>
  <!DOCTYPE html>
@@ -31,10 +37,12 @@ $_SESSION['inp']= $global['tra'];
          </p>
        </header>
 
-       <form name="form1" method="post" action="search.php">
-       <p><i>Укажите почту</i><input type="text" сlass="form-control" name="email" id="rec" value="<?php echo @$_POST['tra'];?>" size="40" /></p>
+       <form name="form3" method="post" action="verifyPayment.php">
+       <p><i>Укажите почту</i><input type="text" сlass="form-control" name="email" id="rec" value="<?php echo @$pst['tra'];?>" size="40" /></p>
+
+<p><i>Укажите почту при регистрации</i><input type="text" сlass="form-control" name="email2" id="rec2" value="<?php echo @$pst['tra2'];?>" size="40" /></p>
        <p>
-           <input type="submit" name="do_fix" class="button" id="rec2" value="Восстановление" size="40">
+         <button type="submit" name="do_fix" class="button" id="rec2" size="40">Восстановление</button>
        </p>
      </form>
 
