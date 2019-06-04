@@ -14,17 +14,7 @@
 		<link rel="stylesheet" type="text/css" href="style.css">
     <!-- Yandex.Metrika counter -->
     <!-- Yandex.Metrika counter -->
-    <script type="text/javascript" >
-       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-       m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-       ym(53923096, "init", {
-            clickmap:true,
-            trackLinks:true,
-            accurateTrackBounce:true
-       });
-    </script>
+    
     <noscript><div><img src="https://mc.yandex.ru/watch/53923096" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
     <!-- /Yandex.Metrika counter -->
 	</head>
@@ -192,14 +182,7 @@
 										<li><a href="yandexpayment.php">Оплата обучения</a></li>
 										<li><a href="offerta.html">Публичная оферта</a></li>
 
-										<!--<li><a href="#">Etiam Dolore</a></li>
-										<li><a href="#">Adipiscing</a></li>
-										<li>-->
 
-
-										<!--<li><a href="#">Maximus Erat</a></li>
-										<li><a href="#">Sapien Mauris</a></li>
-										<li><a href="#">Amet Lacinia</a></li> -->
 									</ul>
 
 
@@ -255,21 +238,7 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-      <!-- Yandex.Metrika counter -->
-      <script type="text/javascript" >
-         (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-         m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-         (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
-         ym(53150563, "init", {
-              clickmap:true,
-              trackLinks:true,
-              accurateTrackBounce:true,
-              webvisor:true
-         });
-      </script>
-      <noscript><div><img src="https://mc.yandex.ru/watch/53150563" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-      <!-- /Yandex.Metrika counter -->
       <script>
 window.replainSettings = { id: '2b90f008-5bac-4351-9521-d16151d08331' };
 (function(u){var s=document.createElement('script');s.type='text/javascript';s.async=true;s.src=u;
