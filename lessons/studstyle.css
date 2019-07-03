@@ -1,3 +1,4 @@
 body {
-    background: url(/image/Slider3.jpg) repeat-y 100% 0;
+    background: url(/image/Slider3.jpg) repeat-y,
+               url(/image/Slider3.jpg) repeat-y 100% 0;
    }
