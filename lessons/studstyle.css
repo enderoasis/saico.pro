@@ -1,0 +1,4 @@
+body {
+    background: url(/image/Slider3.jpg) repeat-y, 
+                #fc0 url(/image/Slider3.jpg) repeat-y 100% 0;
+   }

@@ -5,7 +5,7 @@ if (!isset( $_SESSION['logged_user'] )) {
   header( 'Refresh: 0; url=/login.php' );
 }
 
- 
+
 
 
  ?>
@@ -25,6 +25,7 @@ if (!isset( $_SESSION['logged_user'] )) {
  	<META NAME="LinksUpToDate" CONTENT="false">
  	<META NAME="ScaleCrop" CONTENT="false">
  	<META NAME="ShareDoc" CONTENT="false">
+    <link rel="stylesheet" type="text/css" href="studstyle.css">
  	<STYLE TYPE="text/css">
  	<!--
  		@page { margin-left: 1.18in; margin-right: 0.59in; margin-top: 0.79in; margin-bottom: 0.79in }
