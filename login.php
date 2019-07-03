@@ -4,7 +4,7 @@ session_start();
 	$data1 = $_POST;
 
 	if (isset( $_SESSION['logged_user'] )) {
-	  header( 'Refresh: 0; url=check.php' );
+	  header( 'Refresh: 0; url=study.php' );
 	}
 
 
@@ -25,7 +25,7 @@ session_start();
 			$_SESSION['reg_user'] = $_POST['email'];
 
 			echo '<div style="color:green;">Вы авторизованы!<br/>.</div><hr>';
-		header( 'Refresh: 0; url=check.php' );
+		header( 'Refresh: 0; url=study.php' );
 	 }}
 
 	else

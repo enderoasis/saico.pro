@@ -5,9 +5,9 @@ if (!isset( $_SESSION['logged_user'] )) {
   header( 'Refresh: 0; url=login.php' );
 }
 
-elseif (!isset( $_SESSION['haspaid'])) {
-    header( 'Refresh: 0; url=check.php' );
-  }
+//elseif (!isset( $_SESSION['haspaid'])) {
+  //  header( 'Refresh: 0; url=check.php' );
+  //}
 
 
 
