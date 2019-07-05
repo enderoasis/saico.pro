@@ -14,7 +14,7 @@
 		<link rel="stylesheet" type="text/css" href="style.css">
     <!-- Yandex.Metrika counter -->
     <!-- Yandex.Metrika counter -->
-    
+
     <noscript><div><img src="https://mc.yandex.ru/watch/53923096" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
     <!-- /Yandex.Metrika counter -->
 	</head>
@@ -179,7 +179,7 @@
 										<li><a href="login.php">Учебный портал</a></li>
 									    <!--<li><a href="/info">Видеоинструкция</a></li> -->
 										<li><a href="/partnership">Партнёрство</a></li>
-										<li><a href="yandexpayment.php">Оплата обучения</a></li>
+									<!--	<li><a href="yandexpayment.php">Оплата обучения</a></li>-->
 										<li><a href="offerta.html">Публичная оферта</a></li>
 
 
